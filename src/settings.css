@@ -3,4 +3,8 @@
 /* FONT COLORS */
 /* BACKGROUND COLORS */
 /* HEIGHTS */
-/* WIDTHS *//*# sourceMappingURL=settings.css.map */
+/* WIDTHS */
+/* MARGINS */
+/** 12 division grid, 
+*   for multiples use calc($var*[const])
+*//*# sourceMappingURL=settings.css.map */
