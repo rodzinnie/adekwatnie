@@ -1,8 +1,14 @@
+import {Container, Heading} from '../../common';
 import styles from './index.module.scss'
 
 function About() {
   return (
-    <div className={styles.root}>About</div>
+    <div className={styles.root}>
+      <Container>
+        <Heading variant='bckgRed'>O mnie</Heading>
+      </Container>
+
+    </div>
   )
 }
 

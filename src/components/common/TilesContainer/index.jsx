@@ -10,7 +10,7 @@ const offerList = [
   {title: 'Szkolenia', text: '5Masz gotowy tekst AD, ale potrzebujesz go nagrać? Współpracuję z profesjonalnymi studiami w Krakowie i Warszawie. Nagrywam głównie audiodeskrypcje do filmów, ale nie tylko.'}
 ]
 
-function OfferTiles() {
+function TilesContainer() {
   return (
     <div className={styles.root}>
       {offerList.map((e, i) => {
@@ -20,4 +20,4 @@ function OfferTiles() {
   )
 }
 
-export default OfferTiles
+export default TilesContainer

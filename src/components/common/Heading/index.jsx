@@ -2,8 +2,8 @@ import styles from './index.module.scss'
 
 function Heading({ variant, children }) {
   return (
-    <div className={styles[`${variant}`]}>
-      <p className={styles.p}>{children}</p>
+    <div className={styles.root}>
+      <p className={styles[`${variant}`]}>{children}</p>
     </div>
   )
 }

@@ -1,10 +1,10 @@
 import styles from './index.module.scss'
-import {HeaderLeft, OfferTiles} from '../../common'
+import {Heading, TilesContainer} from '../../common'
 function Offer() {
   return (
     <div className={styles.root}>
-      <HeaderLeft variant={'bckgRed'}>oferta</HeaderLeft>
-      <OfferTiles />
+      <Heading variant={'bckgRed'}>oferta</Heading>
+      <TilesContainer />
     </div>
   )
 }
