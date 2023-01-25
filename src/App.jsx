@@ -2,19 +2,17 @@ import { useState } from 'react'
 
 import styles from './App.module.scss'
 import {
-  About, 
+  About,
   Contact,
   Footer,
   Header,
   Hero,
-  Offer
+  Offer,
 } from './components/layout'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className={styles.App} >
+    <div className={styles.App}>
       <Header />
       <Hero />
       <Offer />

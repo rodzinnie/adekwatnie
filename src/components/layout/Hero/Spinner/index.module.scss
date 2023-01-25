@@ -1,0 +1,176 @@
+@import '../../../../settings.scss';
+.spinner {
+  position: relative;
+  width: 100px;
+  height: 3.3rem;
+  margin-left: 15px;
+  // padding-left: 15px;
+  overflow: hidden;
+  // background-color: blueviolet;
+}
+
+.word {
+  margin: 0;
+  line-height: 22px;
+}
+
+.word:nth-child(1),
+.word:nth-child(6),
+.word:nth-child(7) {
+  animation: spin_words 6s infinite;
+}
+
+.word:nth-child(2) {
+  animation: word2 6s infinite;
+}
+
+.word:nth-child(3) {
+  animation: word3 6s infinite;
+}
+
+.word:nth-child(4) {
+  animation: word4 6s infinite;
+}
+
+.word:nth-child(5) {
+  animation: word5 6s infinite;
+}
+
+@keyframes word2 {
+  0% {
+    transform: scale(1.2) translateX(8px);
+    color: $bckgRed;
+  }
+  5% {
+    color: $navbar-color;
+  }
+  13% {
+    transform: scale(1) translateY(-112%);
+  }
+  33% {
+    transform: translateY(-100%);
+  }
+  46% {
+    transform: translateY(-212%);
+  }
+  66% {
+    transform: translateY(-200%);
+  }
+  79% {
+    transform: translateY(-312%);
+  }
+  100% {
+    transform: translateY(-300%);
+  }
+}
+
+@keyframes word4 {
+  13% {
+    transform: translateY(-112%);
+  }
+  33% {
+    transform: scale(1) translateY(-100%);
+  }
+  40% {
+    color: $navbar-color;
+  }
+  46% {
+    transform: scale(1.2) translateY(-180%) translateX(8px);
+    color: $bckgRed;
+  }
+  66% {
+    transform: scale(1.2) translateY(-167%) translateX(8px);
+    color: $bckgRed;
+  }
+  71% {
+    color: $navbar-color;
+  }
+  79% {
+    transform: translateY(-312%);
+  }
+  100% {
+    transform: translateY(-300%);
+  }
+}
+
+@keyframes word5 {
+  5% {
+    color: $navbar-color;
+  }
+  13% {
+    transform: translateY(-112%);
+  }
+  33% {
+    transform: translateY(-100%);
+  }
+  46% {
+    transform: translateY(-212%);
+  }
+  66% {
+    transform: translateY(-200%);
+  }
+  73% {
+    color: $navbar-color;
+  }
+  79% {
+    transform: scale(1.2) translateY(-270%) translateX(8px);
+    color: $bckgRed;
+  }
+  100% {
+    transform: scale(1.2) translateY(-257%) translateX(8px);
+    color: $bckgRed;
+  }
+}
+
+@keyframes word3 {
+  0% {
+    transform: scale(1);
+  }
+  7% {
+    color: $navbar-color;
+  }
+  13% {
+    transform: scale(1.2) translateY(-93%) translateX(8px);
+    color: $bckgRed;
+  }
+  33% {
+    transform: scale(1.2) translateY(-80%) translateX(8px);
+    color: $bckgRed;
+  }
+  38% {
+    color: $navbar-color;
+  }
+  46% {
+    transform: translateY(-212%);
+  }
+  66% {
+    transform: translateY(-200%);
+  }
+  79% {
+    transform: translateY(-312%);
+  }
+  100% {
+    transform: translateY(-300%);
+  }
+}
+
+@keyframes spin_words {
+  13% {
+    transform: translateY(-112%);
+  }
+  33% {
+    transform: translateY(-100%);
+  }
+  46% {
+    transform: translateY(-212%);
+  }
+  66% {
+    transform: translateY(-200%);
+  }
+  79% {
+    transform: translateY(-312%);
+  }
+  100% {
+    transform: translateY(-300%);
+  }
+}
