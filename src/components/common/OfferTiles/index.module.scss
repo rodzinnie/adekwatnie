@@ -1,0 +1,17 @@
+.root{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 700px) {
+  .root{
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1000px) {
+  .root{
+  }
+}

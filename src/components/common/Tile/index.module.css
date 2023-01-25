@@ -1,0 +1,14 @@
+.root {
+  flex-basis: 100%;
+}
+
+@media (min-width: 700px) {
+  .root {
+    flex-basis: 40%;
+  }
+}
+@media (min-width: 1000px) {
+  .root {
+    flex-basis: 28%;
+  }
+}/*# sourceMappingURL=index.module.css.map */
