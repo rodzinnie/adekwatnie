@@ -5,6 +5,13 @@
       font-size: 60px;
   }
 }
+
+.lightBlue{
+  &::before{
+    background-color: $bckgLightBlue;
+    font-size: 60px;
+  }
+}
 .root{
   text-transform: lowercase;
   margin-left: $marg-1;
@@ -16,7 +23,7 @@
   z-index: 2;
 }
 
-p{
+h1{
   position: relative;
     &::before{
     position: absolute;
@@ -29,5 +36,5 @@ p{
 }
 
 .root {
-  font-family: $main-font-text;
+  font-family: $main-font-heading;
 }

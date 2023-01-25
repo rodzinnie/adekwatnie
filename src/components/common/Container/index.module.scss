@@ -1,3 +1,7 @@
+@import '../../../settings';
+
 .root{
-  
+  margin: calc($marg-1*0.5) $marg-1;
+  position: relative;
+  overflow: hidden;
 }

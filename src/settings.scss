@@ -1,6 +1,8 @@
 /* FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
-$main-font-text: 'Teko', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Teko:wght@300;400;500;600;700&display=swap');
+$main-font-heading: 'Teko', sans-serif;
+$main-font-text: 'Oswald', sans-serif;
+
 
 /* FONT COLORS */
 $navbar-color: rgba(255, 255, 255, 0.829);
@@ -11,8 +13,10 @@ $navbar-bckg-color: #D9D9D9;
 $hero-bckg-color: #1D3557;
 $bckgRed: #E63946;
 $bckgLightBlue: #457B9D;
+$bckgDarkBlue: #1D3557;
+$bckgLightContainer: #f1faeee0;
 /* HEIGHTS */
-
+$container-min-height: 80vh;
 
 
 /* WIDTHS */

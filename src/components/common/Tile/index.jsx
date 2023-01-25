@@ -1,7 +1,18 @@
 import styles from './index.module.scss'
-function Tile({children}) {
+import clsx from 'clsx'
+function Tile({variant, buttons=[], children}) {
   return (
-    <div >{children}</div>
+    <div className={clsx(styles[variant], styles.root )}>
+      {children}
+      <div className={styles.buttons}>
+        {buttons.includes('play') && 
+          <p>play</p>
+        }
+        {buttons.includes('stop') && 
+          <p>stop</p>
+        }
+      </div>
+    </div>
   )
 }
 

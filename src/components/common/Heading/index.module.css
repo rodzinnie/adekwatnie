@@ -1,5 +1,5 @@
 /* FONTS */
-@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Teko:wght@300;400;500;600;700&display=swap");
 /* FONT COLORS */
 /* BACKGROUND COLORS */
 /* HEIGHTS */
@@ -10,6 +10,11 @@
 */
 .bckgRed::before {
   background-color: #E63946;
+  font-size: 60px;
+}
+
+.lightBlue::before {
+  background-color: #457B9D;
   font-size: 60px;
 }
 
@@ -26,10 +31,10 @@
   z-index: 2;
 }
 
-p {
+h1 {
   position: relative;
 }
-p::before {
+h1::before {
   position: absolute;
   content: " ";
   width: 100%;
