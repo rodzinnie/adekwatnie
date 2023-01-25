@@ -1,11 +1,11 @@
 import styles from './index.module.scss'
 
-function HeaderLeft({variant, children}) {
+function Heading({ variant, children }) {
   return (
     <div className={styles[`${variant}`]}>
-      <p  className={styles.p}>{children}</p>
+      <p className={styles.p}>{children}</p>
     </div>
   )
 }
 
-export default HeaderLeft
+export default Heading

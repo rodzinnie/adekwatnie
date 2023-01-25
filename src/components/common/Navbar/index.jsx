@@ -8,9 +8,6 @@ function Navbar() {
   const [windowSize, setWindowSize] = useState(getWindowSize())
   const inputRef = useRef()
   const rootRef = useRef()
-  const offerRef = useRef()
-  const aboutRef = useRef()
-  const contactRef = useRef()
 
   useEffect(() => {
     function handleWindowResize() {
