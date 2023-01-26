@@ -2,7 +2,9 @@ import styles from './index.module.scss'
 
 function Contact() {
   return (
-    <div className={styles.root}>Contact</div>
+    <section id='contact' className={styles.root}>
+      Contact
+    </section>
   )
 }
 

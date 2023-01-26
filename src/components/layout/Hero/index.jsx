@@ -6,7 +6,8 @@ function Hero() {
     <div className={styles.root}>
       <div className={styles.phrase}>
         <p>aby</p>
-        <Spinner /> <p className={styles.sentence}>przemowil ludzkim glosem</p>
+        {/*<Spinner />*/}{' '}
+        <p className={styles.sentence}>przemowil ludzkim glosem</p>
       </div>
     </div>
   )
