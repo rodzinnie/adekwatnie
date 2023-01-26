@@ -4,7 +4,7 @@ function SVGLogo(props) {
       width={props.width || '344'}
       height={props.height || '48'}
       viewBox='0 0 265 37'
-      fill='none'
+      fill={props.color || 'none'}
       xmlns='http://www.w3.org/2000/svg'
     >
       <path

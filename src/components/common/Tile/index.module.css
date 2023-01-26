@@ -17,7 +17,7 @@
   flex-direction: column;
   font-family: "Teko", sans-serif;
   text-transform: uppercase;
-  font-size: 35px;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 .red > *, .lightBlue > *, .darkBlue > * {
@@ -25,15 +25,15 @@
 }
 
 .red {
-  border-color: #E63946;
+  border-color: #e63946;
 }
 
 .lightBlue {
-  border-color: #457B9D;
+  border-color: #457b9d;
 }
 
 .darkBlue {
-  border-color: #1D3557;
+  border-color: #1d3557;
 }
 
 .container {
