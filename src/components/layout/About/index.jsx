@@ -61,7 +61,7 @@ function About() {
       <section>
         <Container>
           <Heading variant='lightBlue'>recenzje moich audiodeskrypcji</Heading>
-          <Carousel slides={testimonials} timer={3000} arrows={false} />
+          <Carousel slides={testimonials} timer={5000} arrows={true} />
         </Container>
       </section>
     </section>

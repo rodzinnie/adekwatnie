@@ -1,121 +1,113 @@
-@import'../../../settings';
+@import '../../../settings';
+
+$sticky-breakpoint: 32em;
+
 .root {
   background-color: $navbar-bckg-color;
-  padding: 0;
+  padding: 0 10%;
   margin: 0;
-  position: relative;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: nowrap;
   opacity: 1;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  
+  height: 100px;
+  z-index: 5;
+  transition: all 0.2s linear;
+
+  @media (min-height: $sticky-breakpoint) {
+    position: sticky;
+    top: 0;
+  }
 }
 
-.logos{
-  display: flex;
-  flex-direction: row;
-  flex-basis: 50%;
+[id] {
+  @media (min-height: $sticky-breakpoint) {
+    scroll-margin-top: 65px;
+  }
+}
+
+.scrolled {
+  height: 65px;
+
+  div {
+    height: 32px;
+  }
+
+  .navlink {
+    font-size: 30px;
+    line-height: 42px;
+  }
 }
 
 .nav {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  background-color: rgba(0, 0, 0);
-  color: $navbar-color;
+  position: relative;
+  background-color: $navbar-bckg-color;
   z-index: 1;
-  text-align: center;
-  right: -100%;
-  transition: right 1s;
-}
-
-.span {
-  color: $navbar-color;
-  width: auto;
-  display:block;
-  font-family: $main-font-heading;
-  line-height: 42px;
-  font-size: 30px;
-  font-weight:900;
+  right: 0;
   white-space: pre;
 }
 
 .navlink {
   font-family: $main-font-heading;
+  font-size: 40px;
+  line-height: 56px;
   color: $navbar-color;
-  padding-top: 20px;
-  padding-right: 100px;
+  padding-left: 100px;
   width: 100%;
+  text-decoration: none;
 }
 
-.navlink:visited{
+.navlink:visited {
   color: $navbar-color;
-}
-
-.logo{
-  height: 80px;
 }
 
 .hamburger {
-  position: absolute;
-  z-index: 10;
-  right: 10px;
+  display: none;
 }
 
-@media (max-width:500px) {
-  .span {
-      font-size: 23px;     
-  }
-  .hamburger {
-      right: 10px;
-  }
-}
-
-
-@media (min-width:1200px) {
-  .span{
-      font-size: 25px;
-  }
+@media (max-width: 1200px) {
   .root {
-      justify-content: space-around;
-      align-items: center;
-      overflow-y: visible;
+    overflow-y: visible;
   }
-  
+
   .nav {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      text-align: center;
-      position: relative;
-      background-color: $navbar-bckg-color;
-      z-index: 1;
-      text-align: center;
-      right: 0;
-      white-space: pre;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgba(0, 0, 0);
+    color: $navbar-color;
+    z-index: 1;
+    text-align: center;
+    right: -100%;
+    transition: right 1s;
   }
-  
-  .navlink{
-      font-size: 20px;
-      color: $navbar-color;
-      width: max-content;
-      padding-right: 10px;
-      padding-left: 10px;
-      text-align: center;
+
+  .navlink {
+    font-size: 20px;
+    color: $navbar-color;
+    width: max-content;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
   }
-  .navlink:visited{
-      color: $navbar-color;
+  .navlink:visited {
+    color: $navbar-color;
   }
 
   .hamburger {
-      display: none;
+    display: block;
+    position: absolute;
+    z-index: 10;
+    right: 3%;
   }
 }
 
-@media (min-width: 1400px) {
-  .navlink{
-      font-size: 25px;
+@media (max-width: 500px) {
+  .span {
+    font-size: 23px;
+  }
+  .hamburger {
+    right: 10px;
   }
 }

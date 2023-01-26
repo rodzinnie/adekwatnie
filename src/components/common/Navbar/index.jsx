@@ -1,13 +1,16 @@
 import { useState, useRef, useEffect } from 'react'
+import clsx from 'clsx'
 import { Sling as Hamburger } from 'hamburger-react'
-
-import styles from './index.module.css'
+import Logo from '../Logo/index'
+import styles from './index.module.scss'
 
 function Navbar() {
   const [isOpen, setOpen] = useState(false)
   const [windowSize, setWindowSize] = useState(getWindowSize())
   const inputRef = useRef()
   const rootRef = useRef()
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [active, setActive] = useState(null)
 
   useEffect(() => {
     function handleWindowResize() {
@@ -23,6 +26,18 @@ function Navbar() {
     return () => {
       window.removeEventListener('resize', handleWindowResize)
     }
+  }, [])
+
+  function handleScroll() {
+    if (window.scrollY > 150) setIsScrolled(true)
+    if (window.scrollY < 100) {
+      setIsScrolled(false)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   function getWindowSize() {
@@ -41,23 +56,20 @@ function Navbar() {
     }
   }
 
-  const handleIsActive = ({ isActive }) => {
-    return {
-      borderBottom: isActive ? '1px black solid' : 'none',
-      textShadow: isActive ? '2px 3px #33323280' : 'none',
-    }
-  }
-
-  const handleOnClick = (e) => {
-    e.preventDefault()
+  const handleClick = (e) => {
+    setActive(e.target)
+    // e.target.add
+    console.log(active)
   }
 
   return (
-    <div className={styles.root} ref={rootRef}>
-      <div className={styles.logos}>
-        <p>adekwatne.pl</p>
-      </div>
-      <nav ref={inputRef} className={styles.nav}>
+    <header
+      id='header'
+      className={clsx(styles.root, isScrolled ? styles.scrolled : null)}
+      ref={rootRef}
+    >
+      <Logo height={isScrolled ? '32' : null} />
+      <nav ref={inputRef} className={styles.nav} onClick={handleClick}>
         <a className={styles.navlink} href='#offer'>
           oferta
         </a>
@@ -76,7 +88,7 @@ function Navbar() {
           color='#000000'
         />
       </div>
-    </div>
+    </header>
   )
 }
 

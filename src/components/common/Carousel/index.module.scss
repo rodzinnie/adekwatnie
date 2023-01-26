@@ -1,6 +1,6 @@
 @import '../../../settings';
 
-.root{
+.root {
   position: relative;
   height: 100%;
   display: flex;
@@ -10,32 +10,36 @@
   font-size: 25px;
 }
 
-.arrowLeft, .arrowRight{
+.arrowLeft,
+.arrowRight {
   cursor: pointer;
-  color: rgb(255, 255, 255);
+  color: #1e1e1e;
   position: absolute;
   top: 50%;
   font-size: 40px;
-  transform:  translateY(-50%);
-  -webkit-tap-highlight-color: #ccc;
+  transform: translateY(-50%);
+  -webkit-tap-highlight-color: #1e1e1e;
 }
 
-.arrowLeft:hover, .arrowRight:hover, .arrowLeft:active, .arrowRight:active{
-  -webkit-tap-highlight-color: #ccc;
+.arrowLeft:hover,
+.arrowRight:hover,
+.arrowLeft:active,
+.arrowRight:active {
+  -webkit-tap-highlight-color: #1e1e1e;
 }
 
-.arrowRight{
+.arrowRight {
   right: 0;
 }
 
-.arrowLeft{
+.arrowLeft {
   left: 0;
 }
 
 @media (min-width: 900px) {
-  .root{
+  .root {
     width: 50%;
     margin: auto;
+    padding: 0 3%;
   }
-
 }

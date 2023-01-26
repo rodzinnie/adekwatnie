@@ -1,0 +1,13 @@
+@import '../../../settings.scss';
+
+.logo {
+  height: 48px;
+  cursor: pointer;
+  svg path {
+    filter: drop-shadow(2px 4px 2px rgb(0 0 0 / 0.4));
+  }
+}
+
+.logo:active svg path {
+  filter: drop-shadow(2px 2px 2px rgb(0 0 0 / 0.4));
+}

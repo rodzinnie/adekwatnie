@@ -2,26 +2,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Teko:wght@300;400;500;600;700&display=swap');
 $main-font-heading: 'Teko', sans-serif;
 $main-font-text: 'Oswald', sans-serif;
-
+$main-font-logo: 'Oswald', sans-serif;
 
 /* FONT COLORS */
-$navbar-color: rgba(255, 255, 255, 0.829);
-
+$navbar-color: #1e1e1e;
+$white-text: #ffffff;
 
 /* BACKGROUND COLORS */
-$navbar-bckg-color: #D9D9D9;
-$hero-bckg-color: #1D3557;
-$bckgRed: #E63946;
-$bckgLightBlue: #457B9D;
-$bckgDarkBlue: #1D3557;
+$navbar-bckg-color: #d9d9d9;
+$hero-bckg-color: #1d3557;
+$bckgRed: #e63946;
+$bckgLightBlue: #457b9d;
+$bckgDarkBlue: #1d3557;
 $bckgLightContainer: #f1faeee0;
-$lightBackground: #F1FAEE;
+$lightBackground: #f1faee;
 /* HEIGHTS */
 $container-min-height: 80vh;
 
-
 /* WIDTHS */
-
 
 /* MARGINS */
 /** 12 division grid, 
@@ -29,7 +27,3 @@ $container-min-height: 80vh;
 */
 
 $marg-1: 8.3%;
-
-
-
-

@@ -42,7 +42,7 @@
     color: $bckgRed;
   }
   5% {
-    color: $navbar-color;
+    color: $white-text;
   }
   13% {
     transform: scale(1) translateY(-112%);
@@ -72,7 +72,7 @@
     transform: scale(1) translateY(-100%);
   }
   40% {
-    color: $navbar-color;
+    color: $white-text;
   }
   46% {
     transform: scale(1.2) translateY(-180%) translateX(8px);
@@ -83,7 +83,7 @@
     color: $bckgRed;
   }
   71% {
-    color: $navbar-color;
+    color: $white-text;
   }
   79% {
     transform: translateY(-312%);
@@ -95,7 +95,7 @@
 
 @keyframes word5 {
   5% {
-    color: $navbar-color;
+    color: $white-text;
   }
   13% {
     transform: translateY(-112%);
@@ -110,7 +110,7 @@
     transform: translateY(-200%);
   }
   73% {
-    color: $navbar-color;
+    color: $white-text;
   }
   79% {
     transform: scale(1.2) translateY(-270%) translateX(8px);
@@ -127,7 +127,7 @@
     transform: scale(1);
   }
   7% {
-    color: $navbar-color;
+    color: $white-text;
   }
   13% {
     transform: scale(1.2) translateY(-93%) translateX(8px);
@@ -138,7 +138,7 @@
     color: $bckgRed;
   }
   38% {
-    color: $navbar-color;
+    color: $white-text;
   }
   46% {
     transform: translateY(-212%);

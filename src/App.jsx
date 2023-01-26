@@ -1,19 +1,13 @@
 import { useState } from 'react'
 
 import styles from './App.module.scss'
-import {
-  About,
-  Contact,
-  Footer,
-  Header,
-  Hero,
-  Offer,
-} from './components/layout'
+import { Navbar } from './components/common'
+import { About, Contact, Footer, Hero, Offer } from './components/layout'
 
 function App() {
   return (
     <div className={styles.App}>
-      <Header />
+      <Navbar />
       <Hero />
       <Offer />
       <About />
