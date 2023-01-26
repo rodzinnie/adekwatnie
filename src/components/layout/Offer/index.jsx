@@ -31,7 +31,9 @@ const offerList = [
 function Offer() {
   return (
     <section id='offer' className={styles.root}>
-      <Heading variant={'bckgRed'}>oferta</Heading>
+      <Heading variant={'bckgLightBlue'}>
+        <h2>oferta</h2>
+      </Heading>
       <TilesContainer list={offerList} />
     </section>
   )

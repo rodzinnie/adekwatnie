@@ -1,41 +1,43 @@
 @import '../../../settings';
-.bckgRed{
-    &::before{
-      background-color: $bckgRed;
-      font-size: 60px;
-  }
-}
-
-.lightBlue{
-  &::before{
-    background-color: $bckgLightBlue;
-    font-size: 60px;
-  }
-}
-.root{
-  text-transform: lowercase;
-  margin-left: $marg-1;
-  padding: calc($marg-1*0.5) 0;
-  width: fit-content;
-  max-width: 50%;
-  position: relative;
-  font-size: 60px;
-  font-weight: bold;
-  z-index: 2;
-}
-
-h1{
-  position: relative;
-    &::before{
-    position: absolute;
-    content: ' ';
-    width: 100%;
-    height: 2rem;
-    left: 10%;
-    z-index: -1;
-  }
-}
 
 .root {
   font-family: $main-font-heading;
+  text-transform: lowercase;
+  margin-left: $marg-1;
+  padding: calc($marg-1 * 0.5) 0;
+  width: fit-content;
+  max-width: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+.bckgRed,
+.bckgLightBlue {
+  font-weight: bold;
+  *::before {
+    position: absolute;
+    content: ' ';
+    width: 100%;
+    left: 1.5rem;
+    z-index: -1;
+  }
+
+  h2::before {
+    height: 3rem;
+  }
+  h3::before {
+    height: 2rem;
+  }
+}
+
+.bckgRed {
+  *::before {
+    background-color: $bckgRed;
+  }
+}
+
+.bckgLightBlue {
+  *::before {
+    background-color: $bckgLightBlue;
+  }
 }

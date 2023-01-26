@@ -15,7 +15,9 @@ function About() {
   return (
     <section id='about' className={styles.root}>
       <Container>
-        <Heading variant='bckgRed'>O mnie</Heading>
+        <Heading variant='bckgRed'>
+          <h2>O mnie</h2>
+        </Heading>
         <div className={styles.myPic}>
           <p>img</p>
         </div>
@@ -28,12 +30,17 @@ function About() {
       </Container>
       <TilesContainer
         list={list}
-        heading='tak brzmi mój głos'
-        headingColor='lightBlue'
+        heading={
+          <Heading variant='bckgLightBlue'>
+            <h3>tak brzmi mój głos</h3>
+          </Heading>
+        }
       />
       <section>
         <Container>
-          <Heading variant='bckgRed'>nagrody</Heading>
+          <Heading variant='bckgRed'>
+            <h3>nagrody</h3>
+          </Heading>
           <p className={styles.paraLeft}>
             2022: I miejsce w konkursie na najlepszą audiodeskrypcję filmową na
             XII Festiwalu Kultury i Sztuki (dla Osób Niewidomych) w Płocku
@@ -56,11 +63,15 @@ function About() {
         </Container>
       </section>
       <section className={styles.lightBackground}>
-        <Heading variant='lightBlue'>Pisanie i szkolenia</Heading>
+        <Heading variant='bckgLightBlue'>
+          <h3>Pisanie i szkolenia</h3>
+        </Heading>
       </section>
       <section>
         <Container>
-          <Heading variant='lightBlue'>recenzje moich audiodeskrypcji</Heading>
+          <Heading variant='bckgLightBlue'>
+            <h3>recenzje moich audiodeskrypcji</h3>
+          </Heading>
           <Carousel slides={testimonials} timer={5000} arrows={true} />
         </Container>
       </section>

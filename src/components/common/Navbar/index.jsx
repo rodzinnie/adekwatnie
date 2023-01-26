@@ -58,8 +58,6 @@ function Navbar() {
 
   const handleClick = (e) => {
     setActive(e.target)
-    // e.target.add
-    console.log(active)
   }
 
   return (
