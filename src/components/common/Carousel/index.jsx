@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
 
-import styles from './index.module.css'
+import styles from './index.module.scss'
 
 function Carousel({slides, timer, arrows}) {
   const [slideNo, setSlideNo] = useState(0)

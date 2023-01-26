@@ -31,6 +31,9 @@ function About() {
           <p className={styles.paraRight}>2020: II miejsce w konkursie na najlepszą audiodeskrypcję filmową na X Festiwalu Kultury i Sztuki (dla Osób Niewidomych) w Płocku (Wysoka dziewczyna, reż. K. Bałagow)</p>
         </Container>
       </section>
+      <section className={styles.lightBackground}>
+        <Heading variant='lightBlue'>Pisanie i szkolenia</Heading>
+      </section>
       <section>
         <Container>
           <Heading variant='lightBlue'>recenzje moich audiodeskrypcji</Heading>

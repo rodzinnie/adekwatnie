@@ -1,5 +1,7 @@
 @import '../../../settings';
-
+.lightBackground{
+  background-color: $lightBackground;
+}
 .paraLeft, .paraRight{
   padding: 20px;
   position: relative;

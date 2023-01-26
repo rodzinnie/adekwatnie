@@ -8,6 +8,10 @@
 /** 12 division grid, 
 *   for multiples use calc($var*[const])
 */
+.lightBackground {
+  background-color: #D9D9D9;
+}
+
 .paraLeft, .paraRight {
   padding: 20px;
   position: relative;

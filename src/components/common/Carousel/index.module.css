@@ -1,37 +1,48 @@
-.root{
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Teko:wght@300;400;500;600;700&display=swap");
+/* FONT COLORS */
+/* BACKGROUND COLORS */
+/* HEIGHTS */
+/* WIDTHS */
+/* MARGINS */
+/** 12 division grid, 
+*   for multiples use calc($var*[const])
+*/
+.root {
   position: relative;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 25px;
 }
 
-.arrowLeft, .arrowRight{
+.arrowLeft, .arrowRight {
   cursor: pointer;
   color: rgb(255, 255, 255);
   position: absolute;
   top: 50%;
   font-size: 40px;
-  transform:  translateY(-50%);
+  transform: translateY(-50%);
   -webkit-tap-highlight-color: #ccc;
 }
 
-.arrowLeft:hover, .arrowRight:hover, .arrowLeft:active, .arrowRight:active{
+.arrowLeft:hover, .arrowRight:hover, .arrowLeft:active, .arrowRight:active {
   -webkit-tap-highlight-color: #ccc;
 }
 
-.arrowRight{
+.arrowRight {
   right: 0;
 }
 
-.arrowLeft{
+.arrowLeft {
   left: 0;
 }
 
 @media (min-width: 900px) {
-  .root{
+  .root {
     width: 50%;
     margin: auto;
   }
-
-}
+}/*# sourceMappingURL=index.module.css.map */
