@@ -37,10 +37,14 @@
 }
 
 .buttons{
-  width: calc($marg-1*3);
-  margin: auto;
+  // outline: 1px solid red;
   display: flex;
-  justify-content: space-around;
+  margin: auto;
+  justify-content: center;
+  & >* {
+    margin: 10px;
+    // outline: 1px solid blue;
+  }
 }
 
 

@@ -8,7 +8,7 @@ function TilesContainer({ list, heading }) {
       <div className={styles.tilesSection}>
         {list.map((e, i) => {
           return (
-            <Tile key={i} variant={e.variant || ''} buttons={e.buttons}>
+            <Tile key={i} variant={e.variant || ''} buttons={e.buttons} fill={e.fill}>
               <p>{e.title}</p>
             </Tile>
           )
