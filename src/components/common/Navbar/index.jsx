@@ -2,7 +2,9 @@ import { useState, useRef, useEffect } from 'react'
 import clsx from 'clsx'
 import { Sling as Hamburger } from 'hamburger-react'
 import Logo from '../Logo/index'
+import Heading from '../Heading/index'
 import styles from './index.module.scss'
+import { useScrollPosition } from '../../../hooks/useScrollPosition'
 
 function Navbar() {
   const [isOpen, setOpen] = useState(false)
@@ -11,6 +13,7 @@ function Navbar() {
   const rootRef = useRef()
   const [isScrolled, setIsScrolled] = useState(false)
   const [active, setActive] = useState(null)
+  const scrollPosition = useScrollPosition()
 
   useEffect(() => {
     function handleWindowResize() {
@@ -28,17 +31,14 @@ function Navbar() {
     }
   }, [])
 
-  function handleScroll() {
-    if (window.scrollY > 150) setIsScrolled(true)
-    if (window.scrollY < 100) {
+  useEffect(() => {
+    if (scrollPosition > 150) {
+      setIsScrolled(true)
+    }
+    if (scrollPosition < 100) {
       setIsScrolled(false)
     }
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [scrollPosition])
 
   function getWindowSize() {
     const { innerWidth, innerHeight } = window
@@ -57,7 +57,7 @@ function Navbar() {
   }
 
   const handleClick = (e) => {
-    setActive(e.target)
+    setActive(e.target.dataset.name)
   }
 
   return (
@@ -69,13 +69,19 @@ function Navbar() {
       <Logo height={isScrolled ? '32' : null} />
       <nav ref={inputRef} className={styles.nav} onClick={handleClick}>
         <a className={styles.navlink} href='#offer'>
-          oferta
+          <Heading variant={active === 'offer' ? 'bckgRed' : null}>
+            <h5 data-name='offer'>oferta</h5>
+          </Heading>
         </a>
         <a className={styles.navlink} href='#about'>
-          o mnie
+          <Heading variant={active === 'about' ? 'bckgRed' : null}>
+            <h5 data-name='about'>o mnie</h5>
+          </Heading>
         </a>
         <a className={styles.navlink} href='#contact'>
-          kontakt
+          <Heading variant={active === 'contact' ? 'bckgRed' : null}>
+            <h5 data-name='contact'>kontakt</h5>
+          </Heading>
         </a>
       </nav>
       <div className={styles.hamburger}>

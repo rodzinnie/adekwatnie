@@ -23,7 +23,7 @@ $sticky-breakpoint: 32em;
 
 [id] {
   @media (min-height: $sticky-breakpoint) {
-    scroll-margin-top: 65px;
+    scroll-margin-top: 63px;
   }
 }
 
@@ -37,15 +37,21 @@ $sticky-breakpoint: 32em;
   .navlink {
     font-size: 30px;
     line-height: 42px;
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
   }
 }
 
 .nav {
   position: relative;
-  background-color: $navbar-bckg-color;
   z-index: 1;
   right: 0;
   white-space: pre;
+  width: fit-content;
+  box-sizing: border-box;
 }
 
 .navlink {
@@ -53,9 +59,12 @@ $sticky-breakpoint: 32em;
   font-size: 40px;
   line-height: 56px;
   color: $navbar-color;
-  padding-left: 100px;
-  width: 100%;
+  margin-left: 100px;
   text-decoration: none;
+
+  * {
+    margin: 0;
+  }
 }
 
 .navlink:visited {
