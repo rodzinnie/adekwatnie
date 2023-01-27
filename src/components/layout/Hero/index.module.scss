@@ -13,10 +13,10 @@
 .phrase {
   padding: 55vh 0 0 45vw;
   color: $white-text;
-  font-family: $main-font-text;
 }
 
 .title {
+  font-family: $main-font-text;
   margin-bottom: 2rem;
   letter-spacing: 0.4rem;
   text-shadow: 6px 2px 0px black, 7px 2px 0px $white-text;
@@ -30,17 +30,19 @@
   align-items: center;
 
   * {
-    font-family: $main-font-text;
+    font-family: $main-font-heading;
     font-weight: normal;
     font-size: 2rem;
     white-space: nowrap;
     letter-spacing: 0.2rem;
   }
-
+  .words {
+    margin-bottom: 2px;
+  }
   .words:first-child {
-    margin-right: 1rem;
+    margin-right: 0.5rem;
   }
   .words:last-child {
-    margin-left: 1rem;
+    margin-left: 0.5rem;
   }
 }

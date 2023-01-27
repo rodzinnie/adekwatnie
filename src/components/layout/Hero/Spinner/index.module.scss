@@ -4,10 +4,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 8rem;
+  width: 7rem;
   height: 6.9rem;
   overflow: hidden;
-  background-color: cadetblue;
 }
 
 @mixin enlargeWord {
@@ -59,20 +58,20 @@ p.word {
   0% {
     @include enlargeWord;
   }
-  23% {
+  18% {
     transform: translateY(-110%);
     @include baseWord;
   }
   33% {
     transform: translateY(-100%);
   }
-  56% {
+  51% {
     transform: translateY(-210%);
   }
   66% {
     transform: translateY(-200%);
   }
-  89% {
+  84% {
     transform: translateY(-310%);
   }
   100% {
@@ -85,7 +84,7 @@ p.word {
   0% {
     @include baseWord;
   }
-  23% {
+  18% {
     transform: translateY(-110%);
     @include enlargeWord;
   }
@@ -93,14 +92,14 @@ p.word {
     transform: translateY(-100%);
     @include enlargeWord;
   }
-  56% {
+  51% {
     transform: translateY(-210%);
     @include baseWord;
   }
   66% {
     transform: translateY(-200%);
   }
-  89% {
+  84% {
     transform: translateY(-310%);
   }
   100% {
@@ -109,14 +108,14 @@ p.word {
 }
 
 @keyframes word4 {
-  23% {
+  18% {
     transform: translateY(-110%);
   }
   33% {
     transform: translateY(-100%);
     @include baseWord;
   }
-  56% {
+  51% {
     transform: translateY(-210%);
     @include enlargeWord;
   }
@@ -124,7 +123,7 @@ p.word {
     transform: translateY(-200%);
     @include enlargeWord;
   }
-  89% {
+  84% {
     transform: translateY(-310%);
     @include baseWord;
   }
@@ -134,21 +133,21 @@ p.word {
 }
 
 @keyframes word5 {
-  23% {
+  18% {
     @include baseWord;
     transform: translateY(-110%);
   }
   33% {
     transform: translateY(-100%);
   }
-  56% {
+  51% {
     transform: translateY(-210%);
   }
   66% {
     transform: translateY(-200%);
     @include baseWord;
   }
-  89% {
+  84% {
     transform: translateY(-310%);
     @include enlargeWord;
   }
@@ -159,19 +158,19 @@ p.word {
 }
 
 @keyframes spin_words {
-  23% {
+  18% {
     transform: translateY(-110%);
   }
   33% {
     transform: translateY(-100%);
   }
-  56% {
+  51% {
     transform: translateY(-210%);
   }
   66% {
     transform: translateY(-200%);
   }
-  89% {
+  84% {
     transform: translateY(-310%);
   }
   100% {
