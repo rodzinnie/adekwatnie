@@ -5,9 +5,12 @@ function Hero() {
   return (
     <div className={styles.root}>
       <div className={styles.phrase}>
-        <p>aby </p>
-        {/*<Spinner />*/}{' '}
-        <p className={styles.sentence}> przemowil ludzkim glosem</p>
+        <h4 className={styles.title}>audiodeskrypcje</h4>
+        <div className={styles.sentence}>
+          <p className={styles.words}>aby</p>
+          <Spinner />
+          <p className={styles.words}>przemówił ludzkim głosem</p>
+        </div>
       </div>
     </div>
   )

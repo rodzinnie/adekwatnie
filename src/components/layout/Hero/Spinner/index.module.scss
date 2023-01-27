@@ -1,17 +1,14 @@
 @import '../../../../settings.scss';
 .spinner {
   position: relative;
-  width: 100px;
+  width: 10rem;
   height: 3.3rem;
   margin-left: 15px;
-  // padding-left: 15px;
-  overflow: hidden;
-  // background-color: blueviolet;
+  // overflow: hidden;
 }
 
 .word {
   margin: 0;
-  line-height: 22px;
 }
 
 .word:nth-child(1),
