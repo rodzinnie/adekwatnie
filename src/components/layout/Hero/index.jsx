@@ -5,7 +5,7 @@ function Hero() {
   return (
     <div className={styles.root}>
       <div className={styles.phrase}>
-        {/* <h4 className={styles.title}>audiodeskrypcje</h4> */}
+        <h4 className={styles.title}>audiodeskrypcje</h4>
         <div className={styles.sentence}>
           <p className={styles.words}>aby</p>
           <Spinner />
