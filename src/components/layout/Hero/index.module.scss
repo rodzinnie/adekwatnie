@@ -2,7 +2,7 @@
 .root {
   width: 100%;
   height: calc(100vh - 100px);
-  background: url('src\\assets\\heroBackground.png') no-repeat center center
+  background: url('../../../assets/heroBackground.png') no-repeat center center
     scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
