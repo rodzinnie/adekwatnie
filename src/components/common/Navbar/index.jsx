@@ -56,8 +56,8 @@ function Navbar() {
     }
   }
 
-  const handleClick = (e) => {
-    setActive(e.target.dataset.name)
+  const handleClick = (name) => {
+    setActive(name)
   }
 
   return (
@@ -67,20 +67,32 @@ function Navbar() {
       ref={rootRef}
     >
       <Logo height={isScrolled ? '32' : null} />
-      <nav ref={inputRef} className={styles.nav} onClick={handleClick}>
-        <a className={styles.navlink} href='#offer'>
+      <nav ref={inputRef} className={styles.nav}>
+        <a
+          className={styles.navlink}
+          href='#offer'
+          onClick={() => handleClick('offer')}
+        >
           <Heading variant={active === 'offer' ? 'bckgRed' : null}>
-            <h5 data-name='offer'>oferta</h5>
+            <h5>oferta</h5>
           </Heading>
         </a>
-        <a className={styles.navlink} href='#about'>
+        <a
+          className={styles.navlink}
+          href='#about'
+          onClick={() => handleClick('about')}
+        >
           <Heading variant={active === 'about' ? 'bckgRed' : null}>
-            <h5 data-name='about'>o mnie</h5>
+            <h5>o mnie</h5>
           </Heading>
         </a>
-        <a className={styles.navlink} href='#contact'>
+        <a
+          className={styles.navlink}
+          href='#contact'
+          onClick={() => handleClick('contact')}
+        >
           <Heading variant={active === 'contact' ? 'bckgRed' : null}>
-            <h5 data-name='contact'>kontakt</h5>
+            <h5>kontakt</h5>
           </Heading>
         </a>
       </nav>
