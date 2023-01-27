@@ -1,14 +1,36 @@
 @import '../../../../settings.scss';
 .spinner {
   position: relative;
-  width: 10rem;
-  height: 3.3rem;
-  margin-left: 15px;
-  // overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 8rem;
+  height: 6.9rem;
+  overflow: hidden;
+  background-color: cadetblue;
 }
 
-.word {
+@mixin enlargeWord {
+  color: $bckgRed;
+  font-size: 2rem;
+  text-shadow: -1px -1px 0 $bckgRed, 1px -1px 0 $bckgRed, -1px 1px 0 $bckgRed,
+    1px 1px 0 $bckgRed;
+}
+
+@mixin baseWord {
+  color: $white-text;
+  font-size: 1.5rem;
+  text-shadow: none;
+}
+
+p.word {
   margin: 0;
+  font-size: 1.5rem;
+  line-height: 2.3rem;
+  transition: all 2s ease-in;
+  -webkit-transition: all 2s ease-in;
+  -moz-transition: all 2s ease-in;
+  -o-transition: all 2s ease-in;
 }
 
 .word:nth-child(1),
@@ -35,26 +57,51 @@
 
 @keyframes word2 {
   0% {
-    transform: scale(1.2) translateX(8px);
-    color: $bckgRed;
+    @include enlargeWord;
   }
-  5% {
-    color: $white-text;
-  }
-  13% {
-    transform: scale(1) translateY(-112%);
+  23% {
+    transform: translateY(-110%);
+    @include baseWord;
   }
   33% {
     transform: translateY(-100%);
   }
-  46% {
-    transform: translateY(-212%);
+  56% {
+    transform: translateY(-210%);
   }
   66% {
     transform: translateY(-200%);
   }
-  79% {
-    transform: translateY(-312%);
+  89% {
+    transform: translateY(-310%);
+  }
+  100% {
+    transform: translateY(-300%);
+    @include baseWord;
+  }
+}
+
+@keyframes word3 {
+  0% {
+    @include baseWord;
+  }
+  23% {
+    transform: translateY(-110%);
+    @include enlargeWord;
+  }
+  33% {
+    transform: translateY(-100%);
+    @include enlargeWord;
+  }
+  56% {
+    transform: translateY(-210%);
+    @include baseWord;
+  }
+  66% {
+    transform: translateY(-200%);
+  }
+  89% {
+    transform: translateY(-310%);
   }
   100% {
     transform: translateY(-300%);
@@ -62,28 +109,24 @@
 }
 
 @keyframes word4 {
-  13% {
-    transform: translateY(-112%);
+  23% {
+    transform: translateY(-110%);
   }
   33% {
-    transform: scale(1) translateY(-100%);
+    transform: translateY(-100%);
+    @include baseWord;
   }
-  40% {
-    color: $white-text;
-  }
-  46% {
-    transform: scale(1.2) translateY(-180%) translateX(8px);
-    color: $bckgRed;
+  56% {
+    transform: translateY(-210%);
+    @include enlargeWord;
   }
   66% {
-    transform: scale(1.2) translateY(-167%) translateX(8px);
-    color: $bckgRed;
+    transform: translateY(-200%);
+    @include enlargeWord;
   }
-  71% {
-    color: $white-text;
-  }
-  79% {
-    transform: translateY(-312%);
+  89% {
+    transform: translateY(-310%);
+    @include baseWord;
   }
   100% {
     transform: translateY(-300%);
@@ -91,81 +134,45 @@
 }
 
 @keyframes word5 {
-  5% {
-    color: $white-text;
-  }
-  13% {
-    transform: translateY(-112%);
+  23% {
+    @include baseWord;
+    transform: translateY(-110%);
   }
   33% {
     transform: translateY(-100%);
   }
-  46% {
-    transform: translateY(-212%);
+  56% {
+    transform: translateY(-210%);
   }
   66% {
     transform: translateY(-200%);
+    @include baseWord;
   }
-  73% {
-    color: $white-text;
-  }
-  79% {
-    transform: scale(1.2) translateY(-270%) translateX(8px);
-    color: $bckgRed;
-  }
-  100% {
-    transform: scale(1.2) translateY(-257%) translateX(8px);
-    color: $bckgRed;
-  }
-}
-
-@keyframes word3 {
-  0% {
-    transform: scale(1);
-  }
-  7% {
-    color: $white-text;
-  }
-  13% {
-    transform: scale(1.2) translateY(-93%) translateX(8px);
-    color: $bckgRed;
-  }
-  33% {
-    transform: scale(1.2) translateY(-80%) translateX(8px);
-    color: $bckgRed;
-  }
-  38% {
-    color: $white-text;
-  }
-  46% {
-    transform: translateY(-212%);
-  }
-  66% {
-    transform: translateY(-200%);
-  }
-  79% {
-    transform: translateY(-312%);
+  89% {
+    transform: translateY(-310%);
+    @include enlargeWord;
   }
   100% {
     transform: translateY(-300%);
+    @include enlargeWord;
   }
 }
 
 @keyframes spin_words {
-  13% {
-    transform: translateY(-112%);
+  23% {
+    transform: translateY(-110%);
   }
   33% {
     transform: translateY(-100%);
   }
-  46% {
-    transform: translateY(-212%);
+  56% {
+    transform: translateY(-210%);
   }
   66% {
     transform: translateY(-200%);
   }
-  79% {
-    transform: translateY(-312%);
+  89% {
+    transform: translateY(-310%);
   }
   100% {
     transform: translateY(-300%);
