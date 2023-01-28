@@ -1,0 +1,11 @@
+@import '../../../settings';
+
+.root {
+  background-color: $lightBackground;
+  display: flex;
+  justify-content: center;
+}
+
+.tilesContainer {
+  max-width: 1300px;
+}

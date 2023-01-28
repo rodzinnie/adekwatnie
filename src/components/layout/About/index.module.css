@@ -1,5 +1,5 @@
 /* FONTS */
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Teko:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Teko:wght@300;400;500;600;700&display=swap');
 /* FONT COLORS */
 /* BACKGROUND COLORS */
 /* HEIGHTS */
@@ -9,23 +9,25 @@
 *   for multiples use calc($var*[const])
 */
 .lightBackground {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
 }
 
-.paraLeft, .paraRight {
+.paraLeft,
+.paraRight {
   padding: 20px;
   position: relative;
   width: 60%;
   margin: 40px 0;
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
   line-height: 150%;
   font-size: 25px;
   z-index: 1;
 }
-.paraLeft::before, .paraRight::before {
+.paraLeft::before,
+.paraRight::before {
   z-index: -2;
   position: absolute;
-  content: "";
+  content: '';
   left: 0;
   top: 0;
   width: 100%;
@@ -37,23 +39,23 @@
   margin-right: 40%;
 }
 .paraLeft::before {
-  background-color: #457B9D;
+  background-color: #457b9d;
 }
 
 .paraRight {
   margin-left: 40%;
 }
 .paraRight::before {
-  background-color: #1D3557;
+  background-color: #1d3557;
 }
 
 .root {
-  background-color: #E63946;
+  background-color: #e63946;
   padding: 4.15% 0;
 }
 
 .aboutMe {
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
   padding: 8.3%;
   font-size: 25px;
   padding-top: 20%;
@@ -64,7 +66,7 @@
   width: 400px;
   height: 400px;
   border-radius: 200px;
-  outline: 20px solid #1D3557;
+  outline: 20px solid #1d3557;
   position: absolute;
   right: -100px;
   top: -100px;
@@ -75,7 +77,7 @@
 .myPic > * {
   width: 100%;
   height: 100%;
-  background-image: url("../../../assets/jago.jpg");
+  background-image: url('../../../assets/jago.jpg');
   background-position: center;
   background-size: cover;
-}/*# sourceMappingURL=index.module.css.map */
+} /*# sourceMappingURL=index.module.css.map */
