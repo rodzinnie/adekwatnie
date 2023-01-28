@@ -1,0 +1,14 @@
+@import '../../../settings';
+
+header {
+  width: 100%;
+  padding-left: 10%;
+}
+
+.bgRed {
+  background-color: $bgRed;
+}
+
+.lightBackground {
+  background-color: $lightBackground;
+}

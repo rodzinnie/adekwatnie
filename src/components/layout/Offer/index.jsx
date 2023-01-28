@@ -1,5 +1,6 @@
 import styles from './index.module.scss'
-import { Heading, TilesContainer } from '../../common'
+import { TilesContainer } from '../../common'
+import SegmentHeader from '../../common/SegmentHeader'
 
 const offerList = [
   {
@@ -43,11 +44,7 @@ const offerList = [
 function Offer() {
   return (
     <section id='offer' className={styles.root}>
-      <header className={styles.offer_header}>
-        <Heading variant={'bgLightBlue'}>
-          <h2>oferta</h2>
-        </Heading>
-      </header>
+      <SegmentHeader bgColor='bgRed' variant='bgLightBlue' title='oferta' />
       <div className={styles.content}>
         <TilesContainer list={offerList} />
       </div>

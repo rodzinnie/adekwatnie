@@ -1,6 +1,7 @@
 import { Carousel, Container, Heading, TilesContainer } from '../../common'
 import styles from './index.module.scss'
 import VoiceRecords from '../../common/VoiceRecords/index'
+import SegmentHeader from '../../common/SegmentHeader/index'
 const list = [
   {
     title: 'Próbka Głosu 1',
@@ -38,6 +39,7 @@ const testimonials = [
 function About() {
   return (
     <section id='about' className={styles.root}>
+      <SegmentHeader bgColor='lightBackground' variant='bgRed' title='o mnie' />
       <Container>
         <Heading variant='bgRed'>
           <h2>O mnie</h2>
