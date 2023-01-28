@@ -5,7 +5,7 @@ function Contact() {
   return (
     <section id='contact' className={styles.root}>
       <Heading variant={'bgRed'}>
-        <h2>Kontakt</h2>
+        <h2>kontakt</h2>
       </Heading>
     </section>
   )

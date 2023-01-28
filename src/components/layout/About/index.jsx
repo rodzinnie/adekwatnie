@@ -1,7 +1,8 @@
-import { Carousel, Container, Heading, TilesContainer } from '../../common'
+import { Carousel, Container, Heading } from '../../common'
 import styles from './index.module.scss'
-import VoiceRecords from '../../common/VoiceRecords/index'
 import SegmentHeader from '../../common/SegmentHeader/index'
+import Awards from '../../common/Awards'
+import VoiceRecords from '../../common/VoiceRecords/index'
 const list = [
   {
     title: 'Próbka Głosu 1',
@@ -40,20 +41,7 @@ function About() {
   return (
     <section id='about' className={styles.root}>
       <SegmentHeader bgColor='lightBackground' variant='bgRed' title='o mnie' />
-      <Container>
-        <Heading variant='bgRed'>
-          <h2>O mnie</h2>
-        </Heading>
-        <div className={styles.myPic}>
-          <p>img</p>
-        </div>
-        <p className={styles.aboutMe}>
-          Nazywam się Jagoda Grudzień i adekwatne teksty to moja pasja: tworzę
-          audiodeskrypcje do filmów fabularnych i dokumentalnych, przestrzeni
-          wystawienniczych, dzieł sztuki, spektakli operowych. Zajmuję się także
-          czytaniem audiodeskrypcji na żywo oraz nagrywaniem.
-        </p>
-      </Container>
+      <Awards />
       <VoiceRecords list={list} />
       <section>
         <Container>

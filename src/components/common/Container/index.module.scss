@@ -1,7 +1,7 @@
 @import '../../../settings';
 
-.root{
-  margin: calc($marg-1*0.5) $marg-1;
-  position: relative;
-  overflow: hidden;
+.root {
+  width: clamp(900px, 900px, 900px);
+  height: clamp(700px, 700px, 700px);
+  background-color: $lightBackground;
 }
