@@ -8,12 +8,12 @@ $navbar-color: #1e1e1e;
 $white-text: #ffffff;
 
 /* BACKGROUND COLORS */
-$navbar-bckg-color: #d9d9d9;
-$hero-bckg-color: #1d3557;
-$bckgRed: #e63946;
-$bckgLightBlue: #457b9d;
-$bckgDarkBlue: #1d3557;
-$bckgLightContainer: #f1faeee0;
+$navbar-bg-color: #d9d9d9;
+$hero-bg-color: #1d3557;
+$bgRed: #e63946;
+$bgLightBlue: #457b9d;
+$bgDarkBlue: #1d3557;
+$bgLightContainer: #f1faeee0;
 $lightBackground: #f1faee;
 /* HEIGHTS */
 $container-min-height: 80vh;
@@ -26,3 +26,12 @@ $container-min-height: 80vh;
 */
 
 $marg-1: 8.3%;
+
+/* ALWAYS USE max-width starting from xl down*/
+/* BREAKPOINTS */
+// $xxl: ''; // < 1400px
+$xl: '1399px'; // 1200px - 1399px
+$lg: '1199px'; // 992px - 1199px
+$md: '991px'; // 768px - 991px
+$sm: '767px'; // 576px - 767px
+$xs: '575px'; // 0px - 575px

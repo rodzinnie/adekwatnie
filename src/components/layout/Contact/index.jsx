@@ -4,7 +4,7 @@ import styles from './index.module.scss'
 function Contact() {
   return (
     <section id='contact' className={styles.root}>
-      <Heading variant={'bckgRed'}>
+      <Heading variant={'bgRed'}>
         <h2>Kontakt</h2>
       </Heading>
     </section>

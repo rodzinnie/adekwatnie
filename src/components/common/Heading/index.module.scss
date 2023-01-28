@@ -2,6 +2,7 @@
 
 .root {
   display: inline-block;
+  align-self: start;
   font-family: $main-font-heading;
   text-transform: lowercase;
   margin-left: $marg-1;
@@ -12,8 +13,8 @@
   z-index: 2;
 }
 
-.bckgRed,
-.bckgLightBlue {
+.bgRed,
+.bgLightBlue {
   font-weight: bold;
   *::before {
     position: absolute;
@@ -34,14 +35,14 @@
   }
 }
 
-.bckgRed {
+.bgRed {
   *::before {
-    background-color: $bckgRed;
+    background-color: $bgRed;
   }
 }
 
-.bckgLightBlue {
+.bgLightBlue {
   *::before {
-    background-color: $bckgLightBlue;
+    background-color: $bgLightBlue;
   }
 }

@@ -6,11 +6,14 @@ function TilesContainer({ list, heading }) {
     <div className={styles.root}>
       {heading}
       <div className={styles.tilesSection}>
-        {list.map((e, i) => {
+        {list.map((listItem, i) => {
           return (
-            <Tile key={i} variant={e.variant || ''} buttons={e.buttons} fill={e.fill}>
-              <p>{e.title}</p>
-            </Tile>
+            <Tile
+              key={i}
+              variant={listItem.variant || ''}
+              title={listItem.title}
+              buttons={listItem.buttons}
+            />
           )
         })}
       </div>

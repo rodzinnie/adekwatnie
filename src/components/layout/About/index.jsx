@@ -1,9 +1,24 @@
 import { Carousel, Container, Heading, TilesContainer } from '../../common'
 import styles from './index.module.scss'
 const list = [
-  { title: 'Próbka Głosu 1', buttons: ['play', 'stop'], variant: 'darkBlue' , fill: '#1d3557'},
-  { title: 'Próbka Głosu 2', buttons: ['play', 'stop'], variant: 'lightBlue' , fill: '#457b9d'},
-  { title: 'Próbka Głosu 3', buttons: ['play', 'stop'], variant: 'red'  , fill: '#e63946'},
+  {
+    title: 'Próbka Głosu 1',
+    buttons: ['play', 'stop'],
+    variant: 'darkBlue',
+    fill: '#1d3557',
+  },
+  {
+    title: 'Próbka Głosu 2',
+    buttons: ['play', 'stop'],
+    variant: 'lightBlue',
+    fill: '#457b9d',
+  },
+  {
+    title: 'Próbka Głosu 3',
+    buttons: ['play', 'stop'],
+    variant: 'red',
+    fill: '#e63946',
+  },
 ]
 const testimonials = [
   'Obejrzałam ten film, ale powiem, że bez szczególnych emocji. Nic mnie w tym filmie zbytnio nie poruszyło. Jedynym pozytywem dla mnie jest bardzo dobrze zrobiona i przeczytana audiodeskrypcja, bo bez niej chyba nie dotrwałabym do końca filmu (H.U., recenzja filmu Śniegu już nigdy nie będzie)',
@@ -15,7 +30,7 @@ function About() {
   return (
     <section id='about' className={styles.root}>
       <Container>
-        <Heading variant='bckgRed'>
+        <Heading variant='bgRed'>
           <h2>O mnie</h2>
         </Heading>
         <div className={styles.myPic}>
@@ -31,14 +46,14 @@ function About() {
       <TilesContainer
         list={list}
         heading={
-          <Heading variant='bckgLightBlue'>
+          <Heading variant='bgLightBlue'>
             <h3>tak brzmi mój głos</h3>
           </Heading>
         }
       />
       <section>
         <Container>
-          <Heading variant='bckgRed'>
+          <Heading variant='bgRed'>
             <h3>nagrody</h3>
           </Heading>
           <p className={styles.paraLeft}>
@@ -63,13 +78,13 @@ function About() {
         </Container>
       </section>
       <section className={styles.lightBackground}>
-        <Heading variant='bckgLightBlue'>
+        <Heading variant='bgLightBlue'>
           <h3>Pisanie i szkolenia</h3>
         </Heading>
       </section>
       <section>
         <Container>
-          <Heading variant='bckgLightBlue'>
+          <Heading variant='bgLightBlue'>
             <h3>recenzje moich audiodeskrypcji</h3>
           </Heading>
           <Carousel slides={testimonials} timer={5000} arrows={true} />

@@ -5,42 +5,52 @@ const offerList = [
   {
     title: 'Audiodeskrypcje Filmowe',
     text: 'Masz gotowy tekst AD, ale potrzebujesz go nagrać? Współpracuję z profesjonalnymi studiami w Krakowie i Warszawie. Nagrywam głównie audiodeskrypcje do filmów, ale nie tylko.',
-    variant: 'darkBlue' , fill: '#1d3557', buttons: ['play']
+    variant: 'darkBlue',
+    buttons: [{ name: 'play', fill: '#1d3557' }],
   },
   {
     title: 'Audiodeskrypcje Teatralne',
     text: '1Masz gotowy tekst AD, ale potrzebujesz go nagrać? Współpracuję z profesjonalnymi studiami w Krakowie i Warszawie. Nagrywam głównie audiodeskrypcje do filmów, ale nie tylko.',
-    variant: 'darkBlue' , fill: '#1d3557', buttons: ['play']
+    variant: 'lightBlue',
+    buttons: [{ name: 'play', fill: '#457B9D' }],
   },
   {
     title: 'Audiodeskrypcje Eventów',
     text: '2Masz gotowy tekst AD, ale potrzebujesz go nagrać? Współpracuję z profesjonalnymi studiami w Krakowie i Warszawie. Nagrywam głównie audiodeskrypcje do filmów, ale nie tylko.',
-    variant: 'darkBlue' , fill: '#1d3557', buttons: ['play']
+    variant: 'red',
+    buttons: [{ name: 'play', fill: '#E63946' }],
   },
   {
     title: 'Nagrywanie Ścieżek',
     text: '3Masz gotowy tekst AD, ale potrzebujesz go nagrać? Współpracuję z profesjonalnymi studiami w Krakowie i Warszawie. Nagrywam głównie audiodeskrypcje do filmów, ale nie tylko.',
-    variant: 'darkBlue' , fill: '#1d3557', buttons: ['play']
+    variant: 'lightBlue',
+    buttons: [{ name: 'play', fill: '#457B9D' }],
   },
   {
     title: 'Voiceover - lektorka na żywo',
     text: '4Masz gotowy tekst AD, ale potrzebujesz go nagrać? Współpracuję z profesjonalnymi studiami w Krakowie i Warszawie. Nagrywam głównie audiodeskrypcje do filmów, ale nie tylko.',
-    variant: 'darkBlue' , fill: '#1d3557', buttons: ['play']
+    variant: 'red',
+    buttons: [{ name: 'play', fill: '#E63946' }],
   },
   {
     title: 'Szkolenia',
     text: '5Masz gotowy tekst AD, ale potrzebujesz go nagrać? Współpracuję z profesjonalnymi studiami w Krakowie i Warszawie. Nagrywam głównie audiodeskrypcje do filmów, ale nie tylko.',
-    variant: 'darkBlue' , fill: '#1d3557', buttons: ['play']
+    variant: 'darkBlue',
+    buttons: [{ name: 'play', fill: '#1d3557' }],
   },
 ]
 
 function Offer() {
   return (
     <section id='offer' className={styles.root}>
-      <Heading variant={'bckgLightBlue'}>
-        <h2>oferta</h2>
-      </Heading>
-      <TilesContainer list={offerList} />
+      <header className={styles.offer_header}>
+        <Heading variant={'bgLightBlue'}>
+          <h2>oferta</h2>
+        </Heading>
+      </header>
+      <div className={styles.content}>
+        <TilesContainer list={offerList} />
+      </div>
     </section>
   )
 }

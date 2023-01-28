@@ -1,12 +1,14 @@
 import styles from './index.module.scss'
 import SVGStop from '../../icons/SVGStop'
 import SVGPlay from '../../icons/SVGPlay'
-function Button({play=false, stop=false, fill='black', children}) {
+
+function Button({ name, fill = 'black', text }) {
+  const Icon = name === 'play' ? SVGPlay : SVGStop
+
   return (
     <button className={styles.root}>
-      {play && <SVGPlay width='100' height='100' fill={fill} />}
-      {stop && <SVGStop width='100' height='100' fill={fill}/>}
-      <div>{children}</div>
+      <Icon width='68' height='52' fill={fill} />
+      <div>{text}</div>
     </button>
   )
 }
