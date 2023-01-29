@@ -2,16 +2,14 @@
 
 .root {
   background-color: $bgRed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: calc(100vh - 65px);
+  // height: calc(100vh - 65px);
 }
 
 .container {
   overflow: hidden;
+  margin: auto;
 }
-
+.blurbSpan{ position: relative; z-index: 10;}
 .myPic {
   position: relative;
   overflow: hidden;
@@ -22,7 +20,6 @@
   display: flex;
   right: -63%;
   top: -8%;
-  float: left;
 
   & > * {
     width: 100%;
@@ -34,9 +31,10 @@
 }
 
 .aboutMe {
+  // outline: 2px solid yellow;
+  width: 50%;
+  margin-left: 10%;
   font-family: $main-font-text;
-  float: none;
-  width: fit-content;
 
   h6 {
     padding-top: 3rem;

@@ -11,9 +11,9 @@
   position: relative;
   z-index: 2;
 }
-
+.bgRedRmMargin {margin: 0;}
 .bgRed,
-.bgLightBlue {
+.bgLightBlue , .bgRedRmMargin  {
   font-weight: bold;
   *::before {
     position: absolute;
@@ -34,7 +34,7 @@
   }
 }
 
-.bgRed {
+.bgRed, .bgRedRmMargin {
   *::before {
     background-color: $bgRed;
   }

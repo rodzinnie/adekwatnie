@@ -2,7 +2,7 @@ import Container from '../Container/index'
 import Heading from '../Heading/index'
 import styles from './index.module.scss'
 
-const Awards = () => {
+const Short = () => {
   return (
     <section className={styles.root}>
       <Container className={styles.container}>
@@ -10,14 +10,13 @@ const Awards = () => {
           <p>img</p>
         </div>
         <div className={styles.aboutMe}>
-          <Heading variant='bgRed'>
+          <h6 className={styles.blurb}>
+          <Heading variant='bgRedRmMargin'>
             <h2>N</h2>
-          </Heading>
-          <h6>
-            azywam się Jagoda Grudzień i adekwatne teksty to moja pasja: tworzę
+          </Heading><span className={styles.blurbSpan}>azywam się Jagoda Grudzień i adekwatne teksty to moja pasja: tworzę
             audiodeskrypcje do filmów fabularnych i dokumentalnych, przestrzeni
             wystawienniczych, dzieł sztuki, spektakli operowych. Zajmuję się
-            także czytaniem audiodeskrypcji na żywo oraz nagrywaniem.
+            także czytaniem audiodeskrypcji na żywo oraz nagrywaniem.</span>
           </h6>
         </div>
       </Container>
@@ -25,4 +24,4 @@ const Awards = () => {
   )
 }
 
-export default Awards
+export default Short

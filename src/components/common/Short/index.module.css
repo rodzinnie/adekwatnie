@@ -12,14 +12,16 @@
 /* BREAKPOINTS */
 .root {
   background-color: #e63946;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: calc(100vh - 65px);
 }
 
 .container {
   overflow: hidden;
+  margin: auto;
+}
+
+.blurbSpan {
+  position: relative;
+  z-index: 10;
 }
 
 .myPic {
@@ -32,7 +34,6 @@
   display: flex;
   right: -63%;
   top: -8%;
-  float: left;
 }
 .myPic > * {
   width: 100%;
@@ -43,11 +44,9 @@
 }
 
 .aboutMe {
+  width: 50%;
+  margin-left: 10%;
   font-family: "Oswald", sans-serif;
-  float: none;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
 }
 .aboutMe h6 {
   padding-top: 3rem;

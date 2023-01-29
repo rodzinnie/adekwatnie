@@ -24,12 +24,16 @@
   z-index: 2;
 }
 
+.bgRedRmMargin {
+  margin: 0;
+}
+
 .bgRed,
-.bgLightBlue {
+.bgLightBlue, .bgRedRmMargin {
   font-weight: bold;
 }
 .bgRed *::before,
-.bgLightBlue *::before {
+.bgLightBlue *::before, .bgRedRmMargin *::before {
   position: absolute;
   content: " ";
   width: 100%;
@@ -37,19 +41,19 @@
   z-index: -1;
 }
 .bgRed h2::before,
-.bgLightBlue h2::before {
+.bgLightBlue h2::before, .bgRedRmMargin h2::before {
   height: 3rem;
 }
 .bgRed h3::before,
-.bgLightBlue h3::before {
+.bgLightBlue h3::before, .bgRedRmMargin h3::before {
   height: 2rem;
 }
 .bgRed h5::before,
-.bgLightBlue h5::before {
+.bgLightBlue h5::before, .bgRedRmMargin h5::before {
   height: 1.2rem;
 }
 
-.bgRed *::before {
+.bgRed *::before, .bgRedRmMargin *::before {
   background-color: #e63946;
 }
 
