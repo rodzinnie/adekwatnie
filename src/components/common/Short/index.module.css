@@ -44,12 +44,12 @@
 }
 
 .aboutMe {
+  outline: 2px solid yellow;
   width: 50%;
   margin-left: 10%;
   font-family: "Oswald", sans-serif;
 }
 .aboutMe h6 {
-  padding-top: 3rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;

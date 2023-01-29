@@ -13,7 +13,7 @@ const Short = () => {
           <h6 className={styles.blurb}>
           <Heading variant='bgRedRmMargin'>
             <h2>N</h2>
-          </Heading><span className={styles.blurbSpan}>azywam się Jagoda Grudzień i adekwatne teksty to moja pasja: tworzę
+          </Heading><span className={styles.blurbSpan}>azywam się Jagoda Grudzień i <span className='ad'>ad</span>ekwatne teksty to moja pasja: tworzę
             audiodeskrypcje do filmów fabularnych i dokumentalnych, przestrzeni
             wystawienniczych, dzieł sztuki, spektakli operowych. Zajmuję się
             także czytaniem audiodeskrypcji na żywo oraz nagrywaniem.</span>

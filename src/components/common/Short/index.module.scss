@@ -9,7 +9,12 @@
   overflow: hidden;
   margin: auto;
 }
-.blurbSpan{ position: relative; z-index: 10;}
+
+.blurbSpan{ 
+  position: relative; 
+  z-index: 10;
+}
+
 .myPic {
   position: relative;
   overflow: hidden;
@@ -31,19 +36,15 @@
 }
 
 .aboutMe {
-  // outline: 2px solid yellow;
+  outline: 2px solid yellow;
   width: 50%;
   margin-left: 10%;
   font-family: $main-font-text;
 
   h6 {
-    padding-top: 3rem;
     width: fit-content;
   }
 
-  //   & div {
-  //     float: left;
-  //   }
 
   & div,
   & div h2 {
