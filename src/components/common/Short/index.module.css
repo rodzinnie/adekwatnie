@@ -12,6 +12,7 @@
 /* BREAKPOINTS */
 .root {
   background-color: #e63946;
+  margin: 50px 0;
 }
 
 .container {
@@ -44,7 +45,6 @@
 }
 
 .aboutMe {
-  outline: 2px solid yellow;
   width: 50%;
   margin-left: 10%;
   font-family: "Oswald", sans-serif;
