@@ -11,7 +11,14 @@
 /* ALWAYS USE max-width starting from xl down*/
 /* BREAKPOINTS */
 .root {
-  width: 900px;
-  height: 700px;
   background-color: #f1faee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.content {
+  max-width: 1300px;
 }/*# sourceMappingURL=index.module.css.map */

@@ -8,25 +8,53 @@
 /** 12 division grid, 
 *   for multiples use calc($var*[const])
 */
+/* ALWAYS USE max-width starting from xl down*/
+/* BREAKPOINTS */
 .root {
   width: 100%;
-  height: 85vh;
-  background-color: #1D3557;
+  height: calc(100vh - 100px);
+  min-height: 700px;
+  background: url("../../../assets/heroBackground.png") no-repeat center center scroll;
+  background-size: cover;
+  position: relative;
 }
 
 .phrase {
+  position: absolute;
+  bottom: 150px;
+  left: 40%;
+  color: #ffffff;
+}
+
+.title {
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 2rem;
+  letter-spacing: 0.4rem;
+  text-shadow: 6px 2px 0px black, 7px 2px 0px #ffffff;
+}
+
+.sentence {
   display: flex;
   height: auto;
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
-  color: rgba(255, 255, 255, 0.829);
+  padding-left: 10%;
   align-items: center;
 }
-.phrase * {
+.sentence * {
   font-family: "Teko", sans-serif;
-}
-
-.sentence {
+  font-weight: normal;
+  font-size: 2rem;
   white-space: nowrap;
+  letter-spacing: 0.2rem;
+}
+.sentence .words {
+  margin-bottom: 2px;
+}
+.sentence .words:first-child {
+  margin-right: 0.5rem;
+}
+.sentence .words:last-child {
+  margin-left: 0.5rem;
 }/*# sourceMappingURL=index.module.css.map */

@@ -10,8 +10,15 @@
 */
 /* ALWAYS USE max-width starting from xl down*/
 /* BREAKPOINTS */
-.root {
-  width: 900px;
-  height: 700px;
+header {
+  width: 100%;
+  padding-left: 10%;
+}
+
+.bgRed {
+  background-color: #e63946;
+}
+
+.lightBackground {
   background-color: #f1faee;
 }/*# sourceMappingURL=index.module.css.map */

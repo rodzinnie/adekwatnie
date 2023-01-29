@@ -1,5 +1,5 @@
 /* FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Teko:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Teko:wght@300;400;500;600;700&display=swap");
 /* FONT COLORS */
 /* BACKGROUND COLORS */
 /* HEIGHTS */
@@ -8,96 +8,99 @@
 /** 12 division grid, 
 *   for multiples use calc($var*[const])
 */
+/* ALWAYS USE max-width starting from xl down*/
+/* BREAKPOINTS */
 .root {
   background-color: #d9d9d9;
-  padding: 0;
+  padding: 0 10%;
   margin: 0;
-  position: relative;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: nowrap;
   opacity: 1;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  height: 100px;
+  z-index: 5;
+  transition: all 0.2s linear;
+}
+@media (min-height: 32em) {
+  .root {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+}
+
+@media (min-height: 32em) {
+  [id] {
+    scroll-margin-top: 63px;
+  }
+}
+
+.scrolled {
+  height: 65px;
+}
+.scrolled div {
+  height: 32px;
+}
+.scrolled .navlink {
+  font-size: 30px;
+  line-height: 42px;
+}
+.scrolled .navlink * {
+  margin: 0;
+  padding: 0;
 }
 
 .nav {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  background-color: rgb(0, 0, 0);
-  color: rgba(255, 255, 255, 0.829);
+  position: relative;
   z-index: 1;
-  text-align: center;
-  right: -100%;
-  transition: right 1s;
-}
-
-.span {
-  color: rgba(255, 255, 255, 0.829);
-  width: auto;
-  display: block;
-  font-family: 'Teko', sans-serif;
-  line-height: 42px;
-  font-size: 30px;
-  font-weight: 900;
+  right: 0;
   white-space: pre;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  box-sizing: border-box;
 }
 
 .navlink {
-  font-family: 'Teko', sans-serif;
-  color: rgba(255, 255, 255, 0.829);
-  padding-top: 20px;
-  padding-right: 100px;
-  width: 100%;
+  font-family: "Teko", sans-serif;
+  font-size: 40px;
+  line-height: 56px;
+  color: #1e1e1e;
+  margin-left: 100px;
+  text-decoration: none;
+}
+.navlink * {
+  margin: 0;
 }
 
 .navlink:visited {
-  color: rgba(255, 255, 255, 0.829);
-}
-
-.logo {
-  height: 80px;
+  color: #1e1e1e;
 }
 
 .hamburger {
-  position: absolute;
-  z-index: 10;
-  right: 10px;
+  display: none;
 }
 
-@media (max-width: 500px) {
-  .span {
-    font-size: 23px;
-  }
-  .hamburger {
-    right: 10px;
-  }
-}
-@media (min-width: 1200px) {
-  .span {
-    font-size: 25px;
-  }
+@media (max-width: 1200px) {
   .root {
-    justify-content: space-around;
-    align-items: center;
     overflow-y: visible;
   }
   .nav {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    text-align: center;
-    position: relative;
-    background-color: #d9d9d9;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    color: #1e1e1e;
     z-index: 1;
     text-align: center;
-    right: 0;
-    white-space: pre;
+    right: -100%;
+    transition: right 1s;
   }
   .navlink {
     font-size: 20px;
-    color: rgba(255, 255, 255, 0.829);
+    color: #1e1e1e;
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
@@ -106,14 +109,20 @@
     text-align: center;
   }
   .navlink:visited {
-    color: rgba(255, 255, 255, 0.829);
+    color: #1e1e1e;
   }
   .hamburger {
-    display: none;
+    display: block;
+    position: absolute;
+    z-index: 10;
+    right: 3%;
   }
 }
-@media (min-width: 1400px) {
-  .navlink {
-    font-size: 25px;
+@media (max-width: 500px) {
+  .span {
+    font-size: 23px;
   }
-} /*# sourceMappingURL=index.module.css.map */
+  .hamburger {
+    right: 10px;
+  }
+}/*# sourceMappingURL=index.module.css.map */

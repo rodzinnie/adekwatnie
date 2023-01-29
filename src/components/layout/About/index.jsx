@@ -69,11 +69,11 @@ function About() {
           </p>
         </Container>
       </section>
-      <section className={styles.lightBackground}>
+      {/* <section className={styles.lightBackground}>
         <Heading variant='bgLightBlue'>
           <h3>Pisanie i szkolenia</h3>
         </Heading>
-      </section>
+      </section> */}
       <section>
         <Container>
           <Heading variant='bgLightBlue'>
