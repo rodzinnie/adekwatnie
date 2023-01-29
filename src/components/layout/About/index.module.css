@@ -10,10 +10,6 @@
 */
 /* ALWAYS USE max-width starting from xl down*/
 /* BREAKPOINTS */
-.lightBackground {
-  background-color: #f1faee;
-}
-
 .paraLeft,
 .paraRight {
   padding: 20px;
