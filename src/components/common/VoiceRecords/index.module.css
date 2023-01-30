@@ -1,0 +1,22 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Teko:wght@300;400;500;600;700&display=swap");
+/* FONT COLORS */
+/* BACKGROUND COLORS */
+/* HEIGHTS */
+/* WIDTHS */
+/* MARGINS */
+/** 12 division grid, 
+*   for multiples use calc($var*[const])
+*/
+/* ALWAYS USE max-width starting from xl down*/
+/* BREAKPOINTS */
+.root {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 7%;
+}
+
+.tilesContainer {
+  max-width: 1300px;
+}/*# sourceMappingURL=index.module.css.map */

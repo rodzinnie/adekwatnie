@@ -8,21 +8,25 @@
 /** 12 division grid, 
 *   for multiples use calc($var*[const])
 */
+/* ALWAYS USE max-width starting from xl down*/
+/* BREAKPOINTS */
 .root {
-  background-color: #f1faee;
+  width: 100%;
 }
 
 .tilesSection {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
+  gap: 3rem;
+  margin: 3rem 0;
 }
 
 @media (min-width: 1100px) {
   .tilesSection {
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
   }
 }/*# sourceMappingURL=index.module.css.map */

@@ -8,8 +8,10 @@
 /** 12 division grid, 
 *   for multiples use calc($var*[const])
 */
+/* ALWAYS USE max-width starting from xl down*/
+/* BREAKPOINTS */
 .root {
-  margin: 4.15% 8.3%;
-  position: relative;
-  overflow: hidden;
+  width: 800px;
+  height: 500px;
+  background-color: rgba(199, 226, 231, 0.9019607843);
 }/*# sourceMappingURL=index.module.css.map */

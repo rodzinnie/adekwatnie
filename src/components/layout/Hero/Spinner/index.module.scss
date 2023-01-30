@@ -10,10 +10,10 @@
 }
 
 @mixin enlargeWord {
-  color: $bckgRed;
+  color: $bgRed;
   font-size: 2rem;
-  text-shadow: -1px -1px 0 $bckgRed, 1px -1px 0 $bckgRed, -1px 1px 0 $bckgRed,
-    1px 1px 0 $bckgRed;
+  text-shadow: -1px -1px 0 $bgRed, 1px -1px 0 $bgRed, -1px 1px 0 $bgRed,
+    1px 1px 0 $bgRed;
 }
 
 @mixin baseWord {

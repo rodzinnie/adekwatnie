@@ -8,6 +8,8 @@
 /** 12 division grid, 
 *   for multiples use calc($var*[const])
 */
+/* ALWAYS USE max-width starting from xl down*/
+/* BREAKPOINTS */
 .root {
   position: relative;
   height: 100%;
@@ -18,18 +20,22 @@
   font-size: 25px;
 }
 
-.arrowLeft, .arrowRight {
+.arrowLeft,
+.arrowRight {
   cursor: pointer;
-  color: rgb(255, 255, 255);
+  color: #1e1e1e;
   position: absolute;
   top: 50%;
   font-size: 40px;
   transform: translateY(-50%);
-  -webkit-tap-highlight-color: #ccc;
+  -webkit-tap-highlight-color: #1e1e1e;
 }
 
-.arrowLeft:hover, .arrowRight:hover, .arrowLeft:active, .arrowRight:active {
-  -webkit-tap-highlight-color: #ccc;
+.arrowLeft:hover,
+.arrowRight:hover,
+.arrowLeft:active,
+.arrowRight:active {
+  -webkit-tap-highlight-color: #1e1e1e;
 }
 
 .arrowRight {
@@ -44,5 +50,6 @@
   .root {
     width: 50%;
     margin: auto;
+    padding: 0 3%;
   }
 }/*# sourceMappingURL=index.module.css.map */

@@ -1,44 +1,16 @@
-import { Carousel, Container, Heading, TilesContainer } from '../../common'
+import { Carousel, Container, Heading, SegmentHeader, Short, VoiceRecords  } from '../../common'
 import styles from './index.module.scss'
-const list = [
-  { title: 'Próbka Głosu 1', buttons: ['play', 'stop'], variant: 'darkBlue' , fill: '#1d3557'},
-  { title: 'Próbka Głosu 2', buttons: ['play', 'stop'], variant: 'lightBlue' , fill: '#457b9d'},
-  { title: 'Próbka Głosu 3', buttons: ['play', 'stop'], variant: 'red'  , fill: '#e63946'},
-]
-const testimonials = [
-  'Obejrzałam ten film, ale powiem, że bez szczególnych emocji. Nic mnie w tym filmie zbytnio nie poruszyło. Jedynym pozytywem dla mnie jest bardzo dobrze zrobiona i przeczytana audiodeskrypcja, bo bez niej chyba nie dotrwałabym do końca filmu (H.U., recenzja filmu Śniegu już nigdy nie będzie)',
-  'Audiodeskrypcja sporządzona i przeczytana na najwyższym poziomie. Brawo (U.N., recenzja filmu Śniegu już nigdy nie będzie)',
-  'W jak widoki – są piękne, co znakomicie oddała bardzo dobra audiodeskrypcja (E.G., recenzja filmu Psie pazury)',
-  'Jeśli mowa o postaciach, to Phil od początku filmu wydawał mi się zły – czy tego chciała autorka, żebyśmy patrzyli ze złością na tego kowboja i myśleli „on coś kombinuje coś złego?. Dużo dawała też barwna, a jednocześnie informująca o przebiegu akcji audiodeskrypcja…” (J.M., recenzja filmu Psie pazury)',
-]
+import { list , testimonials} from './data'
+
 function About() {
   return (
     <section id='about' className={styles.root}>
-      <Container>
-        <Heading variant='bckgRed'>
-          <h2>O mnie</h2>
-        </Heading>
-        <div className={styles.myPic}>
-          <p>img</p>
-        </div>
-        <p className={styles.aboutMe}>
-          Nazywam się Jagoda Grudzień i adekwatne teksty to moja pasja: tworzę
-          audiodeskrypcje do filmów fabularnych i dokumentalnych, przestrzeni
-          wystawienniczych, dzieł sztuki, spektakli operowych. Zajmuję się także
-          czytaniem audiodeskrypcji na żywo oraz nagrywaniem.
-        </p>
-      </Container>
-      <TilesContainer
-        list={list}
-        heading={
-          <Heading variant='bckgLightBlue'>
-            <h3>tak brzmi mój głos</h3>
-          </Heading>
-        }
-      />
+      <SegmentHeader bgColor='lightBackground' variant='bgRed' title='o mnie' />
+      <Short />
+      <VoiceRecords list={list} />
       <section>
         <Container>
-          <Heading variant='bckgRed'>
+          <Heading variant='bgRed'>
             <h3>nagrody</h3>
           </Heading>
           <p className={styles.paraLeft}>
@@ -62,14 +34,14 @@ function About() {
           </p>
         </Container>
       </section>
-      <section className={styles.lightBackground}>
-        <Heading variant='bckgLightBlue'>
+      {/* <section className={styles.lightBackground}>
+        <Heading variant='bgLightBlue'>
           <h3>Pisanie i szkolenia</h3>
         </Heading>
-      </section>
+      </section> */}
       <section>
         <Container>
-          <Heading variant='bckgLightBlue'>
+          <Heading variant='bgLightBlue'>
             <h3>recenzje moich audiodeskrypcji</h3>
           </Heading>
           <Carousel slides={testimonials} timer={5000} arrows={true} />

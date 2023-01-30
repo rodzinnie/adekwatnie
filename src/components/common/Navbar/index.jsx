@@ -73,7 +73,7 @@ function Navbar() {
           href='#offer'
           onClick={() => handleClick('offer')}
         >
-          <Heading variant={active === 'offer' ? 'bckgRed' : null}>
+          <Heading variant={active === 'offer' ? 'bgRed' : null}>
             <h5>oferta</h5>
           </Heading>
         </a>
@@ -82,7 +82,7 @@ function Navbar() {
           href='#about'
           onClick={() => handleClick('about')}
         >
-          <Heading variant={active === 'about' ? 'bckgRed' : null}>
+          <Heading variant={active === 'about' ? 'bgRed' : null}>
             <h5>o mnie</h5>
           </Heading>
         </a>
@@ -91,7 +91,7 @@ function Navbar() {
           href='#contact'
           onClick={() => handleClick('contact')}
         >
-          <Heading variant={active === 'contact' ? 'bckgRed' : null}>
+          <Heading variant={active === 'contact' ? 'bgRed' : null}>
             <h5>kontakt</h5>
           </Heading>
         </a>

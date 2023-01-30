@@ -1,0 +1,61 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Teko:wght@300;400;500;600;700&display=swap");
+/* FONT COLORS */
+/* BACKGROUND COLORS */
+/* HEIGHTS */
+/* WIDTHS */
+/* MARGINS */
+/** 12 division grid, 
+*   for multiples use calc($var*[const])
+*/
+/* ALWAYS USE max-width starting from xl down*/
+/* BREAKPOINTS */
+.root {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.bgRed {
+  width: 100%;
+  height: 100%;
+  background-color: #e63946;
+}
+
+.content {
+  max-width: 1300px;
+}
+
+.aboutMe {
+  width: 50%;
+  margin-left: 8.3%;
+  font-family: "Oswald", sans-serif;
+}
+.aboutMe h6 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.aboutMe div, .aboutMe div h2 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  line-height: 3rem;
+}
+
+.spread {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 50px;
+}
+
+.buttons {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}/*# sourceMappingURL=index.module.css.map */

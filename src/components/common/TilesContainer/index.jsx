@@ -1,16 +1,20 @@
+import clsx from 'clsx'
 import styles from './index.module.scss'
 import { Tile } from '../'
 
-function TilesContainer({ list, heading }) {
+function TilesContainer({ list, heading, className }) {
   return (
-    <div className={styles.root}>
+    <div className={clsx(styles.root, className)}>
       {heading}
       <div className={styles.tilesSection}>
-        {list.map((e, i) => {
+        {list.map((listItem, i) => {
           return (
-            <Tile key={i} variant={e.variant || ''} buttons={e.buttons} fill={e.fill}>
-              <p>{e.title}</p>
-            </Tile>
+            <Tile
+              key={i}
+              variant={listItem.variant || ''}
+              title={listItem.title}
+              buttons={listItem.buttons}
+            />
           )
         })}
       </div>

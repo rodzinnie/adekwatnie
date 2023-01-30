@@ -2,16 +2,20 @@
 .root {
   width: 100%;
   height: calc(100vh - 100px);
+  min-height: 700px;
   background: url('../../../assets/heroBackground.png') no-repeat center center
     scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  position: relative;
 }
 
 .phrase {
-  padding: 55vh 0 0 45vw;
+  position: absolute;
+  bottom: 150px;
+  left:40%;
   color: $white-text;
 }
 
@@ -23,10 +27,11 @@
 }
 
 .sentence {
+  // outline: 2px solid yellow;
   display: flex;
   height: auto;
   width: min-content;
-  padding-left: 5%;
+  padding-left: 10%;
   align-items: center;
 
   * {

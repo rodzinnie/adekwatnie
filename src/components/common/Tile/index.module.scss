@@ -1,62 +1,46 @@
 @import '../../../settings';
 
-.red, .lightBlue, .darkBlue {
-  flex-basis: 28%;
-  margin: $marg-1 0;
-  width: 300px;
-  height: 300px;
-  border: 40px solid blue;
+.root {
+  position: relative;
+  width: 350px;
+  height: 350px;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 40px solid blue;
   font-family: $main-font-heading;
   text-transform: uppercase;
   font-size: 1.5rem;
   font-weight: bold;
-  & >* {
-    padding: 30px;
-  }
+  padding: 30px;
 }
 
 .red {
-  border-color: $bckgRed;
+  border-color: $bgRed;
 }
 
-.lightBlue{
-  border-color: $bckgLightBlue;
+.lightBlue {
+  border-color: $bgLightBlue;
 }
 
-.darkBlue{
-  border-color: $bckgDarkBlue;
+.darkBlue {
+  border-color: $bgDarkBlue;
 }
 
-.container{
-  background-color: $bckgLightContainer;
-  min-height: $container-min-height;
+.title {
+}
+
+.description {
+  font-size: 22px;
+}
+
+.buttons {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+  gap: 20%;
+  width: fit-content;
 }
 
-.buttons{
-  // outline: 1px solid red;
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  & >* {
-    margin: 10px;
-    // outline: 1px solid blue;
-  }
+@media (max-width: $xl) {
 }
-
-
-// @media (min-width: 700px) {
-//   .root{
-//     flex-basis: 40%;
-//   }
-// }
-// @media (max-width: 800px) {
-//   .red, .lightBlue, .darkBlue {
-//     flex-basis: 50%;
-//     outline: 4px solid green;
-//   }
-// }
