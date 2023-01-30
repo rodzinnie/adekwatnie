@@ -1,10 +1,11 @@
+import clsx from 'clsx'
 import styles from './index.module.scss'
-import {Container} from '../'
+import { Container } from '../'
 
-function ContrastSection({children}) {
+function ContrastSection({ children, className }) {
   return (
     <section className={styles.root}>
-      <Container className={styles.container}>
+      <Container className={clsx(styles.container, className)}>
         {children}
       </Container>
     </section>
