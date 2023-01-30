@@ -12,8 +12,7 @@
 /* BREAKPOINTS */
 .root {
   width: 100%;
-  height: calc(100vh - 100px);
-  min-height: 700px;
+  height: 400px;
   background: url("../../../assets/heroBackground.png") no-repeat center center scroll;
   background-size: cover;
   position: relative;

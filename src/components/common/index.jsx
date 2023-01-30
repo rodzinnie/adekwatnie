@@ -1,6 +1,7 @@
 export { default as Button } from './Button'
 export { default as Carousel } from './Carousel'
 export { default as Container } from './Container'
+export { default as ContrastSection } from './ContrastSection'
 export { default as Heading } from './Heading'
 export { default as Navbar } from './Navbar'
 export { default as SegmentHeader } from './SegmentHeader'

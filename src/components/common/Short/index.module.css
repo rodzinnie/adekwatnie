@@ -10,16 +10,6 @@
 */
 /* ALWAYS USE max-width starting from xl down*/
 /* BREAKPOINTS */
-.root {
-  background-color: #e63946;
-  margin: 50px 0;
-}
-
-.container {
-  overflow: hidden;
-  margin: auto;
-}
-
 .blurbSpan {
   position: relative;
   z-index: 10;
