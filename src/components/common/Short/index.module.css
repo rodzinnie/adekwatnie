@@ -23,8 +23,8 @@
   border-radius: 200px;
   outline: 20px solid #1d3557;
   display: flex;
-  right: -63%;
-  top: -8%;
+  right: -58%;
+  top: -18%;
 }
 .myPic > * {
   width: 100%;
@@ -35,8 +35,10 @@
 }
 
 .aboutMe {
+  position: absolute;
   width: 50%;
   margin-left: 10%;
+  bottom: 50px;
   font-family: "Oswald", sans-serif;
 }
 .aboutMe h6 {

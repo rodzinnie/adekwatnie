@@ -14,8 +14,8 @@
   border-radius: 200px;
   outline: 20px solid $bgDarkBlue;
   display: flex;
-  right: -63%;
-  top: -8%;
+  right: -58%;
+  top: -18%;
 
   & > * {
     width: 100%;
@@ -27,8 +27,10 @@
 }
 
 .aboutMe {
+  position: absolute;
   width: 50%;
   margin-left: 10%;
+  bottom: 50px;
   font-family: $main-font-text;
 
   h6 {

@@ -11,7 +11,7 @@
 /* ALWAYS USE max-width starting from xl down*/
 /* BREAKPOINTS */
 .root {
-  width: 900px;
-  height: 700px;
+  width: 800px;
+  height: 500px;
   background-color: rgba(199, 226, 231, 0.9019607843);
 }/*# sourceMappingURL=index.module.css.map */

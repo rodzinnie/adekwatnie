@@ -3,7 +3,7 @@ import styles from './index.module.scss'
 
 const Short = () => {
   return (
-    <ContrastSection>
+    <ContrastSection style={{position: 'relative'}}>
       <div className={styles.myPic}>
         <p>img</p>
       </div>
