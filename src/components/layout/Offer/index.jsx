@@ -1,9 +1,8 @@
 import { useState } from 'react'
 
 import styles from './index.module.scss'
-import { Button, ContrastSection, Heading, SegmentHeader, TilesContainer } from '../../common'
+import { Button, ContrastSection, Divider, Heading, SegmentHeader, TilesContainer } from '../../common'
 import {offerList} from './data'
-import SVGDivider from '../../icons/SVGdivider';
 function Offer() {
   const [slideHeading, setSlideHeading] = useState(offerList[0])
   return (
@@ -34,10 +33,9 @@ function Offer() {
           </div>
         </ContrastSection>
       </div>
-      <div className={styles.sectionSummary}>
+      <Divider>
         <p>Ceny poszczególnych usług uzależnione są od ich specyfiki i ustalane indywidualnie.</p>
-        <SVGDivider />
-      </div>
+      </Divider>
     </section>
   )
 }

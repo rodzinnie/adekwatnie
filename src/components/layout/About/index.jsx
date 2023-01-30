@@ -1,4 +1,4 @@
-import { Awards, Carousel, Container, Heading, SegmentHeader, Short, VoiceRecords  } from '../../common'
+import { Awards, Carousel, Divider, Heading, SegmentHeader, Short, VoiceRecords  } from '../../common'
 import styles from './index.module.scss'
 import { list , testimonials} from './data'
 
@@ -22,6 +22,7 @@ function About() {
           <Carousel slides={testimonials} timer={5000} />
         </div>
       </section>
+      <Divider></Divider>
     </section>
   )
 }

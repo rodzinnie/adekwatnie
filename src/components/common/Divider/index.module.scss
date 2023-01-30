@@ -1,0 +1,19 @@
+@import '../../../settings';
+
+.sectionSummary{
+  font-family: $main-font-text;
+  background-color: white;
+  font-size: 30px;
+  font-weight: 100;
+  text-align: center;  
+  &>* {
+    margin: auto;
+    width: 600px;
+    padding: 40px 50px;
+  }
+  p{
+
+    text-align: center;
+  }
+}
+
