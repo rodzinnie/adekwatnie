@@ -10,6 +10,13 @@
 */
 /* ALWAYS USE max-width starting from xl down*/
 /* BREAKPOINTS */
+.testimonials {
+  background-color: #F1FAEE;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
 .root {
   background-color: #e63946;
 }/*# sourceMappingURL=index.module.css.map */

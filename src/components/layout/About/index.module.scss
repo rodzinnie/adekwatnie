@@ -3,6 +3,14 @@
   // background-color: $lightBackground;
 }
 
+.testimonials{
+  background-color: $lightBackground;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
 .root {
   background-color: $bgRed;
 }
+

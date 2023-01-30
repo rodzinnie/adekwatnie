@@ -15,12 +15,12 @@ function About() {
         </Heading>
       </section> */}
       <section>
-        <Container>
+        <div className={styles.testimonials}>
           <Heading variant='bgLightBlue'>
             <h3>recenzje moich audiodeskrypcji</h3>
           </Heading>
-          <Carousel slides={testimonials} timer={5000} arrows={true} />
-        </Container>
+          <Carousel slides={testimonials} timer={5000} />
+        </div>
       </section>
     </section>
   )
