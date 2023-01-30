@@ -12,7 +12,6 @@
 /* BREAKPOINTS */
 .root {
   position: relative;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,7 +48,7 @@
 @media (min-width: 900px) {
   .root {
     width: 50%;
-    margin: auto;
+    margin: 0 auto;
     padding: 0 3%;
   }
 }/*# sourceMappingURL=index.module.css.map */
