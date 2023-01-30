@@ -1,4 +1,4 @@
-import SVGDivider from '../../icons/SVGdivider';
+import SVGDivider from '../../icons/SVGDivider';
 import styles from './index.module.scss'
 
 function Divider({children}) {
