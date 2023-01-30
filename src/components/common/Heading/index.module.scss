@@ -13,6 +13,7 @@
 }
 .bgRedRmMargin {margin: 0;}
 .bgRed,
+.bgDarkBlue, 
 .bgLightBlue , .bgRedRmMargin  {
   font-weight: bold;
   *::before {
@@ -43,5 +44,11 @@
 .bgLightBlue {
   *::before {
     background-color: $bgLightBlue;
+  }
+}
+
+.bgDarkBlue{
+  *::before{
+    background-color: $bgDarkBlue;
   }
 }
