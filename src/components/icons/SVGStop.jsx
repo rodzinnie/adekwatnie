@@ -3,7 +3,7 @@ function SVGStop(props) {
     <svg
       width={props.width || '344'}
       height={props.height || '48'}
-      viewBox={`0 0 ${props.width} ${props.height}`}
+      viewBox={`0 0 68 52`}
       xmlns='http://www.w3.org/2000/svg'
     >
       <line
