@@ -2,41 +2,6 @@
 .lightBackground {
   // background-color: $lightBackground;
 }
-.paraLeft,
-.paraRight {
-  padding: 20px;
-  position: relative;
-  width: 60%;
-  margin: 40px 0;
-  font-family: $main-font-text;
-  line-height: 150%;
-  font-size: 25px;
-  z-index: 1;
-  &::before {
-    z-index: -2;
-    position: absolute;
-    content: '';
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: blue;
-  }
-}
-
-.paraLeft {
-  margin-right: 40%;
-
-  &::before {
-    background-color: $bgLightBlue;
-  }
-}
-.paraRight {
-  margin-left: 40%;
-  &::before {
-    background-color: $bgDarkBlue;
-  }
-}
 
 .root {
   background-color: $bgRed;

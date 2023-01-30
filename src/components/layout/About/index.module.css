@@ -10,43 +10,6 @@
 */
 /* ALWAYS USE max-width starting from xl down*/
 /* BREAKPOINTS */
-.paraLeft,
-.paraRight {
-  padding: 20px;
-  position: relative;
-  width: 60%;
-  margin: 40px 0;
-  font-family: "Oswald", sans-serif;
-  line-height: 150%;
-  font-size: 25px;
-  z-index: 1;
-}
-.paraLeft::before,
-.paraRight::before {
-  z-index: -2;
-  position: absolute;
-  content: "";
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: blue;
-}
-
-.paraLeft {
-  margin-right: 40%;
-}
-.paraLeft::before {
-  background-color: #457b9d;
-}
-
-.paraRight {
-  margin-left: 40%;
-}
-.paraRight::before {
-  background-color: #1d3557;
-}
-
 .root {
   background-color: #e63946;
 }/*# sourceMappingURL=index.module.css.map */

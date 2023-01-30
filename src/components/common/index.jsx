@@ -1,3 +1,4 @@
+export { default as Awards } from './Awards'
 export { default as Button } from './Button'
 export { default as Carousel } from './Carousel'
 export { default as Container } from './Container'
