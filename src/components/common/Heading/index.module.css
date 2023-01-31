@@ -19,7 +19,7 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  max-width: 50%;
+  max-width: 33%;
   position: relative;
   z-index: 2;
 }
@@ -29,10 +29,12 @@
 }
 
 .bgRed,
+.bgDarkBlue,
 .bgLightBlue, .bgRedRmMargin {
   font-weight: bold;
 }
 .bgRed *::before,
+.bgDarkBlue *::before,
 .bgLightBlue *::before, .bgRedRmMargin *::before {
   position: absolute;
   content: " ";
@@ -41,14 +43,17 @@
   z-index: -1;
 }
 .bgRed h2::before,
+.bgDarkBlue h2::before,
 .bgLightBlue h2::before, .bgRedRmMargin h2::before {
   height: 3rem;
 }
 .bgRed h3::before,
+.bgDarkBlue h3::before,
 .bgLightBlue h3::before, .bgRedRmMargin h3::before {
   height: 2rem;
 }
 .bgRed h5::before,
+.bgDarkBlue h5::before,
 .bgLightBlue h5::before, .bgRedRmMargin h5::before {
   height: 1.2rem;
 }
@@ -59,4 +64,8 @@
 
 .bgLightBlue *::before {
   background-color: #457b9d;
+}
+
+.bgDarkBlue *::before {
+  background-color: #1d3557;
 }/*# sourceMappingURL=index.module.css.map */

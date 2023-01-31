@@ -10,14 +10,18 @@
 */
 /* ALWAYS USE max-width starting from xl down*/
 /* BREAKPOINTS */
-.testimonials {
-  background-color: #F1FAEE;
-  height: 500px;
-  display: flex;
-  gap: 50px;
-  flex-direction: column;
+.sectionSummary {
+  font-family: "Oswald", sans-serif;
+  background-color: white;
+  font-size: 30px;
+  font-weight: 100;
+  text-align: center;
 }
-
-.root {
-  background-color: #e63946;
+.sectionSummary > * {
+  margin: auto;
+  width: 600px;
+  padding: 40px 50px;
+}
+.sectionSummary p {
+  text-align: center;
 }/*# sourceMappingURL=index.module.css.map */

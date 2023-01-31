@@ -1,1 +1,30 @@
-/*# sourceMappingURL=index.module.css.map */
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Teko:wght@300;400;500;600;700&display=swap");
+/* FONT COLORS */
+/* BACKGROUND COLORS */
+/* HEIGHTS */
+/* WIDTHS */
+/* MARGINS */
+/** 12 division grid, 
+*   for multiples use calc($var*[const])
+*/
+/* ALWAYS USE max-width starting from xl down*/
+/* BREAKPOINTS */
+.root {
+  background-color: rgba(241, 250, 238, 0.8862745098);
+  padding: 30px;
+  text-align: center;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  font-family: "Teko", sans-serif;
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+.link:hover {
+  color: #1d3557;
+}/*# sourceMappingURL=index.module.css.map */
