@@ -6,7 +6,6 @@ import styles from './index.module.scss'
 function Carousel({timer, arrows}) {
   const {data} = useData()
   const slides = data.testimonials
-  console.log('slides', slides)
 
   const [slideNo, setSlideNo] = useState(0)
   useEffect(() => {

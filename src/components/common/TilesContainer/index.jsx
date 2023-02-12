@@ -5,10 +5,8 @@ import { useContext } from 'react';
 import useData from '../../../context/useData'
 
 function TilesContainer({ listName, heading, className }) {
-  console.log('dupa', listName)
   const { data } = useData()
   const list = data[listName]
-  console.log(data, listName)
   return (
     <div className={clsx(styles.root, className)}>
       {heading}
