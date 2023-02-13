@@ -21,8 +21,9 @@ function Offer() {
     // const currentId = offerList.indexOf(currentSlide)
     const idElem = e.currentTarget.querySelector(`[data-tileno]`).dataset.tileno
     const button = e.target.tagName == 'path' ? true : false
+    const offerElem = document.getElementById('readMore')
     if (button) {
-
+      offerElem.scrollIntoView({behavior:'smooth'})
       setCurrentSlide(offerList[idElem])
     }
   }
@@ -33,7 +34,7 @@ function Offer() {
       <div className={styles.content} >
         <TilesContainer listName='offerList' handleClick={handleClick}/>
       </div>
-      <div className={styles.bgRed}>
+      <div className={styles.bgRed} id='readMore'>
         <ContrastSection className={styles.container}>
           <div className={styles.spread}>
             <Heading variant={'bgRed'}>
