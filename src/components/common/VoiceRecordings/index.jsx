@@ -2,12 +2,12 @@ import TilesContainer from '../TilesContainer/index'
 import Heading from '../Heading'
 import styles from './index.module.scss'
 
-const VoiceRecords = ({ list }) => {
+const VoiceRecordings = () => {
   return (
     <section className={styles.root}>
       <TilesContainer
         className={styles.tilesContainer}
-        list={list}
+        listName='recordings'
         heading={
           <Heading variant='bgLightBlue'>
             <h3>tak brzmi mój głos</h3>
@@ -18,4 +18,4 @@ const VoiceRecords = ({ list }) => {
   )
 }
 
-export default VoiceRecords
+export default VoiceRecordings

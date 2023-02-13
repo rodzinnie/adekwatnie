@@ -1,8 +1,12 @@
 import clsx from 'clsx'
 import styles from './index.module.scss'
 import { Tile } from '../'
+import { useContext } from 'react';
+import useData from '../../../context/useData'
 
-function TilesContainer({ list, heading, className }) {
+function TilesContainer({ listName, heading, className }) {
+  const { data } = useData()
+  const list = data[listName]
   return (
     <div className={clsx(styles.root, className)}>
       {heading}

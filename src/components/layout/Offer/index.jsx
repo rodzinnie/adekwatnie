@@ -1,15 +1,17 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
 import styles from './index.module.scss'
 import { Button, ContrastSection, Divider, Heading, SegmentHeader, TilesContainer } from '../../common'
-import {offerList} from './data'
+import useData from '../../../context/useData';
+
 function Offer() {
+  const {data: {offerList}} = useData()
   const [slideHeading, setSlideHeading] = useState(offerList[0])
   return (
     <section id='offer' className={styles.root}>
       <SegmentHeader bgColor='bgRed' variant='bgLightBlue' title='oferta' />
       <div className={styles.content}>
-        <TilesContainer list={offerList} />
+        <TilesContainer listName='offerList' />
       </div>
       <div className={styles.bgRed}>
         <ContrastSection className={styles.container}>

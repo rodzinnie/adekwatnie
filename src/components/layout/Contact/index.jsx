@@ -1,4 +1,4 @@
-import {Heading, Tile, TilesContainer} from '../../common'
+import {Heading, Tile} from '../../common'
 import styles from './index.module.scss'
 
 function Contact() {
