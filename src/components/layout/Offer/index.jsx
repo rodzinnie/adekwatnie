@@ -10,13 +10,16 @@ import {
   TilesContainer,
 } from '../../common'
 import useData from '../../../context/useData'
+import SVGPlay from '../../icons/SVGPlay'
 
 function Offer() {
   const {
     data: { offerList },
   } = useData()
   const [currentSlide, setCurrentSlide] = useState(offerList[0])
-
+  const goUp = (e) => {
+    document.getElementById('offer').scrollIntoView({behavior:'smooth'})
+  }
   const handleClick = (e) => {
     // const currentId = offerList.indexOf(currentSlide)
     const idElem = e.currentTarget.querySelector(`[data-tileno]`).dataset.tileno
@@ -54,6 +57,7 @@ function Offer() {
               </Button>
             </div>
           </div>
+          <div className={styles.goUp} onClick={goUp}><SVGPlay /></div>
         </ContrastSection>
       </div>
       <Divider>
