@@ -11,9 +11,8 @@ function Button({
   children,
 }) {
   const Icon = name === 'play' ? SVGPlay : SVGStop
-
   return (
-    <button className={styles.root} onClick={handleClick} id={parentId || 34}>
+    <button className={styles.root} onClick={handleClick} data-tileno={parentId || 34}>
       <Icon width={68 * scale} height={52 * scale} fill={fill} />
       <div id={styles.text}>{children}</div>
     </button>

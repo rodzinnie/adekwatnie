@@ -15,28 +15,34 @@ function Offer() {
   const {
     data: { offerList },
   } = useData()
-  const [slideHeading, setSlideHeading] = useState(offerList[0])
+  const [currentSlide, setCurrentSlide] = useState(offerList[0])
 
   const handleClick = (e) => {
-    console.log('parent', e.target.path[1])
+    // const currentId = offerList.indexOf(currentSlide)
+    const idElem = e.currentTarget.querySelector(`[data-tileno]`).dataset.tileno
+    const button = e.target.tagName == 'path' ? true : false
+    if (button) {
+
+      setCurrentSlide(offerList[idElem])
+    }
   }
 
   return (
     <section id='offer' className={styles.root}>
       <SegmentHeader bgColor='bgRed' variant='bgLightBlue' title='oferta' />
-      <div className={styles.content} onClick={(e) => handleClick(e)}>
-        <TilesContainer listName='offerList' />
+      <div className={styles.content} >
+        <TilesContainer listName='offerList' handleClick={handleClick}/>
       </div>
       <div className={styles.bgRed}>
         <ContrastSection className={styles.container}>
           <div className={styles.spread}>
             <Heading variant={'bgRed'}>
               <h3 style={{ textTransform: 'lowercase' }}>
-                {slideHeading.title}
+                {currentSlide.title}
               </h3>
             </Heading>
             <div className={styles.aboutMe}>
-              <h6>{slideHeading.text}</h6>
+              <h6>{currentSlide.text}</h6>
             </div>
             <div className={styles.buttons}>
               <Button name='play' scale={2.2}>
