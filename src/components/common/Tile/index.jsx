@@ -2,7 +2,7 @@ import styles from './index.module.scss'
 import clsx from 'clsx'
 import Button from '../Button/index'
 
-function Tile({ variant, title, description, buttons }) {
+function Tile({ variant, title, description, buttons, parentId }) {
   return (
     <div className={clsx(styles[variant], styles.root)}>
       {title !== undefined && <h6>{title}</h6>}
@@ -11,7 +11,9 @@ function Tile({ variant, title, description, buttons }) {
       )}
       <div className={styles.buttons}>
         {buttons?.length &&
-          buttons.map((button, id) => <Button key={id} {...button} />)}
+          buttons.map((button, id) => (
+            <Button parentId={parentId} key={id} {...button} />
+          ))}
       </div>
     </div>
   )

@@ -1,7 +1,6 @@
 import clsx from 'clsx'
 import styles from './index.module.scss'
 import { Tile } from '../'
-import { useContext } from 'react';
 import useData from '../../../context/useData'
 
 function TilesContainer({ listName, heading, className }) {
@@ -15,6 +14,7 @@ function TilesContainer({ listName, heading, className }) {
           return (
             <Tile
               key={i}
+              parentId={i}
               variant={listItem.variant || ''}
               title={listItem.title}
               buttons={listItem.buttons}
