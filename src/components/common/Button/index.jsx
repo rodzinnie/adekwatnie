@@ -4,7 +4,7 @@ import SVGPlay from '../../icons/SVGPlay'
 
 function Button({ name, fill = '#e63946', scale = 1, handleClick, children }) {
   const Icon = name === 'play' ? SVGPlay : SVGStop
-
+  
   return (
     <button className={styles.root} onClick={handleClick}>
       <Icon width={68 * scale} height={52 * scale} fill={fill} />
