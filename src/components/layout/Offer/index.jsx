@@ -49,10 +49,10 @@ function Offer() {
               <h6>{currentSlide.text}</h6>
             </div>
             <div className={styles.buttons}>
-              <Button name='play' scale={2.2}>
+              <Button name='play' scale={2.2} handleClick={()=> (window.location.assign('/#about'))}>
                 <h6>o mnie</h6>
               </Button>
-              <Button name='pause' scale={2.2}>
+              <Button name='pause' scale={2.2} handleClick={()=> (window.location.assign('/#contact'))}>
                 <h6>kontakt</h6>
               </Button>
             </div>
