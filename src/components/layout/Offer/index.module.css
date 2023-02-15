@@ -10,7 +10,22 @@
 */
 /* ALWAYS USE max-width starting from xl down*/
 /* BREAKPOINTS */
+.goUp {
+  position: absolute;
+  right: -143px;
+  bottom: 0px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(270deg);
+}
+.goUp:hover {
+  transform: rotate(270deg) scale(1.1);
+  cursor: pointer;
+}
+
 .root {
+  position: relative;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -20,7 +35,6 @@
 }
 
 .container {
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   padding: 2rem 0;
@@ -42,7 +56,6 @@
   font-family: "Oswald", sans-serif;
 }
 .aboutMe h6 {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
