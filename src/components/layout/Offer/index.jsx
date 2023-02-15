@@ -25,7 +25,8 @@ function Offer() {
     const idElem = e.currentTarget.querySelector(`[data-tileno]`).dataset.tileno
     const button = e.target.tagName == 'path' ? true : false
     const offerElem = document.getElementById('readMore')
-    if (button) {
+    console.log(idElem,offerList.indexOf(currentSlide))
+    if (button && idElem != 34) {
       offerElem.scrollIntoView({behavior:'smooth'})
       setCurrentSlide(offerList[idElem])
     }
