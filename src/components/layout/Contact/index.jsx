@@ -15,6 +15,7 @@ function Contact() {
         <h2>kontakt</h2>
       </Heading>
       <div className={styles.background}>
+        {/* to do zmiany - musi byc TilesContainer */}
         <Tile 
           title='Napisz do mnie!'
           buttons={[{children:'', name: 'play'}]}

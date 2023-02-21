@@ -3,7 +3,7 @@ import styles from './index.module.scss'
 import { Tile } from '../'
 import useData from '../../../context/useData'
 
-function TilesContainer({ listName, heading, className, handleClick = (e) => console.log('gimme some fun') }) {
+function TilesContainer({ listName, heading, className, handleClick}) {
   const { data } = useData()
   const list = data[listName]
   return (
@@ -12,7 +12,7 @@ function TilesContainer({ listName, heading, className, handleClick = (e) => con
       <div className={styles.tilesSection}>
         {list.map((listItem, i) => {
           return (
-            <div key={i} onClick={e => handleClick(e)}>
+            <div className='div-od-tile' key={i} onClick={handleClick}>
               <Tile
                 parentId={i}
                 variant={listItem.variant || ''}

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import styles from './index.module.scss'
 import {
@@ -21,22 +21,20 @@ function Offer() {
     document.getElementById('offer').scrollIntoView({behavior:'smooth'})
   }
   const handleClick = (e) => {
-    // const currentId = offerList.indexOf(currentSlide)
     const idElem = e.currentTarget.querySelector(`[data-tileno]`).dataset.tileno
-    const button = e.target.tagName == 'path' ? true : false
-    const offerElem = document.getElementById('readMore')
-    console.log(idElem,offerList.indexOf(currentSlide))
-    if (button && idElem != 34) {
-      offerElem.scrollIntoView({behavior:'smooth'})
+    const isButton = e.target.tagName === 'path' ? true : false
+    if (isButton && idElem >= 0) {
       setCurrentSlide(offerList[idElem])
+      const offerElem = document.getElementById('readMore')
+      offerElem.scrollIntoView({behavior:'smooth'})
     }
   }
 
   return (
     <section id='offer' className={styles.root}>
       <SegmentHeader bgColor='bgRed' variant='bgLightBlue' title='oferta' />
-      <div className={styles.content} >
-        <TilesContainer listName='offerList' handleClick={handleClick}/>
+      <div className={styles.content}>
+        <TilesContainer listName='offerList' handleClick={handleClick} />
       </div>
       <div className={styles.bgRed} id='readMore'>
         <ContrastSection className={styles.container}>
