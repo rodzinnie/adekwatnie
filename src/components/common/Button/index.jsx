@@ -7,7 +7,7 @@ function Button({
   fill = '#e63946',
   scale = 1,
   handleClick,
-  parentId = 34,
+  parentId = -1,
   children,
 }) {
   const Icon = name === 'play' ? SVGPlay : SVGStop

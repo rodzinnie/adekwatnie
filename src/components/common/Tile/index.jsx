@@ -2,7 +2,7 @@ import styles from './index.module.scss'
 import clsx from 'clsx'
 import Button from '../Button/index'
 
-function Tile({ variant, title, description, buttons, parentId, buttonClick= (e) => (e) }) {
+function Tile({ variant, title, description, buttons, parentId, buttonClick}) {
   return (
     <div className={clsx(styles[variant], styles.root)}>
       {title !== undefined && <h6>{title}</h6>}
