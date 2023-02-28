@@ -14,6 +14,9 @@ $sticky-breakpoint: 32em;
   height: 100px;
   z-index: 5;
   transition: all 0.2s linear;
+  -webkit-box-shadow: 0px 3px 7px -1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 3px 7px -1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 3px 7px -1px rgba(0, 0, 0, 0.5);
 
   @media (min-height: $sticky-breakpoint) {
     position: sticky;
@@ -30,18 +33,9 @@ $sticky-breakpoint: 32em;
 .scrolled {
   height: 65px;
 
-  div {
-    height: 32px;
-  }
-
   .navlink {
     font-size: 30px;
     line-height: 42px;
-
-    * {
-      margin: 0;
-      padding: 0;
-    }
   }
 }
 
@@ -56,7 +50,6 @@ $sticky-breakpoint: 32em;
 
 .navlink {
   font-family: $main-font-heading;
-  font-size: 40px;
   line-height: 56px;
   color: $navbar-color;
   margin-left: 100px;
@@ -75,33 +68,36 @@ $sticky-breakpoint: 32em;
   display: none;
 }
 
-@media (max-width: 1200px) {
-  .root {
-    overflow-y: visible;
-  }
-
+@media (max-width: $lg) {
   .nav {
     display: flex;
     flex-direction: column;
     position: absolute;
-    background-color: rgba(0, 0, 0);
+    background-color: $navbar-bg-color;
     color: $navbar-color;
     z-index: 1;
     text-align: center;
-    right: -100%;
-    transition: right 1s;
+    width: 200px;
+    top: 100px;
+    transform: translateX(200px);
+    transition: all 0.2s linear;
   }
 
-  .navlink {
-    font-size: 20px;
-    color: $navbar-color;
-    width: max-content;
-    padding-right: 10px;
-    padding-left: 10px;
-    text-align: center;
+  .scrolled .nav {
+    top: 65px;
   }
+
+  .navlink,
   .navlink:visited {
+    line-height: 51px;
     color: $navbar-color;
+    width: 100%;
+    margin: 0;
+    border-top: 1px solid black;
+  }
+
+  .open .nav {
+    transform: translateX(0);
   }
 
   .hamburger {
