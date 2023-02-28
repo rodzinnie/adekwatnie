@@ -4,12 +4,17 @@
   margin: 0;
   padding: 0;
   border: none;
+  &:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+  }
 }
 
 #text {
-  position: absolute;
-  bottom: 12%;
-  padding-left: 4%;
-  font-family: $main-font-text;
+
   font-weight: bold;
+  font-family: $main-font-text;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

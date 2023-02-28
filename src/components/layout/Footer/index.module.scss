@@ -1,7 +1,7 @@
 @import '../../../settings.scss';
 .root{
   background-color: $bgLightContainer;
-  padding: 30px;
+  padding: 1%;
   text-align: center;
 }
 
@@ -16,4 +16,10 @@
 
 .link:hover{
   color: $bgDarkBlue;
+}
+
+@media (max-width: $md) {
+  .link{
+    font-size: 15px;
+  }
 }

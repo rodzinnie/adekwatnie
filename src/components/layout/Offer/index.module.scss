@@ -1,5 +1,24 @@
 @import '../../../settings';
+
+.goUp{
+  position: absolute;
+  // outline: 1px blue solid;
+  right: -143px;
+  bottom: 0px;
+
+  color: white;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(270deg);
+  &:hover{
+    transform: rotate(270deg) scale(1.1);
+    cursor: pointer;
+  }
+
+}
+
 .root {
+  position: relative;
   background-color: white;
   display: flex;
   flex-direction: column;

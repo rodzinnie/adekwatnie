@@ -1,8 +1,12 @@
 import {useEffect, useState} from 'react'
+import useData from '../../../context/useData';
 
 import styles from './index.module.scss'
 
-function Carousel({slides, timer, arrows}) {
+function Carousel({timer, arrows}) {
+  const {data} = useData()
+  const slides = data.testimonials
+
   const [slideNo, setSlideNo] = useState(0)
   useEffect(() => {
 
