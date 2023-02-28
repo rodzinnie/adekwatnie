@@ -9,8 +9,6 @@ import { useScrollPosition } from '../../../hooks/useScrollPosition'
 function Navbar() {
   const [isOpen, setOpen] = useState(false)
   const [windowSize, setWindowSize] = useState(getWindowSize())
-  const inputRef = useRef()
-  const rootRef = useRef()
   const [isScrolled, setIsScrolled] = useState(false)
   const [active, setActive] = useState(null)
   const scrollPosition = useScrollPosition()
@@ -46,16 +44,6 @@ function Navbar() {
     return { innerWidth, innerHeight }
   }
 
-  const handleHamburger = (toggled) => {
-    if (toggled) {
-      inputRef.current.style.right = 0
-      rootRef.current.style.overflow = 'visible'
-    } else {
-      inputRef.current.style.right = '-120%'
-      setTimeout(() => (rootRef.current.style.overflow = 'hidden'), 400)
-    }
-  }
-
   const handleClick = (name) => {
     setActive(name)
   }
@@ -63,11 +51,14 @@ function Navbar() {
   return (
     <header
       id='header'
-      className={clsx(styles.root, isScrolled ? styles.scrolled : null)}
-      ref={rootRef}
+      className={clsx(
+        styles.root,
+        isScrolled && styles.scrolled,
+        isOpen && styles.open
+      )}
     >
       <Logo height={isScrolled ? '32' : null} />
-      <nav ref={inputRef} className={styles.nav}>
+      <nav className={styles.nav}>
         <a
           className={styles.navlink}
           href='#offer'
@@ -98,10 +89,12 @@ function Navbar() {
       </nav>
       <div className={styles.hamburger}>
         <Hamburger
-          onToggle={handleHamburger}
           toggled={isOpen}
           toggle={setOpen}
           color='#000000'
+          size={40}
+          rounded
+          label='show menu'
         />
       </div>
     </header>
