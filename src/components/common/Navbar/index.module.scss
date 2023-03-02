@@ -11,7 +11,7 @@ $sticky-breakpoint: 32em;
   align-items: center;
   flex-wrap: nowrap;
   opacity: 1;
-  height: 100px;
+  height: $navbar-height-md-up;
   z-index: 5;
   transition: all 0.2s linear;
   -webkit-box-shadow: 0px 3px 7px -1px rgba(0, 0, 0, 0.5);
@@ -24,20 +24,20 @@ $sticky-breakpoint: 32em;
   }
 }
 
-[id] {
-  @media (min-height: $sticky-breakpoint) {
-    scroll-margin-top: 63px;
-  }
-}
+// [id] {
+//   @media (min-height: $sticky-breakpoint) {
+//     scroll-margin-top: 63px;
+//   }
+// }
 
-.scrolled {
-  height: 65px;
+// .scrolled {
+//   height: 65px;
 
-  .navlink {
-    font-size: 30px;
-    line-height: 42px;
-  }
-}
+//   .navlink {
+//     font-size: 30px;
+//     line-height: 42px;
+//   }
+// }
 
 .nav {
   position: relative;
@@ -78,14 +78,14 @@ $sticky-breakpoint: 32em;
     z-index: 1;
     text-align: center;
     width: 200px;
-    top: 100px;
+    top: $navbar-height-md-up;
     transform: translateX(200px);
     transition: all 0.2s linear;
   }
 
-  .scrolled .nav {
-    top: 65px;
-  }
+  // .scrolled .nav {
+  //   top: 65px;
+  // }
 
   .navlink,
   .navlink:visited {
@@ -108,11 +108,14 @@ $sticky-breakpoint: 32em;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: $xs) {
+  .root {
+    padding: 0 4%;
+  }
   .span {
     font-size: 23px;
   }
   .hamburger {
-    right: 10px;
+    position: relative;
   }
 }

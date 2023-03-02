@@ -57,7 +57,8 @@ function Navbar() {
         isOpen && styles.open
       )}
     >
-      <Logo height={isScrolled ? '32' : null} />
+      {/* <Logo height={isScrolled ? '32' : null} /> */}
+      <Logo />
       <nav className={styles.nav}>
         <a
           className={styles.navlink}
