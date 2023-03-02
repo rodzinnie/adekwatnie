@@ -1,6 +1,5 @@
 import styles from './index.module.scss'
 import SVGLogo from '../../icons/SVGLogo'
-import React from 'react'
 
 const Logo = ({ width, height }) => {
   return (

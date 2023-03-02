@@ -1,7 +1,7 @@
 import styles from './App.module.scss'
 import { Navbar } from './components/common'
 import { About, Contact, Footer, Hero, Offer } from './components/layout'
-import {DataProvider} from './context/useData'
+import { DataProvider } from './context/useData'
 
 function App() {
   return (

@@ -1,8 +1,10 @@
 @import '../../../settings.scss';
 
 .logo {
-  height: 48px;
+  height: $logo-height-sm-up;
   cursor: pointer;
+  display: flex;
+  align-items: center;
   svg path {
     filter: drop-shadow(2px 4px 2px rgb(0 0 0 / 0.4));
   }
@@ -10,4 +12,11 @@
 
 .logo:active svg path {
   filter: drop-shadow(2px 2px 2px rgb(0 0 0 / 0.4));
+}
+
+@media (max-width: $xs) {
+  .logo svg {
+    height: $logo-height-xs;
+    width: fit-content;
+  }
 }
