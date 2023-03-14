@@ -5,6 +5,7 @@ import Logo from '../Logo/index'
 import Heading from '../Heading/index'
 import styles from './index.module.scss'
 import { useScrollPosition } from '../../../hooks/useScrollPosition'
+import useData from '../../../context/useData'
 
 function Navbar() {
   const [isOpen, setOpen] = useState(false)
@@ -14,7 +15,8 @@ function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [active, setActive] = useState(null)
   const scrollPosition = useScrollPosition()
-
+  const {data: {navbar}} = useData()
+  console.log(navbar)
   useEffect(() => {
     function handleWindowResize() {
       setWindowSize(getWindowSize())
@@ -68,33 +70,18 @@ function Navbar() {
     >
       <Logo height={isScrolled ? '32' : null} windowSize={windowSize} />
       <nav ref={inputRef} className={styles.nav}>
-        <a
-          className={styles.navlink}
-          href='#offer'
-          onClick={() => handleClick('offer')}
-        >
-          <Heading variant={active === 'offer' ? 'bgRed' : null}>
-            <h5>oferta</h5>
-          </Heading>
-        </a>
-        <a
-          className={styles.navlink}
-          href='#about'
-          onClick={() => handleClick('about')}
-        >
-          <Heading variant={active === 'about' ? 'bgRed' : null}>
-            <h5>o mnie</h5>
-          </Heading>
-        </a>
-        <a
-          className={styles.navlink}
-          href='#contact'
-          onClick={() => handleClick('contact')}
-        >
-          <Heading variant={active === 'contact' ? 'bgRed' : null}>
-            <h5>kontakt</h5>
-          </Heading>
-        </a>
+        {navbar.map((e, i) => {
+          return <a
+            className={styles.navlink}
+            href={e.href}
+            onClick={() => handleClick(e.name)}
+            key={i}
+          >
+            <Heading variant={active === e.name ? 'bgRed' : null}>
+              <h5>{e.namePl}</h5>
+            </Heading>
+          </a>
+        })}
       </nav>
       <div className={styles.hamburger}>
         <Hamburger
