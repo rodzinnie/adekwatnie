@@ -1,11 +1,22 @@
 import styles from './index.module.scss'
 import SVGLogo from '../../icons/SVGLogo'
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 
-const Logo = ({ width, height }) => {
+const Logo = ({ height, windowSize }) => {
+  const [calculatedSize, setCalculatedSize] = useState(340)
+
+  console.log('hello', windowSize)
+  useEffect(() => {
+    if(windowSize.innerWidth <= 575){
+      setCalculatedSize(180)
+    } else {
+      setCalculatedSize(340)
+    }
+  }, [windowSize.innerWidth])
+  console.log(calculatedSize)
   return (
     <div className={styles.logo} onClick={() => window.scrollTo(0, 0)}>
-      <SVGLogo width={width} height={height} />
+      <SVGLogo width={calculatedSize} height={height} />
     </div>
   )
 }

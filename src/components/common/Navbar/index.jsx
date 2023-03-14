@@ -66,7 +66,7 @@ function Navbar() {
       className={clsx(styles.root, isScrolled ? styles.scrolled : null)}
       ref={rootRef}
     >
-      <Logo height={isScrolled ? '32' : null} />
+      <Logo height={isScrolled ? '32' : null} windowSize={windowSize} />
       <nav ref={inputRef} className={styles.nav}>
         <a
           className={styles.navlink}
