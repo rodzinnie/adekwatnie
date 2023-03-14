@@ -16,7 +16,6 @@ function Navbar() {
   const [active, setActive] = useState(null)
   const scrollPosition = useScrollPosition()
   const {data: {navbar}} = useData()
-  console.log(navbar)
   useEffect(() => {
     function handleWindowResize() {
       setWindowSize(getWindowSize())
@@ -49,13 +48,16 @@ function Navbar() {
   }
 
   const handleHamburger = (toggled) => {
+    const nav = document.getElementById('navbar')
     if (toggled) {
-      inputRef.current.style.right = 0
-      rootRef.current.style.overflow = 'visible'
+      nav.classList.add('visible')
+      nav.classList.remove('hide')
     } else {
-      inputRef.current.style.right = '-120%'
-      setTimeout(() => (rootRef.current.style.overflow = 'hidden'), 400)
+      nav.classList.remove('visible')
+      nav.classList.add('hide')
+      // setTimeout(() => (), 400)
     }
+    console.log(nav.classList)
   }
 
   const handleClick = (name) => {
@@ -69,7 +71,7 @@ function Navbar() {
       ref={rootRef}
     >
       <Logo height={isScrolled ? '32' : null} windowSize={windowSize} />
-      <nav ref={inputRef} className={styles.nav}>
+      <nav ref={inputRef} className={styles.nav} id={'navbar'}>
         {navbar.map((e, i) => {
           return <a
             className={styles.navlink}
