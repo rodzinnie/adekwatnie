@@ -13,7 +13,6 @@ const Logo = ({ height, windowSize }) => {
       setCalculatedSize(340)
     }
   }, [windowSize.innerWidth])
-  console.log(calculatedSize)
   return (
     <div className={styles.logo} onClick={() => window.scrollTo(0, 0)}>
       <SVGLogo width={calculatedSize} height={height} />
