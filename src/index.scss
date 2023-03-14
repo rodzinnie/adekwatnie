@@ -1,30 +1,25 @@
-/* FONTS */
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Teko:wght@300;400;500;600;700&display=swap");
-/* FONT COLORS */
-/* BACKGROUND COLORS */
-/* HEIGHTS */
-/* WIDTHS */
-/* MARGINS */
-/** 12 division grid, 
-*   for multiples use calc($var*[const])
-*/
-/* ALWAYS USE max-width starting from xl down*/
-/* BREAKPOINTS */
+@import './settings.scss';
+
 @media (max-width: 500px) {
-  .visible {
+  .visible{
     position: absolute;
-    top: 100px;
+    top: $navbar-height;
     right: 0;
     overflow: visible;
     width: 100vw;
+    
   }
-  .hide {
+
+  .hide{
     position: absolute;
-    top: 100px;
+    top: $navbar-height;
     right: -120%;
     overflow: hidden;
   }
 }
+
+
+
 html,
 body,
 div,
@@ -115,6 +110,7 @@ video {
   box-sizing: border-box;
 }
 
+
 h2 {
   font-size: 5rem;
 }
@@ -144,6 +140,7 @@ html {
     scroll-behavior: auto;
   }
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -158,30 +155,25 @@ nav,
 section {
   display: block;
 }
-
 body {
   line-height: 1;
 }
-
 ol,
 ul {
   list-style: none;
 }
-
 blockquote,
 q {
   quotes: none;
 }
-
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}/*# sourceMappingURL=index.css.map */
+}

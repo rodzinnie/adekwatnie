@@ -12,7 +12,7 @@
 /* BREAKPOINTS */
 .root {
   background-color: rgba(241, 250, 238, 0.8862745098);
-  padding: 30px;
+  padding: 1%;
   text-align: center;
 }
 
@@ -27,4 +27,10 @@
 
 .link:hover {
   color: #1d3557;
+}
+
+@media (max-width: 991px) {
+  .link {
+    font-size: 15px;
+  }
 }/*# sourceMappingURL=index.module.css.map */

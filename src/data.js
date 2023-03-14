@@ -1,4 +1,9 @@
 const fetchedData = {}
+fetchedData.navbar = [
+  {href: '#offer', name: 'offer', namePl: 'oferta'},
+  {href: '#about', name: 'about', namePl: 'o mnie'},
+  {href: '#contact', name: 'contact', namePl: 'kontakt'},
+]
 fetchedData.recordings = [
   {
     title: 'Próbka Głosu 1',
