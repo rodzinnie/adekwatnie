@@ -4,8 +4,6 @@ import React, {useEffect, useState} from 'react'
 
 const Logo = ({ height, windowSize }) => {
   const [calculatedSize, setCalculatedSize] = useState(340)
-
-  console.log('hello', windowSize)
   useEffect(() => {
     if(windowSize.innerWidth <= 575){
       setCalculatedSize(180)
