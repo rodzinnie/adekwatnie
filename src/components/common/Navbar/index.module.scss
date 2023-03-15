@@ -78,7 +78,7 @@ $sticky-breakpoint: 32em;
 
 @media (max-width: 1200px) {
   .root {
-    overflow-y: visible;
+    overflow: hidden;
   }
 
   .nav {

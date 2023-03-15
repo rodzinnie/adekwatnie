@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import clsx from 'clsx'
 import { Sling as Hamburger } from 'hamburger-react'
 import Logo from '../Logo/index'
@@ -10,8 +10,6 @@ import useData from '../../../context/useData'
 function Navbar() {
   const [isOpen, setOpen] = useState(false)
   const [windowSize, setWindowSize] = useState(getWindowSize())
-  const inputRef = useRef()
-  const rootRef = useRef()
   const [isScrolled, setIsScrolled] = useState(false)
   const [active, setActive] = useState(null)
   const scrollPosition = useScrollPosition()
@@ -49,13 +47,15 @@ function Navbar() {
 
   const handleHamburger = (toggled) => {
     const nav = document.getElementById('navbar')
+    const root = document.getElementById('header')
     if (toggled) {
       nav.classList.add('visible')
       nav.classList.remove('hide')
+      root.style.overflow = 'visible'
     } else {
       nav.classList.remove('visible')
       nav.classList.add('hide')
-      // setTimeout(() => (), 400)
+      setTimeout(() => (root.style.overflow = 'hidden'), 400)
     }
     console.log(nav.classList)
   }
@@ -68,10 +68,9 @@ function Navbar() {
     <header
       id='header'
       className={clsx(styles.root, isScrolled ? styles.scrolled : null)}
-      ref={rootRef}
     >
       <Logo height={isScrolled ? '32' : null} windowSize={windowSize} />
-      <nav ref={inputRef} className={styles.nav} id={'navbar'}>
+      <nav className={styles.nav} id={'navbar'}>
         {navbar.map((e, i) => {
           return <a
             className={styles.navlink}
