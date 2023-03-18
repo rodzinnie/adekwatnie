@@ -1,6 +1,6 @@
 @import './settings.scss';
 
-@media (max-width: 500px) {
+@media (max-width: $md) {
   .visible{
     position: absolute;
     top: $navbar-height;
@@ -13,7 +13,7 @@
   .hide{
     position: absolute;
     top: $navbar-height;
-    right: -120%;
+    right: -100vw;
     overflow: hidden;
   }
 }

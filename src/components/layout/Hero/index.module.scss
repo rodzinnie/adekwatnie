@@ -53,7 +53,7 @@
 }
 
 
-@media (max-width: 575px){
+@media (max-width: $sm){
   .phrase{
     height: 85%;
     position: static;

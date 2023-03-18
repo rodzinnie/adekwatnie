@@ -76,10 +76,10 @@ $sticky-breakpoint: 32em;
   display: none;
 }
 
-@media (max-width: 1200px) {
-  .root {
-    overflow: hidden;
-  }
+@media (max-width: $md) {
+  // .root {
+  //   overflow: hidden;
+  // }
 
   .nav {
     display: flex;
@@ -113,7 +113,7 @@ $sticky-breakpoint: 32em;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: $md) {
   .span {
     font-size: 23px;
   }
