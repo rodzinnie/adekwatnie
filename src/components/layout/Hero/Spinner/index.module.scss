@@ -177,3 +177,10 @@ p.word {
     transform: translateY(-300%);
   }
 }
+
+
+@media (max-width: $sm){
+  .word{
+    font-size: $hero-words-sm;
+  }
+}

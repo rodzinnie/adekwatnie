@@ -53,3 +53,32 @@
 }
 
 
+
+
+@media (max-width: $sm){
+  .phrase{
+    height: 85%;
+    position: static;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+  }
+  .title{
+    font-size: 25px;
+    margin-bottom: 2rem;
+    letter-spacing: 0.4rem;
+    text-shadow: 6px 2px 0px black, 7px 2px 0px $white-text;
+  }
+  .sentence{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .words{
+    font-size: $hero-words-sm;
+    padding: 15px 0;
+  }
+
+}
