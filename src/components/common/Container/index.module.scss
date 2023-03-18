@@ -5,3 +5,11 @@
   height: clamp(400px, 500px, 700px);
   background-color: $bgLightContainer;
 }
+
+@media (max-width: $sm){
+  .root{
+    width: 80%;
+    min-height: 600px;
+  }
+}
+

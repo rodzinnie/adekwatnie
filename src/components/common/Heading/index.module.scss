@@ -24,23 +24,6 @@
   }
 }
 
-// .bgRedRmMargin {margin: 0;}
-
-// .bgRed,
-// .bgDarkBlue, 
-// .bgLightBlue , .bgRedRmMargin{
-//   position: relative;
-//   *::before {
-//     position: absolute;
-//     content: 'twoja stara';
-//     width: 100%;
-//     left: 1.5rem;
-//     top: 0;
-//     z-index: 1;
-//     background-color: blue;
-//   }
-// }
-
 .h2::before {
   height: 3rem;
 }
@@ -132,5 +115,11 @@
         height: 2rem;
       }
     }
+  }
+}
+
+@media (max-width: $sm) {
+  .root{
+
   }
 }

@@ -8,11 +8,11 @@ function App() {
     <DataProvider>
       <div className={styles.App}>
         {/* <Navbar />
-        <Hero /> */}
-        <Offer />
+        <Hero />
+        <Offer /> */}
         <About />
-        <Contact />
-        <Footer />
+        {/* <Contact />
+        <Footer /> */}
       </div>
     </DataProvider>
   )
