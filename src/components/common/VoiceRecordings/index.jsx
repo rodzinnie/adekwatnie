@@ -9,9 +9,7 @@ const VoiceRecordings = () => {
         className={styles.tilesContainer}
         listName='recordings'
         heading={
-          <Heading variant='bgLightBlue'>
-            <h3>tak brzmi mój głos</h3>
-          </Heading>
+          <Heading variant='bgLightBlue' headingLevel={'3'} text={'tak brzmi mój głos'}/>
         }
       />
     </section>

@@ -15,9 +15,7 @@ function About() {
       </section> */}
       <section>
         <div className={styles.testimonials}>
-          <Heading variant='bgLightBlue'>
-            <h3>recenzje moich audiodeskrypcji</h3>
-          </Heading>
+          <Heading variant='bgLightBlue' headingLevel={'3'} text={'recenzje moich audiodeskrypcji'} />
           <Carousel timer={5000} />
         </div>
       </section>

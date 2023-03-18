@@ -4,7 +4,7 @@ import { Sling as Hamburger } from 'hamburger-react'
 import Logo from '../Logo/index'
 import Heading from '../Heading/index'
 import styles from './index.module.scss'
-import { useScrollPosition } from '../../../hooks/useScrollPosition'
+// import { useScrollPosition } from '../../../hooks/useScrollPosition'
 import useData from '../../../context/useData'
 
 function Navbar() {
@@ -79,9 +79,7 @@ function Navbar() {
             onClick={() => handleClick(e.name)}
             key={i}
           >
-            <Heading variant={active === e.name ? 'bgRed' : null}>
-              <h5>{e.namePl}</h5>
-            </Heading>
+            <Heading variant={active === e.name ? 'bgRed' : null} headingLevel='5' text={e.namePl} />
           </a>
         })}
       </nav>

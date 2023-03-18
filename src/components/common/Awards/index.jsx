@@ -4,9 +4,7 @@ function Awards() {
   return (
     <section className={styles.root}>
       <div className={styles.container}>
-        <Heading variant='bgRed'>
-          <h3>nagrody</h3>
-        </Heading>
+        <Heading variant='bgRed' headingLevel={'3'} text={'nagrody'} />
         <p className={styles.paraLeft}>
           2022: I miejsce w konkursie na najlepszą audiodeskrypcję filmową na
           XII Festiwalu Kultury i Sztuki (dla Osób Niewidomych) w Płocku
