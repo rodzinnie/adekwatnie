@@ -24,7 +24,11 @@ function Navbar() {
       }
     }
     window.addEventListener('resize', handleWindowResize)
-
+    document.getElementById('navbar').addEventListener('click', () =>{
+      console.log('click')
+      closeNav(false)
+      
+    })
     return () => {
       window.removeEventListener('resize', handleWindowResize)
     }
@@ -41,14 +45,12 @@ function Navbar() {
 
   function getWindowSize() {
     const { innerWidth, innerHeight } = window
-
     return { innerWidth, innerHeight }
   }
-
-  const handleHamburger = (toggled) => {
+  const closeNav = (bool) => {
     const nav = document.getElementById('navbar')
     const root = document.getElementById('header')
-    if (toggled) {
+    if (bool) {
       nav.classList.add('visible')
       nav.classList.remove('hide')
       root.style.overflow = 'visible'
@@ -57,6 +59,10 @@ function Navbar() {
       nav.classList.add('hide')
       setTimeout(() => (root.style.overflow = 'hidden'), 400)
     }
+  }
+  const handleHamburger = (toggled) => {
+    console.log('toggled: ', toggled)
+    closeNav(toggled)
     console.log(nav.classList)
   }
 
