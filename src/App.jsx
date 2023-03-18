@@ -7,11 +7,11 @@ function App() {
   return (
     <DataProvider>
       <div className={styles.App}>
-        {/* <Navbar />
+        <Navbar />
         <Hero />
-        <Offer /> */}
+        <Offer />
         {/* <About /> */}
-        <Contact />
+        {/* <Contact /> */}
         {/* <Footer /> */}
       </div>
     </DataProvider>

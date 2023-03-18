@@ -112,7 +112,9 @@
     font-size: 2rem;
   }
   .h5::before {
-    height: 2rem;
+    height: 1.2rem;
+    width: 100%;
+    min-width: 90px;
   }
   .h6 {
     padding-top: 20px;
