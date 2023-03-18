@@ -41,5 +41,9 @@
 @media (max-width: $md) {
   .root {
     width: 80%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
   }
 }

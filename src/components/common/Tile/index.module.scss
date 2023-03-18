@@ -42,5 +42,11 @@
   width: fit-content;
 }
 
-@media (max-width: $xl) {
+@media (max-width: 350px) {
+  .root{
+    width: 250px;
+    height: 250px;
+    border-width: 15px;
+  }
+
 }

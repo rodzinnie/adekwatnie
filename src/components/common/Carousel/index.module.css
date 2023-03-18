@@ -52,5 +52,9 @@
 @media (max-width: 991px) {
   .root {
     width: 80%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
   }
 }/*# sourceMappingURL=index.module.css.map */

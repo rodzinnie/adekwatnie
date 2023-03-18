@@ -6,12 +6,13 @@
   font-family: $main-font-heading;
   margin-left: $marg-1;
   padding: calc($marg-1 * 0.35) 0 calc($marg-1 * 0.2) 0;
-  width: fit-content;
   max-width: 33%;
   z-index: 2;
   text-transform: 'lowercase';
   position: relative;
   font-weight: bold;
+  width: fit-content;
+  white-space: nowrap;
   &::before{
     position: absolute;
     content: '';
@@ -24,15 +25,19 @@
   }
 }
 
-// .h2::before {
-//   height: 3rem;
-// }
-// .h3::before {
-//   height: 2rem;
-// }
-// .h5::before {
-//   height: 1.2rem;
-// }
+.h2::before {
+  height: 3rem;
+}
+.h3::before {
+  height: 2rem;
+}
+.h4::before {
+  height: 2rem;
+  width: 100%;
+}
+.h5::before {
+  height: 1.2rem;
+}
 .bgRed, .bgRedRmMargin {
   &::before {
     background-color: $bgRed;
@@ -109,15 +114,24 @@
   .h6 {
     padding-top: 20px;
     min-width: 300px;
+
     font-size: 1.5rem;
+    // white-space: normal;
     &::before {
       height: 1rem;
     }
   }
 }
 
-// @media (max-width: $sm) {
-//   .root{
+@media (max-width: 350px) {
+  .h6 {
+    padding-top: 20px;
+    min-width: 240px;
 
-//   }
-// }
+    font-size: 1.2rem;
+    // white-space: normal;
+    &::before {
+      height: 0.9rem;
+    }
+  } 
+}

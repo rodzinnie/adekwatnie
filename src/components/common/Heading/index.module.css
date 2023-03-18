@@ -17,13 +17,14 @@
   font-family: "Teko", sans-serif;
   margin-left: 8.3%;
   padding: 2.905% 0 1.66% 0;
-  width: -moz-fit-content;
-  width: fit-content;
   max-width: 33%;
   z-index: 2;
   text-transform: "lowercase";
   position: relative;
   font-weight: bold;
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
 }
 .root::before {
   position: absolute;
@@ -34,6 +35,23 @@
   background-color: #457b9d;
   top: 50%;
   transform: translateY(-80%);
+}
+
+.h2::before {
+  height: 3rem;
+}
+
+.h3::before {
+  height: 2rem;
+}
+
+.h4::before {
+  height: 2rem;
+  width: 100%;
+}
+
+.h5::before {
+  height: 1.2rem;
 }
 
 .bgRed::before, .bgRedRmMargin::before {
@@ -103,5 +121,15 @@
   }
   .h6::before {
     height: 1rem;
+  }
+}
+@media (max-width: 350px) {
+  .h6 {
+    padding-top: 20px;
+    min-width: 240px;
+    font-size: 1.2rem;
+  }
+  .h6::before {
+    height: 0.9rem;
   }
 }/*# sourceMappingURL=index.module.css.map */
