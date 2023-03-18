@@ -1,5 +1,6 @@
 /* FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Teko:wght@300;400;500;600;700&display=swap");
+/* FONT SIZES */
 /* FONT COLORS */
 /* BACKGROUND COLORS */
 /* HEIGHTS */
@@ -19,52 +20,88 @@
   width: -moz-fit-content;
   width: fit-content;
   max-width: 33%;
-  position: relative;
   z-index: 2;
-}
-
-.bgRedRmMargin {
-  margin: 0;
-}
-
-.bgRed,
-.bgDarkBlue,
-.bgLightBlue, .bgRedRmMargin {
+  text-transform: "lowercase";
+  position: relative;
   font-weight: bold;
 }
-.bgRed *::before,
-.bgDarkBlue *::before,
-.bgLightBlue *::before, .bgRedRmMargin *::before {
+.root::before {
   position: absolute;
-  content: " ";
+  content: "";
   width: 100%;
   left: 1.5rem;
   z-index: -1;
-}
-.bgRed h2::before,
-.bgDarkBlue h2::before,
-.bgLightBlue h2::before, .bgRedRmMargin h2::before {
-  height: 3rem;
-}
-.bgRed h3::before,
-.bgDarkBlue h3::before,
-.bgLightBlue h3::before, .bgRedRmMargin h3::before {
-  height: 2rem;
-}
-.bgRed h5::before,
-.bgDarkBlue h5::before,
-.bgLightBlue h5::before, .bgRedRmMargin h5::before {
-  height: 1.2rem;
+  background-color: #457b9d;
+  top: 50%;
+  transform: translateY(-80%);
 }
 
-.bgRed *::before, .bgRedRmMargin *::before {
+.bgRed::before, .bgRedRmMargin::before {
   background-color: #e63946;
 }
 
-.bgLightBlue *::before {
+.bgLightBlue::before {
   background-color: #457b9d;
 }
 
-.bgDarkBlue *::before {
+.bgDarkBlue::before {
   background-color: #1d3557;
+}
+
+.h2 {
+  font-size: 5rem;
+}
+
+.h3 {
+  font-size: 3.4rem;
+}
+
+.h4 {
+  font-size: 3rem;
+}
+
+.h5 {
+  font-size: 2rem;
+}
+
+.h6 {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 991px) {
+  .root::before {
+    left: 1rem;
+  }
+  .h2 {
+    font-size: 2.4rem;
+  }
+  .h2::before {
+    height: 1.4rem;
+  }
+  .h3 {
+    font-size: 2rem;
+  }
+  .h3::before {
+    height: 1.5rem;
+  }
+  .h4 {
+    font-size: 2rem;
+  }
+  .h4::before {
+    height: 1rem;
+  }
+  .h5 {
+    font-size: 2rem;
+  }
+  .h5::before {
+    height: 2rem;
+  }
+  .h6 {
+    padding-top: 20px;
+    min-width: 300px;
+    font-size: 1.5rem;
+  }
+  .h6::before {
+    height: 1rem;
+  }
 }/*# sourceMappingURL=index.module.css.map */

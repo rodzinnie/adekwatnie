@@ -1,5 +1,6 @@
 /* FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Teko:wght@300;400;500;600;700&display=swap");
+/* FONT SIZES */
 /* FONT COLORS */
 /* BACKGROUND COLORS */
 /* HEIGHTS */
@@ -12,9 +13,9 @@
 /* BREAKPOINTS */
 .root {
   background-color: transparent;
-  margin: 0;
   padding: 0;
   border: none;
+  margin: 20px 0;
 }
 
 .container {
@@ -55,7 +56,22 @@
 
 .paraRight {
   margin-left: 40%;
+  color: rgb(188, 188, 188);
 }
 .paraRight::before {
   background-color: #1d3557;
+}
+
+@media (max-width: 991px) {
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media (max-width: 767px) {
+  .paraLeft, .paraRight {
+    width: 100%;
+    margin: 0;
+    font-size: 18px;
+  }
 }/*# sourceMappingURL=index.module.css.map */

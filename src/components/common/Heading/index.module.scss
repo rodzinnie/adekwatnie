@@ -24,15 +24,15 @@
   }
 }
 
-.h2::before {
-  height: 3rem;
-}
-.h3::before {
-  height: 2rem;
-}
-.h5::before {
-  height: 1.2rem;
-}
+// .h2::before {
+//   height: 3rem;
+// }
+// .h3::before {
+//   height: 2rem;
+// }
+// .h5::before {
+//   height: 1.2rem;
+// }
 .bgRed, .bgRedRmMargin {
   &::before {
     background-color: $bgRed;
@@ -74,53 +74,50 @@
 
 
 @media (max-width: $md){
-
-  @media (max-width: 1000px) {
-    .root{
-      &::before{
-        left: 1rem;
-      }
-    }
-    .h2 {
-      font-size: 2.4rem;
-      &::before {
-        height: 1.4rem;
-      }
-    }
-  
-    .h3 {
-      font-size: 2rem;
-      &::before {
-        height: 1.5rem;
-      }
-    }
-    
-    .h4 {
-      font-size: 1.5rem;
-      &::before {
-        height: 2rem;
-      }
-    }
-    
-    .h5 {
-      font-size: 2rem;
-      &::before {
-        height: 2rem;
-      }
-    }
-    .h6 {
-      padding-top: 20px;
-      min-width: 300px;
-      font-size: 1.5rem;
-      &::before {
-        height: 1rem;
-      }
-    }
-  }
-}
-
-@media (max-width: $sm) {
   .root{
+    &::before{
+      left: 1rem;
+    }
+  }
+  .h2 {
+    font-size: 2.4rem;
+    &::before {
+      height: 1.4rem;
+    }
+  }
 
+  .h3 {
+    font-size: 2rem;
+    &::before {
+      height: 1.5rem;
+    }
+  }
+  
+  .h4 {
+    font-size: 2rem;
+    &::before {
+      height: 1rem;
+    }
+  }
+  
+  .h5 {
+    font-size: 2rem;
+    &::before {
+      height: 2rem;
+    }
+  }
+  .h6 {
+    padding-top: 20px;
+    min-width: 300px;
+    font-size: 1.5rem;
+    &::before {
+      height: 1rem;
+    }
   }
 }
+
+// @media (max-width: $sm) {
+//   .root{
+
+//   }
+// }

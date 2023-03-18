@@ -1,5 +1,6 @@
 /* FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Teko:wght@300;400;500;600;700&display=swap");
+/* FONT SIZES */
 /* FONT COLORS */
 /* BACKGROUND COLORS */
 /* HEIGHTS */
@@ -81,10 +82,7 @@
   display: none;
 }
 
-@media (max-width: 1200px) {
-  .root {
-    overflow-y: visible;
-  }
+@media (max-width: 991px) {
   .nav {
     display: flex;
     flex-direction: column;
@@ -115,7 +113,7 @@
     right: 3%;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 991px) {
   .span {
     font-size: 23px;
   }

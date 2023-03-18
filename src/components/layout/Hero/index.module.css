@@ -1,5 +1,6 @@
 /* FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Teko:wght@300;400;500;600;700&display=swap");
+/* FONT SIZES */
 /* FONT COLORS */
 /* BACKGROUND COLORS */
 /* HEIGHTS */
@@ -56,4 +57,40 @@
 }
 .sentence .words:last-child {
   margin-left: 0.5rem;
+}
+
+@media (max-width: 991px) {
+  .phrase {
+    height: 98%;
+    position: static;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+  }
+  .title {
+    font-size: 40px;
+    letter-spacing: 0.4rem;
+    text-shadow: none;
+  }
+  .sentence {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .words {
+    font-size: 30px;
+    padding: 15px 0;
+    background-color: #1d3557;
+    padding: 0 10px;
+  }
+}
+@media (max-width: 767px) {
+  .title {
+    font-size: 25px;
+  }
+  .words, .sentence {
+    font-size: 19px;
+  }
 }/*# sourceMappingURL=index.module.css.map */
