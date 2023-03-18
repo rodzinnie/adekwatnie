@@ -10,9 +10,9 @@ function App() {
         <Navbar />
         <Hero />
         <Offer />
-        {/* <About /> */}
-        {/* <Contact /> */}
-        {/* <Footer /> */}
+        <About />
+        <Contact />
+        <Footer />
       </div>
     </DataProvider>
   )
