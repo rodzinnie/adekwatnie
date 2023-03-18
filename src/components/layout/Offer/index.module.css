@@ -13,7 +13,7 @@
 /* BREAKPOINTS */
 .goUp {
   position: absolute;
-  right: -143px;
+  right: 10%;
   bottom: 0px;
   color: white;
   justify-content: center;
@@ -81,4 +81,23 @@
   width: 50%;
   margin: auto;
   text-align: center;
+}
+
+@media (max-width: 991px) {
+  .aboutMe {
+    width: 80%;
+  }
+  .aboutMe > * {
+    font-size: 20px;
+  }
+  .btnTxt {
+    font-size: 16px;
+  }
+  .buttons {
+    margin-top: 50px;
+    width: 60%;
+  }
+  .goUp {
+    display: none;
+  }
 }/*# sourceMappingURL=index.module.css.map */

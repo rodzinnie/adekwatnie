@@ -39,6 +39,9 @@
 .h5::before {
   height: 1.2rem;
 }
+.h6::before {
+  height: 2rem;
+}
 .bgRed, .bgRedRmMargin {
   &::before {
     background-color: $bgRed;
@@ -76,7 +79,7 @@
 }
 
 .h6 {
-  font-size: 1.5rem;
+  font-size: 3.4rem;
 }
 
 
@@ -110,7 +113,6 @@
   
   .h5 {
     font-size: 2rem;
-    white-space: normal;
     &::before {
       height: 1.2rem;
       width: 100%;
@@ -121,11 +123,20 @@
     padding-top: 20px;
     min-width: 300px;
 
-    font-size: 1.5rem;
-    // white-space: normal;
+    font-size: 2rem;
     &::before {
       height: 1rem;
     }
+  }
+}
+
+@media (max-width: $xs){
+  .h6{
+    font-size: 1.4rem;
+    min-width: 200px;
+  }
+  .h4{
+    min-width: 200px;
   }
 }
 
@@ -133,9 +144,8 @@
   .h6 {
     padding-top: 20px;
     min-width: 240px;
-
     font-size: 1.2rem;
-    // white-space: normal;
+
     &::before {
       height: 0.9rem;
     }

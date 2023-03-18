@@ -55,6 +55,10 @@
   height: 1.2rem;
 }
 
+.h6::before {
+  height: 2rem;
+}
+
 .bgRed::before, .bgRedRmMargin::before {
   background-color: #e63946;
 }
@@ -85,7 +89,7 @@
 }
 
 .h6 {
-  font-size: 1.5rem;
+  font-size: 3.4rem;
 }
 
 @media (max-width: 991px) {
@@ -113,7 +117,6 @@
   }
   .h5 {
     font-size: 2rem;
-    white-space: normal;
   }
   .h5::before {
     height: 1.2rem;
@@ -123,10 +126,19 @@
   .h6 {
     padding-top: 20px;
     min-width: 300px;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   .h6::before {
     height: 1rem;
+  }
+}
+@media (max-width: 575px) {
+  .h6 {
+    font-size: 1.4rem;
+    min-width: 200px;
+  }
+  .h4 {
+    min-width: 200px;
   }
 }
 @media (max-width: 350px) {

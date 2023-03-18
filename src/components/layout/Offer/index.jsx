@@ -10,16 +10,32 @@ import {
   TilesContainer,
 } from '../../common'
 import useData from '../../../context/useData'
-import SVGPlay from '../../icons/SVGPlay'
 
 function Offer() {
   const {
     data: { offerList },
   } = useData()
+  
   const [currentSlide, setCurrentSlide] = useState(offerList[0])
+  
   const goUp = (e) => {
     document.getElementById('offer').scrollIntoView({behavior:'smooth'})
   }
+
+  const [dimensions, setDimensions] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  })
+  const handleResize = () => {
+    setDimensions({
+    width: window.innerWidth,
+    height: window.innerHeight,
+    })
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleResize, false)
+  }, [])
+
   const handleClick = (e) => {
     const idElem = e.currentTarget.querySelector(`[data-tileno]`).dataset.tileno
     const isButton = e.target.tagName === 'path' ? true : false
@@ -30,6 +46,7 @@ function Offer() {
     }
   }
 
+
   return (
     <section id='offer' className={styles.root}>
       <SegmentHeader bgColor='bgRed' variant='bgLightBlue' title='oferta' />
@@ -39,20 +56,20 @@ function Offer() {
       <div className={styles.bgRed} id='readMore'>
         <ContrastSection className={styles.container}>
           <div className={styles.spread}>
-            <Heading variant={'bgBlue'} headingLevel='5' text={currentSlide.title} />
+            <Heading variant={'bgBlue'} headingLevel='6' text={currentSlide.title} />
             <div className={styles.aboutMe}>
               <h6>{currentSlide.text}</h6>
             </div>
             <div className={styles.buttons}>
-              <Button name='play' scale={2.2} handleClick={()=> (window.location.assign('/#about'))}>
-                <h6>o mnie</h6>
+              <Button name='play' scale={dimensions.width<767 ? 1 : 2.2} handleClick={()=> (window.location.assign('/#about'))}>
+                <h6 className={styles.btnTxt}>o mnie</h6>
               </Button>
-              <Button name='pause' scale={2.2} handleClick={()=> (window.location.assign('/#contact'))}>
-                <h6>kontakt</h6>
+              <Button name='pause' scale={dimensions.width<767 ? 1 : 2.2} handleClick={()=> (window.location.assign('/#contact'))}>
+                <h6 className={styles.btnTxt}>kontakt</h6>
               </Button>
             </div>
           </div>
-          <div className={styles.goUp} onClick={goUp}><SVGPlay /></div>
+          <div className={styles.goUp} onClick={goUp} id='goUp'><Button name='play' handleClick={goUp} fill={'#000000'} parentId={'goUp'} /></div>
         </ContrastSection>
       </div>
       <Divider>
