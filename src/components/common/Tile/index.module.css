@@ -57,4 +57,7 @@
     height: 250px;
     border-width: 15px;
   }
+  .root > * {
+    font-size: 18px;
+  }
 }/*# sourceMappingURL=index.module.css.map */
