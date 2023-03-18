@@ -39,7 +39,7 @@ function Offer() {
       <div className={styles.bgRed} id='readMore'>
         <ContrastSection className={styles.container}>
           <div className={styles.spread}>
-            <Heading variant={'bgRed'} headingLevel='3' text={currentSlide.title} />
+            <Heading variant={'bgBlue'} headingLevel='5' text={currentSlide.title} />
             <div className={styles.aboutMe}>
               <h6>{currentSlide.text}</h6>
             </div>

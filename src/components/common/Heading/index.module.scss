@@ -13,6 +13,7 @@
   font-weight: bold;
   width: fit-content;
   white-space: nowrap;
+  text-transform: lowercase;
   &::before{
     position: absolute;
     content: '';
@@ -63,6 +64,7 @@
 
 .h3 {
   font-size: 3.4rem;
+  text-transform: lowercase;
 }
 
 .h4 {
@@ -93,6 +95,7 @@
 
   .h3 {
     font-size: 2rem;
+    text-transform: lowercase;
     &::before {
       height: 1.5rem;
     }
@@ -107,7 +110,7 @@
   
   .h5 {
     font-size: 2rem;
-    
+    white-space: normal;
     &::before {
       height: 1.2rem;
       width: 100%;
@@ -137,4 +140,5 @@
       height: 0.9rem;
     }
   } 
+
 }
