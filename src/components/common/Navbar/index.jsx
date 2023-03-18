@@ -10,9 +10,9 @@ import useData from '../../../context/useData'
 function Navbar() {
   const [isOpen, setOpen] = useState(false)
   const [windowSize, setWindowSize] = useState(getWindowSize())
-  const [isScrolled, setIsScrolled] = useState(false)
+  // const [isScrolled, setIsScrolled] = useState(false)
   const [active, setActive] = useState(null)
-  const scrollPosition = useScrollPosition()
+  // const scrollPosition = useScrollPosition()
   const {data: {navbar}} = useData()
   useEffect(() => {
     function handleWindowResize() {
@@ -30,14 +30,14 @@ function Navbar() {
     }
   }, [])
 
-  useEffect(() => {
-    if (scrollPosition > 150) {
-      setIsScrolled(true)
-    }
-    if (scrollPosition < 100) {
-      setIsScrolled(false)
-    }
-  }, [scrollPosition])
+  // useEffect(() => {
+  //   if (scrollPosition > 150) {
+  //     setIsScrolled(true)
+  //   }
+  //   if (scrollPosition < 100) {
+  //     setIsScrolled(false)
+  //   }
+  // }, [scrollPosition])
 
   function getWindowSize() {
     const { innerWidth, innerHeight } = window
@@ -67,9 +67,10 @@ function Navbar() {
   return (
     <header
       id='header'
-      className={clsx(styles.root, isScrolled ? styles.scrolled : null)}
+      className={clsx(styles.root)}
     >
-      <Logo height={isScrolled ? '32' : null} windowSize={windowSize} />
+      {/* <Logo height={isScrolled ? '32' : null} windowSize={windowSize} /> */}
+      <Logo height={42} windowSize={windowSize} />
       <nav className={styles.nav} id={'navbar'}>
         {navbar.map((e, i) => {
           return <a
