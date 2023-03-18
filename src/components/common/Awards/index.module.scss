@@ -1,9 +1,9 @@
 @import '../../../settings';
 .root {
   background-color: transparent;
-  margin: 0;
   padding: 0;
   border: none;
+  margin: 20px 0;
 }
 .container{
   width: clamp(800px, 800px, 800px);
@@ -42,7 +42,25 @@
 }
 .paraRight {
   margin-left: 40%;
+  color: $lightGrayFont;
   &::before {
     background-color: $bgDarkBlue;
   }
+}
+
+@media (max-width: $md){
+  .container{
+    width: 80%;
+    margin: auto;
+  }
+}
+
+
+@media (max-width: $sm){
+  .paraLeft, .paraRight{
+    width: 100%;
+    margin: 0;
+    font-size: 18px;
+  }
+
 }

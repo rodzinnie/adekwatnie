@@ -6,15 +6,15 @@ function About() {
     <section id='about' className={styles.root}>
       <SegmentHeader bgColor='lightBackground' variant='bgRed' title='o mnie' />
       <Short />
-      {/* <VoiceRecordings /> */}
-      {/* <Awards /> */}
+      <VoiceRecordings />
+      <Awards />
       <section>
         <div className={styles.testimonials}>
-          <Heading variant='bgLightBlue' headingLevel={'3'} text={'recenzje moich audiodeskrypcji'} />
+          <Heading variant='bgLightBlue' headingLevel={'6'} text={'recenzje moich audiodeskrypcji'} />
           <Carousel timer={5000} />
         </div>
       </section>
-      {/* <Divider></Divider> */}
+      <Divider></Divider>
     </section>
   )
 }

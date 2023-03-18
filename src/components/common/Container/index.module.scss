@@ -6,7 +6,7 @@
   background-color: $bgLightContainer;
 }
 
-@media (max-width: $sm){
+@media (max-width: $md){
   .root{
     width: 80%;
     min-height: 600px;
