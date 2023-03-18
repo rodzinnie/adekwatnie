@@ -55,9 +55,9 @@
 
 
 
-@media (max-width: $sm){
+@media (max-width: $md){
   .phrase{
-    height: 85%;
+    height: 98%;
     position: static;
     display: flex;
     justify-content: flex-end;
@@ -65,10 +65,9 @@
     flex-direction: column;
   }
   .title{
-    font-size: 25px;
-    margin-bottom: 2rem;
+    font-size: 40px;
     letter-spacing: 0.4rem;
-    text-shadow: 6px 2px 0px black, 7px 2px 0px $white-text;
+    text-shadow: none;
   }
   .sentence{
     display: flex;
@@ -77,8 +76,19 @@
     padding: 0;
   }
   .words{
-    font-size: $hero-words-sm;
+    font-size: 30px;
     padding: 15px 0;
+    background-color: $bgDarkBlue;
+    padding: 0 10px ;
   }
 
+}
+
+@media (max-width: $sm){
+  .title{
+    font-size: 25px;
+  }
+  .words, .sentence{
+    font-size: $hero-words-sm;
+  }
 }

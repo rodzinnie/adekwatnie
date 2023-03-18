@@ -7,12 +7,12 @@ function App() {
   return (
     <DataProvider>
       <div className={styles.App}>
-        <Navbar />
-        <Hero />
-        {/* <Offer />
+        {/* <Navbar />
+        <Hero /> */}
+        <Offer />
         <About />
         <Contact />
-        <Footer /> */}
+        <Footer />
       </div>
     </DataProvider>
   )
