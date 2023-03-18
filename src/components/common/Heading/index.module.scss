@@ -19,7 +19,8 @@
     left: 1.5rem;
     z-index: -1;
     background-color: $bgLightBlue;
-    top: 15%;
+    top: 50%;
+    transform: translateY(-80%);
   }
 }
 
@@ -50,19 +51,19 @@
   height: 1.2rem;
 }
 .bgRed, .bgRedRmMargin {
-  *::before {
+  &::before {
     background-color: $bgRed;
   }
 }
 
 .bgLightBlue {
-  *::before {
+  &::before {
     background-color: $bgLightBlue;
   }
 }
 
 .bgDarkBlue{
-  *::before{
+  &::before{
     background-color: $bgDarkBlue;
   }
 }
@@ -92,25 +93,44 @@
 @media (max-width: $md){
 
   @media (max-width: 1000px) {
-  
+    .root{
+      &::before{
+        left: 1rem;
+      }
+    }
     .h2 {
-      font-size: 4rem;
+      font-size: 3.4rem;
+      &::before {
+        height: 2rem;
+      }
     }
   
     .h3 {
       font-size: 2rem;
+      &::before {
+        height: 2rem;
+      }
     }
   
     .h4 {
       font-size: 1.5rem;
+      &::before {
+        height: 2rem;
+      }
     }
   
     .h5 {
       font-size: 2rem;
+      &::before {
+        height: 2rem;
+      }
     }
   
     .h6 {
       font-size: 1.5rem;
+      &::before {
+        height: 2rem;
+      }
     }
   }
 }
