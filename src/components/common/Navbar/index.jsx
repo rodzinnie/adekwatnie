@@ -25,7 +25,6 @@ function Navbar() {
     }
     window.addEventListener('resize', handleWindowResize)
     document.getElementById('navbar').addEventListener('click', () =>{
-      console.log('click')
       closeNav(false)
       
     })
@@ -61,9 +60,7 @@ function Navbar() {
     }
   }
   const handleHamburger = (toggled) => {
-    console.log('toggled: ', toggled)
     closeNav(toggled)
-    console.log(nav.classList)
   }
 
   const handleClick = (name) => {
