@@ -20,4 +20,8 @@
 
 .tilesContainer {
   max-width: 1300px;
+}
+
+.audio {
+  display: none;
 }/*# sourceMappingURL=index.module.css.map */
