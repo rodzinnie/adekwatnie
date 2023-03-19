@@ -2,12 +2,14 @@
 
 .root {
   position: relative;
-  // height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: $main-font-text;
   font-size: 25px;
+  width: 50%;
+  margin: 0 auto;
+  padding: 0 3%;
 }
 
 .arrowLeft,
@@ -36,10 +38,12 @@
   left: 0;
 }
 
-@media (min-width: 900px) {
+@media (max-width: $md) {
   .root {
-    width: 50%;
-    margin: 0 auto;
-    padding: 0 3%;
+    width: 80%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
   }
 }

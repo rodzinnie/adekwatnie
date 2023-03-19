@@ -43,3 +43,40 @@
     line-height: 3rem;
   }
 }
+
+
+@media (max-width: $sm){
+  .myPic{
+    width: 60vw;
+    height:  60vw;
+    border-radius: 30vw;
+    outline: 15px solid $bgDarkBlue;
+    top: -10vw;
+    left: 30vw;
+
+  }
+  .aboutMe{
+    width: 90%;
+    margin: auto;
+    left: 5%;
+    top: 50%;
+    &> * {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+  .aboutMe{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+}
+
+@media (max-width: $xs){
+  .myPic{
+    left: 60vw;
+    transform: translateX(-50%);  
+  }
+
+}

@@ -1,5 +1,6 @@
 /* FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Teko:wght@300;400;500;600;700&display=swap");
+/* FONT SIZES */
 /* FONT COLORS */
 /* BACKGROUND COLORS */
 /* HEIGHTS */
@@ -13,5 +14,12 @@
 .root {
   width: 800px;
   height: 500px;
-  background-color: rgba(199, 226, 231, 0.9019607843);
+  background-color: rgba(241, 250, 238, 0.8862745098);
+}
+
+@media (max-width: 991px) {
+  .root {
+    width: 80%;
+    min-height: 600px;
+  }
 }/*# sourceMappingURL=index.module.css.map */

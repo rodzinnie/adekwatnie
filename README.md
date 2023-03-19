@@ -1,5 +1,5 @@
 deployed on:
-https://adekwatniej.netlify.app/
+https://develop-adekwatnie.netlify.app/
 
 
 

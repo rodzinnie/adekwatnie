@@ -17,3 +17,13 @@
   }
 }
 
+@media (max-width: $md){
+  .sectionSummary{
+    width: 100%;
+    &>*{
+      width: 80%;
+      padding: 0;
+    }
+  }
+}
+

@@ -1,40 +1,82 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import styles from './index.module.scss'
-import { Button, ContrastSection, Divider, Heading, SegmentHeader, TilesContainer } from '../../common'
-import {offerList} from './data'
+import {
+  Button,
+  ContrastSection,
+  Divider,
+  Heading,
+  SegmentHeader,
+  TilesContainer,
+} from '../../common'
+import useData from '../../../context/useData'
+
 function Offer() {
-  const [slideHeading, setSlideHeading] = useState(offerList[0])
+  const {
+    data: { offerList },
+  } = useData()
+  
+  const [currentSlide, setCurrentSlide] = useState(offerList[0])
+  
+  const goUp = (e) => {
+    document.getElementById('offer').scrollIntoView({behavior:'smooth'})
+  }
+
+  const [dimensions, setDimensions] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  })
+  const handleResize = () => {
+    setDimensions({
+    width: window.innerWidth,
+    height: window.innerHeight,
+    })
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleResize, false)
+  }, [])
+
+  const handleClick = (e) => {
+    const idElem = e.currentTarget.querySelector(`[data-tileno]`).dataset.tileno
+    const isButton = e.target.tagName === 'path' ? true : false
+    if (isButton && idElem >= 0) {
+      setCurrentSlide(offerList[idElem])
+      const offerElem = document.getElementById('readMore')
+      offerElem.scrollIntoView({behavior:'smooth'})
+    }
+  }
+
+
   return (
     <section id='offer' className={styles.root}>
       <SegmentHeader bgColor='bgRed' variant='bgLightBlue' title='oferta' />
       <div className={styles.content}>
-        <TilesContainer list={offerList} />
+        <TilesContainer listName='offerList' handleClick={handleClick} />
       </div>
-      <div className={styles.bgRed}>
+      <div className={styles.bgRed} id='readMore'>
         <ContrastSection className={styles.container}>
           <div className={styles.spread}>
-            <Heading variant={'bgRed'}>
-              <h3 style={{ textTransform: 'lowercase' }}>
-                {slideHeading.title}
-              </h3>
-            </Heading>
+            <Heading variant={'bgBlue'} headingLevel='6' text={currentSlide.title} />
             <div className={styles.aboutMe}>
-              <h6>{slideHeading.text}</h6>
+              <h6>{currentSlide.text}</h6>
             </div>
             <div className={styles.buttons}>
-              <Button name='play' scale={2.2}>
-                <h6>o mnie</h6>
+              <Button name='play' scale={dimensions.width<767 ? 1 : 2.2} handleClick={()=> (window.location.assign('/#about'))}>
+                <h6 className={styles.btnTxt}>o mnie</h6>
               </Button>
-              <Button name='pause' scale={2.2}>
-                <h6>kontakt</h6>
+              <Button name='pause' scale={dimensions.width<767 ? 1 : 2.2} handleClick={()=> (window.location.assign('/#contact'))}>
+                <h6 className={styles.btnTxt}>kontakt</h6>
               </Button>
             </div>
           </div>
+          <div className={styles.goUp} onClick={goUp} id='goUp'><Button name='play' handleClick={goUp} fill={'#000000'} parentId={'goUp'} /></div>
         </ContrastSection>
       </div>
       <Divider>
-        <p>Ceny poszczególnych usług uzależnione są od ich specyfiki i ustalane indywidualnie.</p>
+        <p>
+          Ceny poszczególnych usług uzależnione są od ich specyfiki i ustalane
+          indywidualnie.
+        </p>
       </Divider>
     </section>
   )

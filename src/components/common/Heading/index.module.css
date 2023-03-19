@@ -1,5 +1,6 @@
 /* FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Teko:wght@300;400;500;600;700&display=swap");
+/* FONT SIZES */
 /* FONT COLORS */
 /* BACKGROUND COLORS */
 /* HEIGHTS */
@@ -16,56 +17,137 @@
   font-family: "Teko", sans-serif;
   margin-left: 8.3%;
   padding: 2.905% 0 1.66% 0;
-  width: -webkit-fit-content;
+  max-width: 33%;
+  z-index: 2;
+  text-transform: "lowercase";
+  position: relative;
+  font-weight: bold;
   width: -moz-fit-content;
   width: fit-content;
-  max-width: 33%;
-  position: relative;
-  z-index: 2;
+  white-space: nowrap;
+  text-transform: lowercase;
 }
-
-.bgRedRmMargin {
-  margin: 0;
-}
-
-.bgRed,
-.bgDarkBlue,
-.bgLightBlue, .bgRedRmMargin {
-  font-weight: bold;
-}
-.bgRed *::before,
-.bgDarkBlue *::before,
-.bgLightBlue *::before, .bgRedRmMargin *::before {
+.root::before {
   position: absolute;
-  content: " ";
+  content: "";
   width: 100%;
   left: 1.5rem;
   z-index: -1;
+  background-color: #457b9d;
+  top: 50%;
+  transform: translateY(-80%);
 }
-.bgRed h2::before,
-.bgDarkBlue h2::before,
-.bgLightBlue h2::before, .bgRedRmMargin h2::before {
+
+.h2::before {
   height: 3rem;
 }
-.bgRed h3::before,
-.bgDarkBlue h3::before,
-.bgLightBlue h3::before, .bgRedRmMargin h3::before {
+
+.h3::before {
   height: 2rem;
 }
-.bgRed h5::before,
-.bgDarkBlue h5::before,
-.bgLightBlue h5::before, .bgRedRmMargin h5::before {
+
+.h4::before {
+  height: 2rem;
+  width: 100%;
+}
+
+.h5::before {
   height: 1.2rem;
 }
 
-.bgRed *::before, .bgRedRmMargin *::before {
+.h6::before {
+  height: 2rem;
+}
+
+.bgRed::before, .bgRedRmMargin::before {
   background-color: #e63946;
 }
 
-.bgLightBlue *::before {
+.bgLightBlue::before {
   background-color: #457b9d;
 }
 
-.bgDarkBlue *::before {
+.bgDarkBlue::before {
   background-color: #1d3557;
+}
+
+.h2 {
+  font-size: 5rem;
+}
+
+.h3 {
+  font-size: 3.4rem;
+  text-transform: lowercase;
+}
+
+.h4 {
+  font-size: 3rem;
+}
+
+.h5 {
+  font-size: 2rem;
+}
+
+.h6 {
+  font-size: 3.4rem;
+}
+
+@media (max-width: 991px) {
+  .root::before {
+    left: 1rem;
+  }
+  .h2 {
+    font-size: 2.4rem;
+  }
+  .h2::before {
+    height: 1.4rem;
+  }
+  .h3 {
+    font-size: 2rem;
+    text-transform: lowercase;
+  }
+  .h3::before {
+    height: 1.5rem;
+  }
+  .h4 {
+    font-size: 2rem;
+  }
+  .h4::before {
+    height: 1rem;
+  }
+  .h5 {
+    font-size: 2rem;
+  }
+  .h5::before {
+    height: 1.2rem;
+    width: 100%;
+    min-width: 90px;
+  }
+  .h6 {
+    padding-top: 20px;
+    min-width: 300px;
+    font-size: 2rem;
+  }
+  .h6::before {
+    height: 1rem;
+  }
+}
+@media (max-width: 575px) {
+  .h6 {
+    font-size: 1.4rem;
+    min-width: 200px;
+  }
+  .h4 {
+    min-width: 200px;
+  }
+}
+@media (max-width: 350px) {
+  .h6 {
+    padding-top: 20px;
+    min-width: 240px;
+    font-size: 1.2rem;
+  }
+  .h6::before {
+    height: 0.9rem;
+  }
 }/*# sourceMappingURL=index.module.css.map */

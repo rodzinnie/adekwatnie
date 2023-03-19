@@ -1,0 +1,16 @@
+@import '../../../settings';
+
+.root {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 7%;
+}
+
+.tilesContainer {
+  max-width: 1300px;
+}
+
+.audio{
+  display: none;
+}

@@ -11,7 +11,7 @@ $sticky-breakpoint: 32em;
   align-items: center;
   flex-wrap: nowrap;
   opacity: 1;
-  height: 100px;
+  height: $navbar-height;
   z-index: 5;
   transition: all 0.2s linear;
 
@@ -37,7 +37,7 @@ $sticky-breakpoint: 32em;
   .navlink {
     font-size: 30px;
     line-height: 42px;
-
+    margin: 0 15px;
     * {
       margin: 0;
       padding: 0;
@@ -52,6 +52,7 @@ $sticky-breakpoint: 32em;
   white-space: pre;
   width: fit-content;
   box-sizing: border-box;
+  gap: 20px;
 }
 
 .navlink {
@@ -59,11 +60,12 @@ $sticky-breakpoint: 32em;
   font-size: 40px;
   line-height: 56px;
   color: $navbar-color;
-  margin-left: 100px;
+  // margin-left: 100px;
+  text-align: center;
   text-decoration: none;
 
   * {
-    margin: 0;
+    margin: 0 40px;
   }
 }
 
@@ -75,16 +77,16 @@ $sticky-breakpoint: 32em;
   display: none;
 }
 
-@media (max-width: 1200px) {
-  .root {
-    overflow-y: visible;
-  }
+@media (max-width: $md) {
+  // .root {
+  //   overflow: hidden;
+  // }
 
   .nav {
     display: flex;
     flex-direction: column;
     position: absolute;
-    background-color: rgba(0, 0, 0);
+    background-color: rgba(87, 87, 87, 0.871);
     color: $navbar-color;
     z-index: 1;
     text-align: center;
@@ -112,7 +114,7 @@ $sticky-breakpoint: 32em;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: $md) {
   .span {
     font-size: 23px;
   }
