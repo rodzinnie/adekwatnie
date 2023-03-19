@@ -12,3 +12,15 @@
   gap: 30px;
   padding: 30px 0;
 }
+
+@media (max-width: $sm){
+  .background{
+    flex-direction: column;
+  }
+}
+
+@media (max-width: $xs){
+  .background{
+    flex-direction: column;
+  }
+}

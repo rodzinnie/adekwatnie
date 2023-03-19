@@ -5,7 +5,12 @@ function SVGStop(props) {
       height={props.height || '48'}
       viewBox={`0 0 68 52`}
       xmlns='http://www.w3.org/2000/svg'
+      className="stop"
     >
+      <path
+        className="stop"
+        fill={props.fill}
+      />
       <line
         x1='1'
         y1='8.64526'

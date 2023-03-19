@@ -1,5 +1,6 @@
 /* FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Teko:wght@300;400;500;600;700&display=swap");
+/* FONT SIZES */
 /* FONT COLORS */
 /* BACKGROUND COLORS */
 /* HEIGHTS */
@@ -17,6 +18,9 @@
   align-items: center;
   font-family: "Oswald", sans-serif;
   font-size: 25px;
+  width: 50%;
+  margin: 0 auto;
+  padding: 0 3%;
 }
 
 .arrowLeft,
@@ -45,10 +49,12 @@
   left: 0;
 }
 
-@media (min-width: 900px) {
+@media (max-width: 991px) {
   .root {
-    width: 50%;
-    margin: 0 auto;
-    padding: 0 3%;
+    width: 80%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
   }
 }/*# sourceMappingURL=index.module.css.map */

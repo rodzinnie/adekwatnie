@@ -1,5 +1,6 @@
 /* FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Teko:wght@300;400;500;600;700&display=swap");
+/* FONT SIZES */
 /* FONT COLORS */
 /* BACKGROUND COLORS */
 /* HEIGHTS */
@@ -19,4 +20,8 @@
 
 .tilesContainer {
   max-width: 1300px;
+}
+
+.audio {
+  display: none;
 }/*# sourceMappingURL=index.module.css.map */

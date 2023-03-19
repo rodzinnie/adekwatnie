@@ -1,20 +1,19 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import clsx from 'clsx'
 import { Sling as Hamburger } from 'hamburger-react'
 import Logo from '../Logo/index'
 import Heading from '../Heading/index'
 import styles from './index.module.scss'
-import { useScrollPosition } from '../../../hooks/useScrollPosition'
+// import { useScrollPosition } from '../../../hooks/useScrollPosition'
+import useData from '../../../context/useData'
 
 function Navbar() {
   const [isOpen, setOpen] = useState(false)
   const [windowSize, setWindowSize] = useState(getWindowSize())
-  const inputRef = useRef()
-  const rootRef = useRef()
-  const [isScrolled, setIsScrolled] = useState(false)
+  // const [isScrolled, setIsScrolled] = useState(false)
   const [active, setActive] = useState(null)
-  const scrollPosition = useScrollPosition()
-
+  // const scrollPosition = useScrollPosition()
+  const {data: {navbar}} = useData()
   useEffect(() => {
     function handleWindowResize() {
       setWindowSize(getWindowSize())
@@ -25,35 +24,43 @@ function Navbar() {
       }
     }
     window.addEventListener('resize', handleWindowResize)
-
+    document.getElementById('navbar').addEventListener('click', () =>{
+      closeNav(false)
+      
+    })
     return () => {
       window.removeEventListener('resize', handleWindowResize)
     }
   }, [])
 
-  useEffect(() => {
-    if (scrollPosition > 150) {
-      setIsScrolled(true)
-    }
-    if (scrollPosition < 100) {
-      setIsScrolled(false)
-    }
-  }, [scrollPosition])
+  // useEffect(() => {
+  //   if (scrollPosition > 150) {
+  //     setIsScrolled(true)
+  //   }
+  //   if (scrollPosition < 100) {
+  //     setIsScrolled(false)
+  //   }
+  // }, [scrollPosition])
 
   function getWindowSize() {
     const { innerWidth, innerHeight } = window
-
     return { innerWidth, innerHeight }
   }
-
-  const handleHamburger = (toggled) => {
-    if (toggled) {
-      inputRef.current.style.right = 0
-      rootRef.current.style.overflow = 'visible'
+  const closeNav = (bool) => {
+    const nav = document.getElementById('navbar')
+    const root = document.getElementById('header')
+    if (bool) {
+      nav.classList.add('visible')
+      nav.classList.remove('hide')
+      root.style.overflow = 'visible'
     } else {
-      inputRef.current.style.right = '-120%'
-      setTimeout(() => (rootRef.current.style.overflow = 'hidden'), 400)
+      nav.classList.remove('visible')
+      nav.classList.add('hide')
+      setTimeout(() => (root.style.overflow = 'hidden'), 400)
     }
+  }
+  const handleHamburger = (toggled) => {
+    closeNav(toggled)
   }
 
   const handleClick = (name) => {
@@ -63,38 +70,21 @@ function Navbar() {
   return (
     <header
       id='header'
-      className={clsx(styles.root, isScrolled ? styles.scrolled : null)}
-      ref={rootRef}
+      className={clsx(styles.root)}
     >
-      <Logo height={isScrolled ? '32' : null} />
-      <nav ref={inputRef} className={styles.nav}>
-        <a
-          className={styles.navlink}
-          href='#offer'
-          onClick={() => handleClick('offer')}
-        >
-          <Heading variant={active === 'offer' ? 'bgRed' : null}>
-            <h5>oferta</h5>
-          </Heading>
-        </a>
-        <a
-          className={styles.navlink}
-          href='#about'
-          onClick={() => handleClick('about')}
-        >
-          <Heading variant={active === 'about' ? 'bgRed' : null}>
-            <h5>o mnie</h5>
-          </Heading>
-        </a>
-        <a
-          className={styles.navlink}
-          href='#contact'
-          onClick={() => handleClick('contact')}
-        >
-          <Heading variant={active === 'contact' ? 'bgRed' : null}>
-            <h5>kontakt</h5>
-          </Heading>
-        </a>
+      {/* <Logo height={isScrolled ? '32' : null} windowSize={windowSize} /> */}
+      <Logo height={42} windowSize={windowSize} />
+      <nav className={styles.nav} id={'navbar'}>
+        {navbar.map((e, i) => {
+          return <a
+            className={styles.navlink}
+            href={e.href}
+            onClick={() => handleClick(e.name)}
+            key={i}
+          >
+            <Heading variant={active === e.name ? 'bgRed' : null} headingLevel='5' text={e.namePl} />
+          </a>
+        })}
       </nav>
       <div className={styles.hamburger}>
         <Hamburger
