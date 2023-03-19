@@ -6,49 +6,149 @@
   font-family: $main-font-heading;
   margin-left: $marg-1;
   padding: calc($marg-1 * 0.35) 0 calc($marg-1 * 0.2) 0;
-  width: fit-content;
   max-width: 33%;
-  position: relative;
   z-index: 2;
-}
-.bgRedRmMargin {margin: 0;}
-.bgRed,
-.bgDarkBlue, 
-.bgLightBlue , .bgRedRmMargin  {
+  text-transform: 'lowercase';
+  position: relative;
   font-weight: bold;
-  *::before {
+  width: fit-content;
+  white-space: nowrap;
+  text-transform: lowercase;
+  &::before{
     position: absolute;
-    content: ' ';
+    content: '';
     width: 100%;
     left: 1.5rem;
     z-index: -1;
-  }
-
-  h2::before {
-    height: 3rem;
-  }
-  h3::before {
-    height: 2rem;
-  }
-  h5::before {
-    height: 1.2rem;
+    background-color: $bgLightBlue;
+    top: 50%;
+    transform: translateY(-80%);
   }
 }
 
+.h2::before {
+  height: 3rem;
+}
+.h3::before {
+  height: 2rem;
+}
+.h4::before {
+  height: 2rem;
+  width: 100%;
+}
+.h5::before {
+  height: 1.2rem;
+}
+.h6::before {
+  height: 2rem;
+}
 .bgRed, .bgRedRmMargin {
-  *::before {
+  &::before {
     background-color: $bgRed;
   }
 }
 
 .bgLightBlue {
-  *::before {
+  &::before {
     background-color: $bgLightBlue;
   }
 }
 
 .bgDarkBlue{
-  *::before{
+  &::before{
     background-color: $bgDarkBlue;
   }
+}
+
+
+.h2 {
+  font-size: 5rem;
+}
+
+.h3 {
+  font-size: 3.4rem;
+  text-transform: lowercase;
+}
+
+.h4 {
+  font-size: 3rem;
+}
+
+.h5 {
+  font-size: 2rem;
+}
+
+.h6 {
+  font-size: 3.4rem;
+}
+
+
+@media (max-width: $md){
+  .root{
+    &::before{
+      left: 1rem;
+    }
+  }
+  .h2 {
+    font-size: 2.4rem;
+    &::before {
+      height: 1.4rem;
+    }
+  }
+
+  .h3 {
+    font-size: 2rem;
+    text-transform: lowercase;
+    &::before {
+      height: 1.5rem;
+    }
+  }
+  
+  .h4 {
+    font-size: 2rem;
+    &::before {
+      height: 1rem;
+    }
+  }
+  
+  .h5 {
+    font-size: 2rem;
+    &::before {
+      height: 1.2rem;
+      width: 100%;
+      min-width: 90px;
+    }
+  }
+  .h6 {
+    padding-top: 20px;
+    min-width: 300px;
+
+    font-size: 2rem;
+    &::before {
+      height: 1rem;
+    }
+  }
+}
+
+@media (max-width: $xs){
+  .h6{
+    font-size: 1.4rem;
+    min-width: 200px;
+  }
+  .h4{
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 350px) {
+  .h6 {
+    padding-top: 20px;
+    min-width: 240px;
+    font-size: 1.2rem;
+
+    &::before {
+      height: 0.9rem;
+    }
+  } 
+
 }

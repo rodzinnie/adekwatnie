@@ -8,16 +8,9 @@ function About() {
       <Short />
       <VoiceRecordings />
       <Awards />
-      {/* <section className={styles.lightBackground}>
-        <Heading variant='bgLightBlue'>
-          <h3>Pisanie i szkolenia</h3>
-        </Heading>
-      </section> */}
       <section>
         <div className={styles.testimonials}>
-          <Heading variant='bgLightBlue'>
-            <h3>recenzje moich audiodeskrypcji</h3>
-          </Heading>
+          <Heading variant='bgLightBlue' headingLevel={'6'} text={'recenzje moich audiodeskrypcji'} />
           <Carousel timer={5000} />
         </div>
       </section>

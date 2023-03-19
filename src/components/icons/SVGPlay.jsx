@@ -5,9 +5,10 @@ function SVGPlay(props) {
       height={props.height || '48'}
       viewBox={`0 0 68 52`}
       xmlns='http://www.w3.org/2000/svg'
-    >
+      >
       <path
         d='M63.7942 26.7201L16.0933 48.5566V4.8835L63.7942 26.7201Z'
+        className="play"
         fill={props.fill}
       />
       <line

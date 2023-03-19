@@ -1,5 +1,6 @@
 /* FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Teko:wght@300;400;500;600;700&display=swap");
+/* FONT SIZES */
 /* FONT COLORS */
 /* BACKGROUND COLORS */
 /* HEIGHTS */
@@ -12,7 +13,7 @@
 /* BREAKPOINTS */
 .blurbSpan {
   position: relative;
-  z-index: 10;
+  z-index: 4;
 }
 
 .myPic {
@@ -42,7 +43,6 @@
   font-family: "Oswald", sans-serif;
 }
 .aboutMe h6 {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -50,4 +50,37 @@
   margin-bottom: 0;
   padding-bottom: 0;
   line-height: 3rem;
+}
+
+@media (max-width: 767px) {
+  .myPic {
+    width: 60vw;
+    height: 60vw;
+    border-radius: 30vw;
+    outline: 15px solid #1d3557;
+    top: -10vw;
+    left: 30vw;
+  }
+  .aboutMe {
+    width: 90%;
+    margin: auto;
+    left: 5%;
+    top: 50%;
+  }
+  .aboutMe > * {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .aboutMe {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+}
+@media (max-width: 575px) {
+  .myPic {
+    left: 60vw;
+    transform: translateX(-50%);
+  }
 }/*# sourceMappingURL=index.module.css.map */

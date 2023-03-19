@@ -27,7 +27,6 @@
 }
 
 .sentence {
-  // outline: 2px solid yellow;
   display: flex;
   height: auto;
   width: min-content;
@@ -49,5 +48,46 @@
   }
   .words:last-child {
     margin-left: 0.5rem;
+  }
+}
+
+
+
+
+@media (max-width: $md){
+  .phrase{
+    height: 98%;
+    position: static;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+  }
+  .title{
+    font-size: 40px;
+    letter-spacing: 0.4rem;
+    text-shadow: none;
+  }
+  .sentence{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .words{
+    font-size: 30px;
+    padding: 15px 0;
+    background-color: $bgDarkBlue;
+    padding: 0 10px ;
+  }
+
+}
+
+@media (max-width: $sm){
+  .title{
+    font-size: 25px;
+  }
+  .words, .sentence{
+    font-size: $hero-words-sm;
   }
 }

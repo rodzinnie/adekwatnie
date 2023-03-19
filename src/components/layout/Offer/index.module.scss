@@ -3,7 +3,7 @@
 .goUp{
   position: absolute;
   // outline: 1px blue solid;
-  right: -143px;
+  right: 10%;
   bottom: 0px;
 
   color: white;
@@ -74,4 +74,27 @@
   width: 50%;
   margin: auto;
   text-align: center;
+}
+
+@media (max-width: $md){
+  .aboutMe{
+    width: 80%;
+    & > * {font-size: 20px;}
+  }
+  .btnTxt{
+    font-size: 16px;
+  }
+  .buttons{
+    margin-top: 50px;
+    width: 60%;
+  }
+
+  .goUp{
+    display: none;
+  }
+}
+
+
+@media(max-width: $sm){
+  
 }

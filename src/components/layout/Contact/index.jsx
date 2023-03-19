@@ -11,9 +11,7 @@ function Contact() {
   }
   return (
     <section id='contact' className={styles.root}>
-      <Heading variant={'bgDarkBlue'}>
-        <h2>kontakt</h2>
-      </Heading>
+      <Heading variant={'lightBlue'} headingLevel='2' text='kontakt' />
       <div className={styles.background}>
         {/* to do zmiany - musi byc TilesContainer */}
         <Tile 
