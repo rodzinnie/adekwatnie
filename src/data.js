@@ -36,37 +36,37 @@ fetchedData.testimonials = [
 fetchedData.offerList = [
   {
     title: 'Audiodeskrypcje Filmowe',
-    text: 'Masz gotowy tekst AD, ale potrzebujesz go nagrać? Współpracuję z profesjonalnymi studiami w Krakowie i Warszawie. Nagrywam głównie audiodeskrypcje do filmów, ale nie tylko.',
+    text: 'adekwatne audiodeskrypcje rozumieją zarówno dzieło filmowe, jak i potrzeby odbiorców. Mam kilkuletnie doświadczenie w łączeniu tych dwóch perspektyw, a moje działania nagrodzili niewidomi kinomani, a także filmowcy.',
     variant: 'darkBlue',
     buttons: [{ name: 'play', fill: '#1d3557' }],
   },
   {
     title: 'Audiodeskrypcje Teatralne',
-    text: '1Masz gotowy tekst AD, ale potrzebujesz go nagrać? Współpracuję z profesjonalnymi studiami w Krakowie i Warszawie. Nagrywam głównie audiodeskrypcje do filmów, ale nie tylko.',
+    text: 'adekwatne audiodeskrypcje pozostają elastyczne, bo teatr to żywioł, zwłaszcza współczesny. Mam wykształcenie teatrologiczne i potrafię sprostać temu zadaniu.',
     variant: 'lightBlue',
     buttons: [{ name: 'play', fill: '#457B9D' }],
   },
   {
     title: 'Audiodeskrypcje Eventów',
-    text: '2Masz gotowy tekst AD, ale potrzebujesz go nagrać? Współpracuję z profesjonalnymi studiami w Krakowie i Warszawie. Nagrywam głównie audiodeskrypcje do filmów, ale nie tylko.',
+    text: 'Dostępna premiera bądź koncert? Z przyjemnością adekwatnie dostosuję event do potrzeb odbiorców niewidomych i słabowidzących, również z audiodeskrypcją na żywo w każdym miejscu Polski.',
     variant: 'red',
     buttons: [{ name: 'play', fill: '#E63946' }],
   },
   {
     title: 'Nagrywanie Ścieżek',
-    text: '3Masz gotowy tekst AD, ale potrzebujesz go nagrać? Współpracuję z profesjonalnymi studiami w Krakowie i Warszawie. Nagrywam głównie audiodeskrypcje do filmów, ale nie tylko.',
+    text: 'Masz gotowy tekst AD, ale potrzebujesz go nagrać? Współpracuję z profesjonalnymi studiami w Krakowie i Warszawie. Nagrywam głównie audiodeskrypcje do filmów, ale nie tylko.',
     variant: 'lightBlue',
     buttons: [{ name: 'play', fill: '#457B9D' }],
   },
   {
     title: 'Voiceover - lektorka na żywo',
-    text: '4Masz gotowy tekst AD, ale potrzebujesz go nagrać? Współpracuję z profesjonalnymi studiami w Krakowie i Warszawie. Nagrywam głównie audiodeskrypcje do filmów, ale nie tylko.',
+    text: 'Jeśli potrzebujesz, by niewidomi i słabowidzący odbiorcy usłyszeli tekst audiodeskrypcji na żywo, pisz śmiało. Adaptuję gotowe teksty audiodeskrypcji na miejscu i nigdy nie tracę zimnej krwi, gdy trzeba improwizować.',
     variant: 'red',
     buttons: [{ name: 'play', fill: '#E63946' }],
   },
   {
     title: 'Szkolenia',
-    text: '5Masz gotowy tekst AD, ale potrzebujesz go nagrać? Współpracuję z profesjonalnymi studiami w Krakowie i Warszawie. Nagrywam głównie audiodeskrypcje do filmów, ale nie tylko.',
+    text: 'Od kilku lat szkolę w zakresie pisania audiodeskrypcji oraz szeroko pojętej dostępności kultury online i na żywo. Chętnie podzielę się wiedzą zarówno z pracownikami instytucji kultury, jak i osobami, które chcą zacząć indywidualną przygodę z dostępnością.',
     variant: 'darkBlue',
     buttons: [{ name: 'play', fill: '#1d3557' }],
   },
