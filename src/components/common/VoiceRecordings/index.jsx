@@ -1,11 +1,12 @@
 import TilesContainer from '../TilesContainer/index'
 import Heading from '../Heading'
 import styles from './index.module.scss'
-import { useEffect } from 'react'
-import ad from '../../../assets/probki/ad.wav'
+import { useState,  useEffect } from 'react'
+import audodesc from '../../../assets/probki/ad.wav'
 import book from '../../../assets/probki/book.wav'
 import film from '../../../assets/probki/film.wav'
 const VoiceRecordings = () => {
+  const [isPlaying, setIsPlaying] = useState(0)
   useEffect(() => {
     const tiles = document.getElementById('recordings-section')
     const buttons = tiles.querySelectorAll(`[data-tileno]`)
@@ -15,7 +16,9 @@ const VoiceRecordings = () => {
         const isPlayer = e.currentTarget.classList
         const player = document.getElementById('audio' + tileNo)
         if (isPlayer.contains("play")){
+          document.getElementById('audio'+isPlaying).pause()
           player.play()
+          setIsPlaying(tileNo)
         } else if(isPlayer.contains("stop")) {
           player.pause()
         }
@@ -32,7 +35,7 @@ const VoiceRecordings = () => {
         }
       />
       <audio controls className={styles.audio} id='audio0'>
-        <source src={ad} type="audio/wav" />
+        <source src={audodesc} type="audio/wav" />
       </audio>
       <audio controls className={styles.audio} id='audio1'>
         <source src={book} type="audio/wav" />
