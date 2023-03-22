@@ -6,6 +6,7 @@ import {
   ContrastSection,
   Divider,
   Heading,
+  ReadMore,
   SegmentHeader,
   TilesContainer,
 } from '../../common'
@@ -16,12 +17,8 @@ function Offer() {
     data: { offerList },
   } = useData()
   
-  const [currentSlide, setCurrentSlide] = useState(offerList[0])
-  
-  const goUp = (e) => {
-    document.getElementById('offer').scrollIntoView({behavior:'smooth'})
-  }
-
+  const [currentSlide, setCurrentSlide] = useState()
+  // TODO - this function to set dimensions has to be in utils 
   const [dimensions, setDimensions] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
@@ -35,14 +32,19 @@ function Offer() {
   useEffect(() => {
     window.addEventListener("resize", handleResize, false)
   }, [])
+  useEffect(() => {
+    if (currentSlide) {
+      const offerElem = document.getElementById('readMore')
+      offerElem.scrollIntoView({behavior:'smooth'})
+    }
+  }, [currentSlide])
 
   const handleClick = (e) => {
     const idElem = e.currentTarget.querySelector(`[data-tileno]`).dataset.tileno
     const isButton = e.target.tagName === 'path' ? true : false
     if (isButton && idElem >= 0) {
       setCurrentSlide(offerList[idElem])
-      const offerElem = document.getElementById('readMore')
-      offerElem.scrollIntoView({behavior:'smooth'})
+      console.log(currentSlide)
     }
   }
 
@@ -53,25 +55,7 @@ function Offer() {
       <div className={styles.content}>
         <TilesContainer listName='offerList' handleClick={handleClick} />
       </div>
-      <div className={styles.bgRed} id='readMore'>
-        <ContrastSection className={styles.container}>
-          <div className={styles.spread}>
-            <Heading variant={'bgBlue'} headingLevel='6' text={currentSlide.title} />
-            <div className={styles.aboutMe}>
-              <h6>{currentSlide.text}</h6>
-            </div>
-            <div className={styles.buttons}>
-              <Button name='play' scale={dimensions.width<767 ? 1 : 2.2} handleClick={()=> (window.location.assign('/#about'))}>
-                <h6 className={styles.btnTxt}>o mnie</h6>
-              </Button>
-              <Button name='pause' scale={dimensions.width<767 ? 1 : 2.2} handleClick={()=> (window.location.assign('/#contact'))}>
-                <h6 className={styles.btnTxt}>kontakt</h6>
-              </Button>
-            </div>
-          </div>
-          <div className={styles.goUp} onClick={goUp} id='goUp'><Button name='play' handleClick={goUp} fill={'#000000'} parentId={'goUp'} /></div>
-        </ContrastSection>
-      </div>
+      {currentSlide && <ReadMore currentSlide={currentSlide} />}
       <Divider>
         <p>
           Ceny poszczególnych usług uzależnione są od ich specyfiki i ustalane
