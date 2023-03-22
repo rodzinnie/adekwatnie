@@ -14,7 +14,8 @@ $sticky-breakpoint: 32em;
   height: $navbar-height;
   z-index: 5;
   transition: all 0.2s linear;
-
+  overflow: hidden;
+  
   @media (min-height: $sticky-breakpoint) {
     position: sticky;
     top: 0;
