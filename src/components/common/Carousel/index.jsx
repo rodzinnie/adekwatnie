@@ -39,7 +39,7 @@ function Carousel({timer, arrows}) {
     <div className={styles.root}>
       {arrows && <div className={styles.arrowLeft} onClick={() => handleOnClick('left')}>&lt;</div>}
       {arrows && <div className={styles.arrowRight} onClick={() => handleOnClick('right')}>&gt;</div>}
-      {slides[slideNo]}
+      <div className={styles.text} dangerouslySetInnerHTML={{__html: slides[slideNo]}}></div>
     </div>
   )
 }
