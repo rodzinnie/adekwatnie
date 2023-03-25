@@ -1,7 +1,7 @@
 import TilesContainer from '../TilesContainer/index'
 import Heading from '../Heading'
 import styles from './index.module.scss'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import ad from '../../../assets/probki/ad.wav'
 import book from '../../../assets/probki/book.wav'
 import film from '../../../assets/probki/film.wav'
@@ -14,10 +14,18 @@ const VoiceRecordings = () => {
         const tileNo = e.currentTarget.dataset.tileno
         const isPlayer = e.currentTarget.classList
         const player = document.getElementById('audio' + tileNo)
+        const audios = document.querySelectorAll('audio');
         if (isPlayer.contains("play")){
+          for (let audio of audios){
+            if (!audio.paused){
+              audio.pause()
+              player.currentTime = 0
+            }
+          }
           player.play()
         } else if(isPlayer.contains("stop")) {
           player.pause()
+          player.currentTime = 0
         }
       })
     }
