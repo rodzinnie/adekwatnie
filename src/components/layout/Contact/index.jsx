@@ -17,14 +17,14 @@ function Contact() {
         <Tile 
           title='Napisz do mnie!'
           buttons={[{children:'', name: 'play'}]}
-          description='kontakt@adekwatnie.pl'
+          description='kontakt@adekwatne.pl'
           variant='darkBlue'
           buttonClick={() => mailto('mail')}
         ></Tile>
         <Tile 
           title='Zadzwon do mnie!'
           buttons={[{children:'', name: 'play'}]}
-          description='691 880 188'
+          description='696 019 013'
           variant='lightBlue'
           buttonClick={() => mailto('tel')}
         ></Tile>
