@@ -22,7 +22,7 @@ function Contact() {
           buttonClick={() => mailto('mail')}
         ></Tile>
         <Tile 
-          title='Zadzwon do mnie!'
+          title='Zadzwoń do mnie!'
           buttons={[{children:'', name: 'play'}]}
           description='696 019 013'
           variant='lightBlue'
