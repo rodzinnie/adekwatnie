@@ -64,7 +64,7 @@ fetchedData.offerList = [
     buttons: [{ name: 'play', fill: '#457B9D' }],
   },
   {
-    title: 'Voiceover - lektorka na żywo',
+    title: 'Voice over - lektorka na żywo',
     text: 'Jeśli potrzebujesz, by niewidomi i słabowidzący odbiorcy usłyszeli tekst audiodeskrypcji na żywo, pisz śmiało. Adaptuję gotowe teksty audiodeskrypcji na miejscu i nigdy nie tracę zimnej krwi, gdy trzeba improwizować.',
     variant: 'red',
     buttons: [{ name: 'play', fill: '#E63946' }],
