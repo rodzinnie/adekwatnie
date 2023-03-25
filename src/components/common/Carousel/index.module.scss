@@ -38,6 +38,13 @@
   left: 0;
 }
 
+.text div{
+  font-size: 14px;
+  font-style: italic;
+  text-align: right;
+  padding-top: 20px;
+}
+
 @media (max-width: $md) {
   .root {
     width: 80%;
