@@ -33,10 +33,10 @@ const ReadMore = ({currentSlide}) => {
             </div>
             <div className={styles.buttons}>
               <Button name='play' scale={dimensions.width<767 ? 1 : 2.2} handleClick={()=> (window.location.assign('/#contact'))}>
-                <h6 className={styles.btnTxt}>o mnie</h6>
+                <h6 className={styles.btnTxt}>kontakt</h6>
               </Button>
               <Button name='' scale={dimensions.width<767 ? 1 : 2.2} handleClick={goUp}>
-                <h6 className={styles.btnTxt}>powrot</h6>
+                <h6 className={styles.btnTxt}>powrót</h6>
               </Button>
             </div>
           </div>
